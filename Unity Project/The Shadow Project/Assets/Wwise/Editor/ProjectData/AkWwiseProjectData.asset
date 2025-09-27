@@ -39,18 +39,10 @@ MonoBehaviour:
     guid: f17ec69d5e66fe45a81c95e03c4f4dcc
     GuidInternal: 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     m_lastTime: -8584433651665261249
 =======
     m_lastTime: -8584441444190629077
 >>>>>>> ac7ae3d (Created Wwise Routing Hierarchy)
-=======
-    m_lastTime: -8584441444190629077
->>>>>>> ac7ae3d (Created Wwise Routing Hierarchy)
-=======
-    m_lastTime: -8584421609351633890
->>>>>>> 224b812 (Implemented Attic Ambience)
     List:
     - name: Ambience
       guid: 8d0a638fd3b34d46890b30e75d2ea3d5
