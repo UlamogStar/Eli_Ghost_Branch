@@ -38,8 +38,72 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: f17ec69d5e66fe45a81c95e03c4f4dcc
     GuidInternal: 
-    m_lastTime: -8584423259464700877
+<<<<<<< HEAD
+    m_lastTime: -8584433651665261249
+=======
+    m_lastTime: -8584441444190629077
+>>>>>>> ac7ae3d (Created Wwise Routing Hierarchy)
     List:
+    - name: Ambience
+      guid: 8d0a638fd3b34d46890b30e75d2ea3d5
+      id: 85412153
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f17ec69d5e66fe45a81c95e03c4f4dcc
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: World
+        ObjectType: 2
+        guid: c44dfe7ec25b1b469855fb2d85617586
+      - ElementName: Ambience
+        ObjectType: 2
+        guid: 8d0a638fd3b34d46890b30e75d2ea3d5
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\World\Ambience
+    - name: Enemies
+      guid: c6a8f7d7294cc447940536a75fc07e9c
+      id: 2242381963
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f17ec69d5e66fe45a81c95e03c4f4dcc
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: World
+        ObjectType: 2
+        guid: c44dfe7ec25b1b469855fb2d85617586
+      - ElementName: Enemies
+        ObjectType: 2
+        guid: c6a8f7d7294cc447940536a75fc07e9c
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\World\Enemies
+    - name: env_example
+      guid: 45daf150785c084289523362a83738ed
+      id: 2334522901
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f17ec69d5e66fe45a81c95e03c4f4dcc
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: World
+        ObjectType: 2
+        guid: c44dfe7ec25b1b469855fb2d85617586
+      - ElementName: env_example
+        ObjectType: 1
+        guid: 45daf150785c084289523362a83738ed
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\World\env_example
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -54,6 +118,137 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Music
+      guid: 772cc37d0106e04090a7ae8b2f19d853
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f17ec69d5e66fe45a81c95e03c4f4dcc
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music
+        ObjectType: 2
+        guid: 772cc37d0106e04090a7ae8b2f19d853
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music
+    - name: Non-World
+      guid: c9bf53fffceaa542b91780565505df6d
+      id: 838047381
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f17ec69d5e66fe45a81c95e03c4f4dcc
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Non-World
+        ObjectType: 2
+        guid: c9bf53fffceaa542b91780565505df6d
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Non-World
+    - name: Objects
+      guid: 1152c512a49df244ae51f5b13a4a1793
+      id: 1695690031
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f17ec69d5e66fe45a81c95e03c4f4dcc
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: World
+        ObjectType: 2
+        guid: c44dfe7ec25b1b469855fb2d85617586
+      - ElementName: Objects
+        ObjectType: 2
+        guid: 1152c512a49df244ae51f5b13a4a1793
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\World\Objects
+    - name: Player
+      guid: 8d2632a90364ba43bed7833609b2405d
+      id: 1069431850
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f17ec69d5e66fe45a81c95e03c4f4dcc
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: World
+        ObjectType: 2
+        guid: c44dfe7ec25b1b469855fb2d85617586
+      - ElementName: Player
+        ObjectType: 2
+        guid: 8d2632a90364ba43bed7833609b2405d
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\World\Player
+    - name: SFX
+      guid: b30ab92094006146b399cec640f8900f
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f17ec69d5e66fe45a81c95e03c4f4dcc
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: World
+        ObjectType: 2
+        guid: c44dfe7ec25b1b469855fb2d85617586
+      - ElementName: SFX
+        ObjectType: 2
+        guid: b30ab92094006146b399cec640f8900f
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\World\SFX
+    - name: UI
+      guid: 6fef5222d1a97b4b80172c61a56672bb
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f17ec69d5e66fe45a81c95e03c4f4dcc
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Non-World
+        ObjectType: 2
+        guid: c9bf53fffceaa542b91780565505df6d
+      - ElementName: UI
+        ObjectType: 2
+        guid: 6fef5222d1a97b4b80172c61a56672bb
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Non-World\UI
+    - name: World
+      guid: c44dfe7ec25b1b469855fb2d85617586
+      id: 2609808943
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f17ec69d5e66fe45a81c95e03c4f4dcc
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: World
+        ObjectType: 2
+        guid: c44dfe7ec25b1b469855fb2d85617586
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\World
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
