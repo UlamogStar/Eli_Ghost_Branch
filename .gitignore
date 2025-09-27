@@ -81,6 +81,8 @@ crashlytics-build.properties
 *.wem
 *.wsettings
 IncrementalSoundBankData.xml
+AkWwiseProjectData.asset
+
 
 Textures/SubstanceDesigner/.autosave/
 
