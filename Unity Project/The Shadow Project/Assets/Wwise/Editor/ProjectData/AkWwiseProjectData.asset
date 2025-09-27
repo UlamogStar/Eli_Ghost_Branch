@@ -38,11 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Default Work Unit
     guid: f17ec69d5e66fe45a81c95e03c4f4dcc
     GuidInternal: 
-<<<<<<< HEAD
-    m_lastTime: -8584433651665261249
-=======
     m_lastTime: -8584441444190629077
->>>>>>> ac7ae3d (Created Wwise Routing Hierarchy)
     List:
     - name: Ambience
       guid: 8d0a638fd3b34d46890b30e75d2ea3d5
