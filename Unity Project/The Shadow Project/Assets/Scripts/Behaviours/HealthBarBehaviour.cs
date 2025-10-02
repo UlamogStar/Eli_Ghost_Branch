@@ -1,13 +1,14 @@
 /*
 Originial Coder: Zackery E.
 Recent Coder: Owynn A.
-Recent Changes: Formatting and Commenting
-Last date worked on: 9/8/2025
+Recent Changes: Sliding Healthbar Update
+Last date worked on: 9/30/2025
 */
 
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using System.Collections;
 
 public class HealthBarBehaviour : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class HealthBarBehaviour : MonoBehaviour
     public void Awake()
     {
         Debug.Log("Healthbar Awake");
+		slider.maxValue = maxHealth;
+		health.value = maxHealth;
         currentBarHealth = health.value;
         UpdateSlider();
     }//End Awake
@@ -51,9 +54,19 @@ public class HealthBarBehaviour : MonoBehaviour
         } 
     }//End RunHelathEvents
 
-    private void UpdateSlider()
+    public void RunUpdateSlider()
     {
-        slider.maxValue = maxHealth;
-        slider.value = (currentBarHealth <= maxHealth) ? currentBarHealth : maxHealth;
-    }//End UpdateSlider
-}
+        StartCoroutine(UpdateSlider());
+    }//End RunUpdateSlider
+
+	private IEnumerator UpdateSlider()
+	{
+		float speed = 15f;
+
+    	while (slider.value > health.value)
+    	{
+        	slider.value -= Time.deltaTime * speed;;
+        	yield return null;
+    	}//end while
+	}//end UpdateSlider
+}//end class
