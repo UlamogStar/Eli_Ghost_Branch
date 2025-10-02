@@ -1,54 +1,9 @@
 fileFormatVersion: 2
-guid: d170297a26aa5364088fb80cbbc94858
+guid: 32efaac5d5f6588428c1f0024b788a5d
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Basic_CdbraPBR
-    second: {fileID: 2100000, guid: 50bb1b99bc37bb549b755804c6d386d7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BoxMat
-    second: {fileID: 2100000, guid: a301efc0964fd474ab2db15e0c5647c5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ChestMat
-    second: {fileID: 2100000, guid: 5e5e62aa761bbe14094cbd569efcdca9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Crate1_Mat
-    second: {fileID: 2100000, guid: 813f5b2cf0da24546aa042bf3312210d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Crate2_Mat
-    second: {fileID: 2100000, guid: b331792be38324d4b9b898f394cb1aa6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CupboardBackMat
-    second: {fileID: 2100000, guid: 83c9ca0182f144446ae47f0b6ff68c84, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CupboardDoorMat
-    second: {fileID: 2100000, guid: b042d195833ceab4a97d0ea7f51f909c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: StoolMat
-    second: {fileID: 2100000, guid: f3f599cbbc702e44ca970f3f672b8f38, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: TableMat
-    second: {fileID: 2100000, guid: 1190e5f22f06e4b4db8b4e8834c16ff9, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
