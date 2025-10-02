@@ -16,25 +16,21 @@ public class DamageBehaviour : MonoBehaviour
     public IntData health;
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Contact");
         if (other.CompareTag("Object"))
         {
             Debug.Log(other.name);
             ObjectBehaviour objectBehaviour = other.GetComponent<ObjectBehaviour>();
             if (objectBehaviour == null)
             {
-                Debug.LogWarning("Missing ObjectBehaviour on " + other.name);
                 return;
             }
 
             if (isBody == false && objectBehaviour.returnable == true)
             {
-                Debug.Log("Body");
                 OnReturn.Invoke();
             } // end of if}
             else
             {
-                Debug.Log("Body2");
                 damage = objectBehaviour.damage.value;
                 damage *= multiplier;
                 health.value -= damage;
