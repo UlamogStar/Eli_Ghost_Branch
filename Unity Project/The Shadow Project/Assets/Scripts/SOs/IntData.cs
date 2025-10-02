@@ -1,13 +1,13 @@
 /*
 Originial Coder: Zackery E.
-Recent Coder: Zackery E.
-Recent Changes: Initial Coding
+Recent Coder: Owynn A.
+Recent Changes: Changed asset menu location
 Last date worked on: 9/2/2025
 */
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu(fileName = "NewIntData", menuName = "Data Object/Int Data")]
+[CreateAssetMenu(fileName = "NewIntData", menuName = "Scriptable Objects/Int Data")]
 public class IntData : ScriptableObject
 {
     public int value;

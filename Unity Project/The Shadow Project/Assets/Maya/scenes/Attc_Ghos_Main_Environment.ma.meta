@@ -3,7 +3,77 @@ guid: 3f6cb1422ef55d344896b11321fb1ce6
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BeamsMat
+    second: {fileID: 2100000, guid: c58ec40ecd5eee2409ec5c0f47cd435f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BoxMat
+    second: {fileID: 2100000, guid: a301efc0964fd474ab2db15e0c5647c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ChestMat
+    second: {fileID: 2100000, guid: 5e5e62aa761bbe14094cbd569efcdca9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CupboardBackMat
+    second: {fileID: 2100000, guid: 83c9ca0182f144446ae47f0b6ff68c84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CupboardDoorMat
+    second: {fileID: 2100000, guid: b042d195833ceab4a97d0ea7f51f909c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FloorMat
+    second: {fileID: 2100000, guid: 3430abf2ccc50134b9d7615954638e56, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LowWallMat
+    second: {fileID: 2100000, guid: 002fb765b4cd99f43959af3d8eaeec20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShelfMat
+    second: {fileID: 2100000, guid: 83d09bfc95fce5748adfce71ccccf9d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StoolMat
+    second: {fileID: 2100000, guid: f3f599cbbc702e44ca970f3f672b8f38, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TableMat
+    second: {fileID: 2100000, guid: 1190e5f22f06e4b4db8b4e8834c16ff9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: UpperWallMat
+    second: {fileID: 2100000, guid: 016a836af7999bd4fb062c5d45c146ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallShelfMat
+    second: {fileID: 2100000, guid: ce8b1914ce72e824dad1c0e4ab5f5b6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WindowMat
+    second: {fileID: 2100000, guid: f778a2cfc28fc3f4ca029361368d8567, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WindowPaneMat
+    second: {fileID: 2100000, guid: 83dcbfca581d9d447966faf030c98b2a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
