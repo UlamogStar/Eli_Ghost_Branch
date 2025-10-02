@@ -16,6 +16,7 @@ public class GhostBehaviour : MonoBehaviour
     public float waitTime = 2f;
     private NavMeshAgent agent;
     public bool isWandering = true, isDrifting = false;
+	public Transform cameraTransform;
 
     //public Vector3Data center;  replace later
     public Vector3 center, driftPointOne, driftPointTwo;
@@ -57,6 +58,8 @@ public class GhostBehaviour : MonoBehaviour
             Walk();
             while (agent.pathPending || agent.remainingDistance > agent.stoppingDistance)
             {
+				transform.LookAt(cameraTransform.position);
+            	transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
                 yield return null;
             }
 
