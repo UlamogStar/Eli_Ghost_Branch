@@ -1,8 +1,8 @@
 /*
 Originial Coder: Owynn A.
 Recent Coder: Owynn A.
-Recent Changes: Initial Coding
-Last date worked on: 9/23/2025
+Recent Changes: Added a way to activate attack mode
+Last date worked on: 9/30/2025
 */
 
 using UnityEngine;
