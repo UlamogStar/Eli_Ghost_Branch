@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections.Generic;
 public class Body_Tracking : MonoBehaviour
 {
     public UDP udpBody;
@@ -14,15 +14,20 @@ public class Body_Tracking : MonoBehaviour
     [Tooltip("deaflut is (X = -7, Y = 12, Z = 0)")]
     public Vector3 offset = new Vector3(0, 0, 0);
 
-    private void Update()
+    private void FixedUpdate()
     {
         string data = udpBody.data;
-        
+
+        if (string.IsNullOrEmpty(data))
+            return;
+
         data = data.Trim(new char[] { '[', ']' });
         string[] points = data.Split(',');
 
-        // Ensure there are enough points
-        if (points.Length < 2)
+        int pointNumber = points.Length / 2; // assuming data is x,y,z
+
+        // Create missing points
+        while (bodyPoints.Count < pointNumber)
         {
             Debug.LogError("Not enough points received.");
             return;
