@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69873d9c6ac4b3f4d89bfe3b4df20962, type: 3}
+  m_Name: CounterTopSpawnables
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectListSO
+  list:
+  - {fileID: 7711565854845933278, guid: 0e47188a9d3e9ed4a86cda949edb0238, type: 3}
+  - {fileID: 7654721500479801829, guid: e51fa53143f884c49a55a894a4e0a612, type: 3}
+  - {fileID: 2190694356067429341, guid: 0dee7637238456e418f72828fdbfc943, type: 3}
+  - {fileID: 1857487633780912155, guid: 763c6365c677a8a419cc0d8e11ac88d4, type: 3}
