@@ -1,5 +1,20 @@
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\Default Work Unit\Master Audio Bus\World\Ambience	
+	393239870	SFX			\Default Work Unit\Master Audio Bus\World\SFX	
+	838047381	Non-World			\Default Work Unit\Master Audio Bus\Non-World	
+	1069431850	Player			\Default Work Unit\Master Audio Bus\World\Player	
+	1551306167	UI			\Default Work Unit\Master Audio Bus\Non-World\UI	
+	1695690031	Objects			\Default Work Unit\Master Audio Bus\World\Objects	
+	2242381963	Enemies			\Default Work Unit\Master Audio Bus\World\Enemies	
+	2609808943	World			\Default Work Unit\Master Audio Bus\World	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	2334522901	env_example			\Default Work Unit\Master Audio Bus\World\env_example	
+
+Effect plug-ins	ID	Name	Type				Notes
+	3552193294	env_attic_verb	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{BA60EAFF-7B76-4BB6-BDBF-76915B7058A0}" SchemaVersion="119">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{BA60EAFF-7B76-4BB6-BDBF-76915B7058A0}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{BA60EAFF-7B76-4BB6-BDBF-76915B7058A0}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="env_attic_verb" ID="{3DE708B2-DE76-401F-ACFA-DFC8E13130D2}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+					<PropertyList>
+						<Property Name="DecayTime" Type="Real32" Value="0.9"/>
+						<Property Name="Density" Type="Real32" Value="53"/>
+						<Property Name="DryLevel" Type="Real32" Value="-0.3"/>
+						<Property Name="ERLevel" Type="Real32" Value="-3"/>
+						<Property Name="ERPattern" Type="int32" Value="22"/>
+						<Property Name="Filter1Freq" Type="Real32" Value="940"/>
+						<Property Name="Filter1Gain" Type="Real32" Value="-16.5"/>
+						<Property Name="Filter1InsertPos" Type="int32" Value="2"/>
+						<Property Name="PreDelay" Type="Real32" Value="0"/>
+						<Property Name="ReverbLevel" Type="Real32" Value="-18"/>
+						<Property Name="RoomSize" Type="Real32" Value="-64"/>
+						<Property Name="StereoWidth" Type="Real32" Value="140"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>

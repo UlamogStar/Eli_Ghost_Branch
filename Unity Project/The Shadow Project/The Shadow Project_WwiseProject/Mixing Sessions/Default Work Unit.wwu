@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B41CB39B-FE9B-4FCD-940C-FD56A8F2451A}" SchemaVersion="119">
 	<MixingSessions>
-		<WorkUnit Name="Default Work Unit" ID="{B41CB39B-FE9B-4FCD-940C-FD56A8F2451A}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{B41CB39B-FE9B-4FCD-940C-FD56A8F2451A}" PersistMode="Standalone">
+			<ChildrenList>
+				<MixingSession Name="General" ID="{B8C4C4EF-07A2-4D7C-AD69-B8E94B6017BD}">
+					<ObjectList>
+						<ObjectRef Name="Music" ID="{7DC32C77-0601-40E0-90A7-AE8B2F19D853}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+						<ObjectRef Name="Non-World" ID="{FF53BFC9-EAFC-42A5-B917-80565505DF6D}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+						<ObjectRef Name="World" ID="{7EFE4DC4-5BC2-461B-9855-FB2D85617586}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+					</ObjectList>
+				</MixingSession>
+				<MixingSession Name="Ambience" ID="{CD94BD2C-69CD-436B-9E92-6CB1808C5810}">
+					<ObjectList>
+						<ObjectRef Name="env_hauntcreak" ID="{70CC570C-3A04-479B-924B-CF13B3649321}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+						<ObjectRef Name="env_squeak" ID="{2499D247-BFDC-4D27-B170-A00AC9BE5E6F}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+						<ObjectRef Name="env_wind" ID="{1A0B96CE-BA1A-473D-8FA2-328FB1ADC2F7}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+						<ObjectRef Name="env_loop_centerfill" ID="{5A535B59-479E-4700-BE8F-C04DF2BA7A0D}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+						<ObjectRef Name="env_loop_gaspipes" ID="{D766F25F-5DBB-4432-A239-8036D26415E4}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+						<ObjectRef Name="env_loop_morgue" ID="{FAFA87A6-D15A-4FA9-A5A4-60AA2AE34070}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+						<ObjectRef Name="Ambience" ID="{8F630A8D-B3D3-464D-890B-30E75D2EA3D5}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+						<ObjectRef Name="env_example" ID="{50F1DA45-5C78-4208-8952-3362A83738ED}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+					</ObjectList>
+				</MixingSession>
+			</ChildrenList>
+		</WorkUnit>
 	</MixingSessions>
 </WwiseDocument>
