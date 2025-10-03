@@ -9,26 +9,47 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B6CBD692-12EC-CDBA-0932-48F63C40C91F}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{DE02C980-D7F4-6155-F087-6AEC233BA7B1}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<ShareSets>
+					<Plugin Id="3552193294" Name="env_attic_verb" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="85412153" Name="Ambience"/>
+				<Bus Id="393239870" Name="SFX"/>
+				<Bus Id="838047381" Name="Non-World"/>
+				<Bus Id="1069431850" Name="Player"/>
+				<Bus Id="1551306167" Name="UI"/>
+				<Bus Id="1695690031" Name="Objects"/>
+				<Bus Id="2242381963" Name="Enemies"/>
+				<Bus Id="2609808943" Name="World"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="2334522901" Name="env_example">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3552193294"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="3157003241" Type="User" Language="SFX" Hash="{1850913E-8C66-8CEA-258C-A899F2B0F2DA}">
+		<SoundBank Id="3157003241" Type="User" Language="SFX" Hash="{79834029-20A1-7EF6-AA29-F669E707C58F}">
 			<ShortName>test</ShortName>
 			<Path>test.bnk</Path>
 			<Media>
 				<File Id="762578400" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Pause.wav</ShortName>
-					<CachePath>SFX/Pause_2D58C563.wem</CachePath>
+					<CachePath>SFX/Pause_7B654C33.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -39,6 +60,190 @@
 				</Event>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{9C05E0DC-1626-0D96-C616-01F02D79B765}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="50860831" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_hauntcreak_05.wav</ShortName>
+					<CachePath>SFX/env_os_hauntcreak_05_8E324C96.wem</CachePath>
+				</File>
+				<File Id="76659355" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_rats_03.wav</ShortName>
+					<CachePath>SFX/env_os_rats_03_8E324C96.wem</CachePath>
+				</File>
+				<File Id="118384836" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_rats_02.wav</ShortName>
+					<CachePath>SFX/env_os_rats_02_8E324C96.wem</CachePath>
+				</File>
+				<File Id="130462557" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_hauntcreak_04.wav</ShortName>
+					<CachePath>SFX/env_os_hauntcreak_04_899746C0.wem</CachePath>
+				</File>
+				<File Id="147449458" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>env_loop_morgue.wav</ShortName>
+					<Path>Media/147449458.wem</Path>
+					<CachePath>SFX/env_loop_morgue_56CEF360.wem</CachePath>
+				</File>
+				<File Id="160165350" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_squeak_03.wav</ShortName>
+					<CachePath>SFX/env_os_squeak_03_8E324C96.wem</CachePath>
+				</File>
+				<File Id="199535482" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_squeak_01.wav</ShortName>
+					<CachePath>SFX/env_os_squeak_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="245547960" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_rats_07.wav</ShortName>
+					<CachePath>SFX/env_os_rats_07_8E324C96.wem</CachePath>
+				</File>
+				<File Id="254467704" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>env_loop_wind_02.wav</ShortName>
+					<Path>Media/254467704.wem</Path>
+					<CachePath>SFX/env_loop_wind_02_56CEF360.wem</CachePath>
+				</File>
+				<File Id="262500095" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>woosh_05.wav</ShortName>
+					<CachePath>SFX/woosh_05_1C2119D1.wem</CachePath>
+				</File>
+				<File Id="286244852" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_hauntcreak_01.wav</ShortName>
+					<CachePath>SFX/env_os_hauntcreak_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="315671903" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>woosh_03.wav</ShortName>
+					<CachePath>SFX/woosh_03_6567178B.wem</CachePath>
+				</File>
+				<File Id="378498032" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_hauntcreak_03.wav</ShortName>
+					<CachePath>SFX/env_os_hauntcreak_03_8E324C96.wem</CachePath>
+				</File>
+				<File Id="387915797" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_rats_05.wav</ShortName>
+					<CachePath>SFX/env_os_rats_05_8E324C96.wem</CachePath>
+				</File>
+				<File Id="443385534" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_rats_08.wav</ShortName>
+					<CachePath>SFX/env_os_rats_08_8E324C96.wem</CachePath>
+				</File>
+				<File Id="460766516" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_hauntcreak_02.wav</ShortName>
+					<CachePath>SFX/env_os_hauntcreak_02_8E324C96.wem</CachePath>
+				</File>
+				<File Id="529809776" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_rats_01.wav</ShortName>
+					<CachePath>SFX/env_os_rats_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="581889273" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_squeak_04.wav</ShortName>
+					<CachePath>SFX/env_os_squeak_04_8E324C96.wem</CachePath>
+				</File>
+				<File Id="659537667" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>woosh_01.wav</ShortName>
+					<CachePath>SFX/woosh_01_B34D47EA.wem</CachePath>
+				</File>
+				<File Id="688012886" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_rats_09.wav</ShortName>
+					<CachePath>SFX/env_os_rats_09_8E324C96.wem</CachePath>
+				</File>
+				<File Id="723927260" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>woosh_06.wav</ShortName>
+					<CachePath>SFX/woosh_06_386D93C9.wem</CachePath>
+				</File>
+				<File Id="734080490" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>env_loop_centerfill.wav</ShortName>
+					<Path>Media/734080490.wem</Path>
+					<CachePath>SFX/env_loop_centerfill_2C9019F0.wem</CachePath>
+				</File>
+				<File Id="765011205" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_squeak_07.wav</ShortName>
+					<CachePath>SFX/env_os_squeak_07_8E324C96.wem</CachePath>
+				</File>
+				<File Id="801632121" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_squeak_05.wav</ShortName>
+					<CachePath>SFX/env_os_squeak_05_37F97180.wem</CachePath>
+				</File>
+				<File Id="818464119" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>woosh_02.wav</ShortName>
+					<CachePath>SFX/woosh_02_931F350F.wem</CachePath>
+				</File>
+				<File Id="836443457" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>env_loop_wind_01.wav</ShortName>
+					<Path>Media/836443457.wem</Path>
+					<CachePath>SFX/env_loop_wind_01_56CEF360.wem</CachePath>
+				</File>
+				<File Id="886952836" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_rats_06.wav</ShortName>
+					<CachePath>SFX/env_os_rats_06_8E324C96.wem</CachePath>
+				</File>
+				<File Id="927452689" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_squeak_02.wav</ShortName>
+					<CachePath>SFX/env_os_squeak_02_8E324C96.wem</CachePath>
+				</File>
+				<File Id="951544368" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>env_loop_gaspipes.wav</ShortName>
+					<Path>Media/951544368.wem</Path>
+					<CachePath>SFX/env_loop_gaspipes_56CEF360.wem</CachePath>
+				</File>
+				<File Id="959645677" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>woosh_04.wav</ShortName>
+					<CachePath>SFX/woosh_04_63DAC4B0.wem</CachePath>
+				</File>
+				<File Id="962882079" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_squeak_06.wav</ShortName>
+					<CachePath>SFX/env_os_squeak_06_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1015114399" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_rats_04.wav</ShortName>
+					<CachePath>SFX/env_os_rats_04_8E324C96.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1697873554" Name="amb_attic_start" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="50860831"/>
+						<MediaRef Id="76659355"/>
+						<MediaRef Id="118384836"/>
+						<MediaRef Id="130462557"/>
+						<MediaRef Id="147449458"/>
+						<MediaRef Id="160165350"/>
+						<MediaRef Id="199535482"/>
+						<MediaRef Id="245547960"/>
+						<MediaRef Id="254467704"/>
+						<MediaRef Id="286244852"/>
+						<MediaRef Id="378498032"/>
+						<MediaRef Id="387915797"/>
+						<MediaRef Id="443385534"/>
+						<MediaRef Id="460766516"/>
+						<MediaRef Id="529809776"/>
+						<MediaRef Id="581889273"/>
+						<MediaRef Id="688012886"/>
+						<MediaRef Id="734080490"/>
+						<MediaRef Id="765011205"/>
+						<MediaRef Id="801632121"/>
+						<MediaRef Id="836443457"/>
+						<MediaRef Id="886952836"/>
+						<MediaRef Id="927452689"/>
+						<MediaRef Id="951544368"/>
+						<MediaRef Id="962882079"/>
+						<MediaRef Id="1015114399"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2334522901" Name="env_example"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="979070061" Name="ghost_attack" DurationType="OneShot" DurationMin="0.94664294" DurationMax="1.2208729">
+					<MediaRefs>
+						<MediaRef Id="262500095"/>
+						<MediaRef Id="315671903"/>
+						<MediaRef Id="659537667"/>
+						<MediaRef Id="723927260"/>
+						<MediaRef Id="818464119"/>
+						<MediaRef Id="959645677"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C3936127-3C83-95D9-2E3E-7BE1CB10AD1F}</FileHash>
+	<FileHash>{52B5EFD9-9F14-30E7-6BFF-93DFB74F8E50}</FileHash>
 </SoundBanksInfo>

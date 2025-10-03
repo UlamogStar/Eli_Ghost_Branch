@@ -1,6 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{1903113D-3ABC-4C80-97F2-55C578FE7D86}" SchemaVersion="119">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{1903113D-3ABC-4C80-97F2-55C578FE7D86}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{1903113D-3ABC-4C80-97F2-55C578FE7D86}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="General" ID="{7293EC62-894A-4E04-AE26-29FAE6081E7B}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="amb_attic_start" ID="{DB3D22F6-C980-463D-B4B6-422D11971061}" WorkUnitID="{324A6723-D37C-4C70-9353-4885F94E79D8}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="env_loop_centerfill" ID="{5A535B59-479E-4700-BE8F-C04DF2BA7A0D}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="env_hauntcreak" ID="{70CC570C-3A04-479B-924B-CF13B3649321}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="env_loop_gaspipes" ID="{D766F25F-5DBB-4432-A239-8036D26415E4}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="env_squeak" ID="{2499D247-BFDC-4D27-B170-A00AC9BE5E6F}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="env_loop_morgue" ID="{FAFA87A6-D15A-4FA9-A5A4-60AA2AE34070}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="env_wind" ID="{1A0B96CE-BA1A-473D-8FA2-328FB1ADC2F7}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Ambience" ID="{C431A19E-AF5E-4C2F-A5EC-51A4446564E5}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="amb_attic_start" ID="{DB3D22F6-C980-463D-B4B6-422D11971061}" WorkUnitID="{324A6723-D37C-4C70-9353-4885F94E79D8}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="env_wind" ID="{1A0B96CE-BA1A-473D-8FA2-328FB1ADC2F7}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="env_hauntcreak" ID="{70CC570C-3A04-479B-924B-CF13B3649321}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="env_loop_centerfill" ID="{5A535B59-479E-4700-BE8F-C04DF2BA7A0D}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="env_squeak" ID="{2499D247-BFDC-4D27-B170-A00AC9BE5E6F}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="env_loop_gaspipes" ID="{D766F25F-5DBB-4432-A239-8036D26415E4}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="env_rats" ID="{E4FFB394-AED9-4CB6-8D4F-03AF0675F69C}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="env_loop_morgue" ID="{FAFA87A6-D15A-4FA9-A5A4-60AA2AE34070}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

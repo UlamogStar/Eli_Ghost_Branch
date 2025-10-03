@@ -30,6 +30,11 @@
 								</Bus>
 								<Bus Name="Ambience" ID="{8F630A8D-B3D3-464D-890B-30E75D2EA3D5}">
 									<PropertyList>
+										<Property Name="BusChannelConfig" Type="int32">
+											<ValueList>
+												<Value>12546</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Color" Type="int16" Value="4"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
@@ -40,7 +45,23 @@
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
 								</Bus>
-								<AuxBus Name="env_example" ID="{50F1DA45-5C78-4208-8952-3362A83738ED}"/>
+								<AuxBus Name="env_example" ID="{50F1DA45-5C78-4208-8952-3362A83738ED}">
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{562BC1BE-7C03-4FED-A752-AD108B88AA27}" ShortID="971206441">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="env_attic_verb" ID="{3DE708B2-DE76-401F-ACFA-DFC8E13130D2}" WorkUnitID="{BA60EAFF-7B76-4BB6-BDBF-76915B7058A0}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AuxBus>
 								<Bus Name="Player" ID="{A932268D-6403-43BA-BED7-833609B2405D}">
 									<PropertyList>
 										<Property Name="Color" Type="int16" Value="19"/>
