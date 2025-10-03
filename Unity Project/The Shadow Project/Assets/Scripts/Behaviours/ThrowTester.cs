@@ -8,7 +8,7 @@ public class ThrowTester : MonoBehaviour
     [SerializeField] private GameObject throwablePrefab;
     [SerializeField] private GameObject startObject;
     [SerializeField] private Transform target;
-    [SerializeField] private float throwSpeed = 5f;
+    [SerializeField] private float throwSpeed = 1f;
     [SerializeField] private float overshoot = 0.5f;
 
     private GameObject currentThrowable;
@@ -33,7 +33,7 @@ public class ThrowTester : MonoBehaviour
 
             currentThrowable = Instantiate(throwablePrefab, startObject.transform.position, Quaternion.identity);
 
-            throwManager.StartThrow(currentThrowable, location, 30);
+            throwManager.StartThrow(currentThrowable, location, throwSpeed);
         }
     }
 }

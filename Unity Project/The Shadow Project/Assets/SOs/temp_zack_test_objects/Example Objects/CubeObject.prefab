@@ -125,5 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectBehaviour
   damage: {fileID: 0}
+  throwSpeed: 2
   returnable: 0
   originSpawn: {fileID: 0}
+  returnToObject: {fileID: 0}
