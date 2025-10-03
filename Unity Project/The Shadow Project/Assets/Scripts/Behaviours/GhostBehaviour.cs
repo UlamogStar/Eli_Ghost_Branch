@@ -23,6 +23,15 @@ public class GhostBehaviour : MonoBehaviour
     public Quaternion rotation;
     public float rotationSpeed = 5f;
     private int position = 0;
+
+    //Wwise Variables
+    [Header("Wwise Audio Variables")]
+    public AK.Wwise.Event ghost_attack;
+    public AK.Wwise.Event ghost_appear;
+    public AK.Wwise.Event ghost_disappear;
+    public AK.Wwise.Event ghost_hit;
+
+
     private void Awake()
     {
         center = transform.position;
@@ -106,6 +115,9 @@ public class GhostBehaviour : MonoBehaviour
     public void Attack()
     {
         animator.SetTrigger("attack");
+
+        //Wwise Audio trigger
+        ghost_attack.Post(gameObject);
     }
 
     public void Walk()

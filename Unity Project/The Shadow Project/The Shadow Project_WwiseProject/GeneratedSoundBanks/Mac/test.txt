@@ -2,5 +2,5 @@ Event	ID	Name			Wwise Object Path	Notes
 	4258653052	test_event			\Default Work Unit\test_event	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	762578400	test_sfx	H:\School Stuff\School 2025\Fall 2025\Games Capstone\repo\Ghost_Files\Unity Project\The Shadow Project\The Shadow Project_WwiseProject\.cache\Mac\SFX\Pause_2D58C563.wem		\Actor-Mixer Hierarchy\Default Work Unit\test_sfx		40384
+	762578400	test_sfx	H:\School Stuff\School 2025\Fall 2025\Games Capstone\repo\Ghost_Files\Unity Project\The Shadow Project\The Shadow Project_WwiseProject\.cache\Mac\SFX\Pause_7B654C33.wem		\Actor-Mixer Hierarchy\Default Work Unit\test_sfx		6208
 

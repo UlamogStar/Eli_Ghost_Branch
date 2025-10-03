@@ -14,6 +14,68 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="Ambience" ID="{5E65026C-7F35-4C9E-8F58-84C03B081252}" ShortID="582462894">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="amb_attic_start" ID="{DB3D22F6-C980-463D-B4B6-422D11971061}">
+							<ChildrenList>
+								<Action Name="" ID="{81352727-73F3-4EDF-A099-6F9CD3429CBD}" ShortID="22696013">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="env_amb_loop" ID="{6FFD4341-5AB2-411E-8A3A-D991948F417B}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D18E30D4-65BD-45A1-8519-350F56D0E8AA}" ShortID="252695389">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="env_hauntcreak" ID="{70CC570C-3A04-479B-924B-CF13B3649321}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7CA729B8-9C95-47E2-AEB3-1D5391B79E57}" ShortID="99912409">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="env_squeak" ID="{2499D247-BFDC-4D27-B170-A00AC9BE5E6F}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8166E230-39A6-46B3-9BC7-EC43B30DAD63}" ShortID="314532341">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="env_rats" ID="{E4FFB394-AED9-4CB6-8D4F-03AF0675F69C}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Enemies" ID="{ADDCD6C1-5DB5-4590-A86E-37A3FA5C918C}" ShortID="693412819">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="11"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="ghost_attack" ID="{C5BFF7E2-8DD7-4C00-8D8D-64208C60C8A2}">
+							<ChildrenList>
+								<Action Name="" ID="{1185F659-9FAC-4066-8DAA-39DCB29C00C7}" ShortID="968817794">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.6"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ghost_woosh" ID="{181E8136-3ED7-4745-90EA-9E7B7C1B1130}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
