@@ -35,21 +35,25 @@ public class HealthBarBehaviour : MonoBehaviour
 
         RunHealthEvents();
         currentBarHealth = health.value;
-        UpdateSlider();
+        RunUpdateSlider();
+        Debug.Log("Healthbar Update");
     }//End UpdateHealth
 
     private void RunHealthEvents()
     {
-        if (health.value <= 0) //health is depleted
+        if (currentBarHealth  <= 0) //health is depleted
         {
+            Debug.Log("Healthbar On Death");
             onDepleted.Invoke();
         }
         else if (currentBarHealth < health.value) //health increased
         {
+            Debug.Log("Healthbar On Health");
             onHeal.Invoke();
         }
         else if (currentBarHealth > health.value) //health is decreased
         {
+            Debug.Log("Healthbar On Damage");
             onDamage.Invoke();
         } 
     }//End RunHelathEvents
@@ -68,5 +72,7 @@ public class HealthBarBehaviour : MonoBehaviour
         	slider.value -= Time.deltaTime * speed;;
         	yield return null;
     	}//end while
-	}//end UpdateSlider
+
+        Debug.Log("it worked");
+    }//end UpdateSlider
 }//end class

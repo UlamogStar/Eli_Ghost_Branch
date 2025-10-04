@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69873d9c6ac4b3f4d89bfe3b4df20962, type: 3}
+  m_Name: AtticObjectList
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectListSO
+  list:
+  - {fileID: 1067933573507620676, guid: 5b0224b18622f044d9fd494c6dc7f9eb, type: 3}
+  - {fileID: 2632795936351566697, guid: 2057cc081fcd882438124a87f29af757, type: 3}
+  - {fileID: 2095235491797601841, guid: 32cedd4c362f1f241a099ace7949d29a, type: 3}
+  - {fileID: 2959072506460062796, guid: ed2cb9d538025b148bfecc8753da60f6, type: 3}
+  - {fileID: 4764661985652712716, guid: 98ccba5fba54df54eba54f583cd027fb, type: 3}
+  - {fileID: 3028584613036351919, guid: 44aa72f7cfd8c114080ab0ffe324dbac, type: 3}
+  - {fileID: 2302335114772538473, guid: 77c3604278fba734e804adf5e4b6f899, type: 3}
+  - {fileID: 8014366734083089309, guid: b2ecc13bf30290a44942e8395e17c1e5, type: 3}
+  - {fileID: 3445225290737156045, guid: 4edeb4ffa2656a84186a20ae9cad972e, type: 3}
+  - {fileID: 7192396256709127019, guid: cd39f963a8dc55246885839b04f98e33, type: 3}
+  - {fileID: 7078872615798433053, guid: 83b94467d76114546a2b52c93dc98b99, type: 3}
+  - {fileID: 176156287935254898, guid: 7e8412c27aefcb04fb712adbf727dca4, type: 3}
+  - {fileID: 5423059843498078159, guid: 1859eaffcb7903f488d3bb2b01e96b03, type: 3}
+  - {fileID: 6830592788804333146, guid: f52033310c0b7dc4999a11a6ac0795a6, type: 3}
+  - {fileID: 6488573034672774975, guid: 84bd204586a3f7240bba564fbeeeb470, type: 3}
+  - {fileID: 1670590184821544140, guid: 8fbf63d9df8fd764aa2c6fdfaeec303f, type: 3}
+  - {fileID: 1792794902333812670, guid: 40d5596b1cbfc364fbaf1635c7fd6c86, type: 3}
+  - {fileID: 7629304052086675549, guid: f2236f9464ceff842848f49f176d510f, type: 3}
+  - {fileID: 1980875919513272975, guid: 210741872b0ef454dad6139d65b69f72, type: 3}
+  - {fileID: 3100712300063182446, guid: 79478acfd0ad5b14c99d7ed15e4bf3a5, type: 3}
+  - {fileID: 762262780465068190, guid: 4d1f8a6fd86612b4ca12f960efbd163b, type: 3}
