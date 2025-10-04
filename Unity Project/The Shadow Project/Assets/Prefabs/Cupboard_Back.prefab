@@ -458,9 +458,12 @@ GameObject:
   - component: {fileID: 2440622558270452305}
   - component: {fileID: 3409392084868519815}
   - component: {fileID: 4701243991270117260}
+  - component: {fileID: 22581537049657974}
+  - component: {fileID: 5444403733420875710}
+  - component: {fileID: -5752078153569588543}
   m_Layer: 0
   m_Name: Cupboard_Back
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -539,3 +542,56 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &22581537049657974
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6830592788804333146}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.050003547, y: 0.21005817, z: 0.12308253}
+  m_Center: {x: 0.0058037844, y: 0.10496295, z: -0.0000000018626451}
+--- !u!114 &5444403733420875710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6830592788804333146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33a30d312fdf41a5ae8024f799c0cf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectBehaviour
+  damage: {fileID: 11400000, guid: 39bc1588d8063413784d0485f520e1aa, type: 2}
+  throwSpeed: 10
+  returnable: 0
+  throwManager: {fileID: -5752078153569588543}
+  target: {fileID: 0}
+  originSpawn: {fileID: 0}
+  returnToObject: {fileID: 0}
+--- !u!114 &-5752078153569588543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6830592788804333146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12d11b986d72c9547871f95bc0bb24c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThrowObjectBehavior
+  overshoot: 3

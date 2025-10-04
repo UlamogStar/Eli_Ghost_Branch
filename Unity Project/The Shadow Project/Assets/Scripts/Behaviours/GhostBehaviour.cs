@@ -1,8 +1,8 @@
 /*
 Originial Coder: Owynn A.
 Recent Coder: Owynn A.
-Recent Changes: Added a way to activate attack mode
-Last date worked on: 9/30/2025
+Recent Changes: Added throwing behaviour
+Last date worked on: 10/4/2025
 */
 
 using UnityEngine;
@@ -13,7 +13,7 @@ public class GhostBehaviour : MonoBehaviour
 {
     public Animator animator;
     public float radius = .0005f;
-    public float waitTime = 2f;
+    public float waitTime = 2f, delay = .5f;
     private NavMeshAgent agent;
     public bool isWandering = true, isDrifting = false;
 	public Transform cameraTransform;
@@ -32,6 +32,15 @@ public class GhostBehaviour : MonoBehaviour
     public AK.Wwise.Event ghost_hit;
 
 
+
+	[SerializeField] private ThrowObjectBehavior throwManager;
+    [SerializeField] private ObjectListSO throwablePrefab;
+    [SerializeField] private GameObject startObject;
+    [SerializeField] private Transform target;
+    [SerializeField] private float throwSpeed = 1f;
+    [SerializeField] private float overshoot = 0.5f;
+
+    private GameObject currentThrowable;
     private void Awake()
     {
         center = transform.position;
@@ -39,6 +48,11 @@ public class GhostBehaviour : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         StartCoroutine(WanderRoutine());
     }
+	public void StartWander()
+	{
+		StartCoroutine(WanderRoutine());
+	}	
+
     private IEnumerator WanderRoutine()
     {
         agent.updateRotation = true;
@@ -71,8 +85,25 @@ public class GhostBehaviour : MonoBehaviour
             	transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
                 yield return null;
             }
-
+			
             Idle();
+			Attack();
+			yield return new WaitForSeconds(delay);
+			Vector3 location = target.position;
+
+            if (currentThrowable != null)
+            {
+                // Stop coroutine for this object
+                throwManager.EndThrow(currentThrowable);
+
+                // Destroy the object
+                Destroy(currentThrowable);
+                currentThrowable = null;
+            }
+			int randomInt = Random.Range(0, throwablePrefab.list.Count);
+            currentThrowable = Instantiate(throwablePrefab.list[randomInt], startObject.transform.position, Quaternion.identity);
+
+            throwManager.StartThrow(currentThrowable, location, throwSpeed);
             
             yield return new WaitForSeconds(waitTime);
         }
@@ -92,7 +123,10 @@ public class GhostBehaviour : MonoBehaviour
 
     public void StartEndIdle()
     {
+
+		animator.SetTrigger("suprise");
         StartCoroutine(EndIdle());
+		
     }
 
     public IEnumerator EndIdle()
@@ -102,6 +136,7 @@ public class GhostBehaviour : MonoBehaviour
         agent.SetDestination(center);
         
         Walk();
+		
         while (agent.pathPending || agent.remainingDistance > agent.stoppingDistance)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
@@ -109,6 +144,7 @@ public class GhostBehaviour : MonoBehaviour
         }
 
         Idle();
+		
         isDrifting = true;
         StartCoroutine(DriftRoutine());
     }
