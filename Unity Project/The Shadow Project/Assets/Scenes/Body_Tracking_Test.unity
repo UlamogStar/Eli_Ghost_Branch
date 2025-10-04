@@ -492,7 +492,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Body_Tracking
   udpBody: {fileID: 2097620657}
-  bodyPoint: {fileID: 1583102259}
+  bodyPointPrefab: {fileID: 1583102259}
+  bodyPoints: []
+  scale: 0.01
+  offset: {x: -7, y: 12, z: 0}
 --- !u!114 &2097620657
 MonoBehaviour:
   m_ObjectHideFlags: 0
