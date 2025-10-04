@@ -144,7 +144,7 @@ public class GhostBehaviour : MonoBehaviour
         animator.SetTrigger("attack");
 
         //Wwise Audio trigger
-        ghost_attack.Post(gameObject);
+        //ghost_attack.Post(gameObject);
     }
 
     public void Walk()
