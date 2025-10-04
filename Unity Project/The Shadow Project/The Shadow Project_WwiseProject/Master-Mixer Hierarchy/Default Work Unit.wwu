@@ -9,6 +9,83 @@
 							<ObjectRef Name="System" ID="{466BFC49-0904-4A8B-AE9A-44C42CFFD4F5}" WorkUnitID="{E69BE246-7DDB-4986-AD99-62B040CAB8EE}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="World" ID="{7EFE4DC4-5BC2-461B-9855-FB2D85617586}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Bus Name="SFX" ID="{20B90AB3-0094-4661-B399-CEC640F8900F}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</Bus>
+								<Bus Name="Objects" ID="{12C55211-9DA4-44F2-AE51-F5B13A4A1793}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="8"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</Bus>
+								<Bus Name="Ambience" ID="{8F630A8D-B3D3-464D-890B-30E75D2EA3D5}">
+									<PropertyList>
+										<Property Name="BusChannelConfig" Type="int32">
+											<ValueList>
+												<Value>12546</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Color" Type="int16" Value="4"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</Bus>
+								<Bus Name="Enemies" ID="{D7F7A8C6-4C29-47C4-9405-36A75FC07E9C}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="11"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</Bus>
+								<AuxBus Name="env_example" ID="{50F1DA45-5C78-4208-8952-3362A83738ED}">
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{562BC1BE-7C03-4FED-A752-AD108B88AA27}" ShortID="971206441">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="env_attic_verb" ID="{3DE708B2-DE76-401F-ACFA-DFC8E13130D2}" WorkUnitID="{BA60EAFF-7B76-4BB6-BDBF-76915B7058A0}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AuxBus>
+								<Bus Name="Player" ID="{A932268D-6403-43BA-BED7-833609B2405D}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="19"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</Bus>
+							</ChildrenList>
+						</Bus>
+						<Bus Name="Music" ID="{7DC32C77-0601-40E0-90A7-AE8B2F19D853}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="18"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+						<Bus Name="Non-World" ID="{FF53BFC9-EAFC-42A5-B917-80565505DF6D}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="9"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Bus Name="UI" ID="{2252EF6F-A9D1-4B7B-8017-2C61A56672BB}"/>
+							</ChildrenList>
+						</Bus>
+					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

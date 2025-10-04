@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a512d97fc811f1f4a8d8a6d3ee74b8d2, type: 3}
+  m_Name: C5BFF7E2-8DD7-4C00-8D8D-64208C60C8A2
+  m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseEventReference
+  objectName: ghost_attack
+  id: 979070061
+  guid: C5BFF7E2-8DD7-4C00-8D8D-64208C60C8A2
