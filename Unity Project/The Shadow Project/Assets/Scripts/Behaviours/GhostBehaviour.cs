@@ -24,15 +24,6 @@ public class GhostBehaviour : MonoBehaviour
     public float rotationSpeed = 5f;
     private int position = 0;
 
-    //Wwise Variables
-    [Header("Wwise Audio Variables")]
-    public AK.Wwise.Event ghost_attack;
-    public AK.Wwise.Event ghost_appear;
-    public AK.Wwise.Event ghost_disappear;
-    public AK.Wwise.Event ghost_hit;
-
-
-
 	[SerializeField] private ThrowObjectBehavior throwManager;
     [SerializeField] private ObjectListSO throwablePrefab;
     [SerializeField] private GameObject startObject;
