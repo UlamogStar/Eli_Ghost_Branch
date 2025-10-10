@@ -46,7 +46,7 @@ public class Body_Tracking : MonoBehaviour
         // Update positions
         for (int i = 0; i < pointNumber; i++)
         {
-            float x = float.Parse(points[i * 2]) * scale + offset.x;
+            float x = -float.Parse(points[i * 2]) * scale + offset.x;
             float y = float.Parse(points[i * 2 + 1]) * scale + offset.y;
             float z = offset.z;
 
