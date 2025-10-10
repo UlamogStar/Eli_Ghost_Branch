@@ -16,18 +16,37 @@ public class DamageBehaviour : MonoBehaviour
     public IntData health;
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Object"))
+		Debug.Log(other.name);
+        ObjectBehaviour objectBehaviour = other.GetComponent<ObjectBehaviour>();
+		if (this.gameObject.CompareTag("Ghost"))
+		{
+			if(objectBehaviour.thrown)
+			{
+				damage = objectBehaviour.damage.value;
+                damage *= multiplier;
+                health.value -= damage;
+                OnDamage.Invoke();
+			}
+			else
+			{
+				objectBehaviour.thrown = true;	
+			}
+		}
+        else if (other.CompareTag("Object"))
         {
-            Debug.Log(other.name);
-            ObjectBehaviour objectBehaviour = other.GetComponent<ObjectBehaviour>();
+            
             if (objectBehaviour == null)
             {
+				Debug.Log("object not found");
                 return;
             }
 
             if (isBody == false && objectBehaviour.returnable == true)
             {
+				Debug.Log("Return");
                 OnReturn.Invoke();
+                ObjectBehaviour block = other.GetComponent<ObjectBehaviour>();
+                block.OnReturn();
             } // end of if}
             else
             {

@@ -11,9 +11,12 @@ GameObject:
   - component: {fileID: 7272969787758911098}
   - component: {fileID: 6997675814097330016}
   - component: {fileID: 8240163622932502103}
+  - component: {fileID: -3735279037455071515}
+  - component: {fileID: -5694645951673544305}
+  - component: {fileID: -2888935816401340919}
   m_Layer: 0
   m_Name: Stool2
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,3 +92,56 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-3735279037455071515
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3100712300063182446}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.047769994, y: 0.058104444, z: 0.038170375}
+  m_Center: {x: -0.007837866, y: 0.029052211, z: 0.00042192359}
+--- !u!114 &-5694645951673544305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3100712300063182446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33a30d312fdf41a5ae8024f799c0cf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectBehaviour
+  damage: {fileID: 11400000, guid: 6a73afc856733436c8d9f47ed8142ddd, type: 2}
+  throwSpeed: 10
+  returnable: 0
+  throwManager: {fileID: -2888935816401340919}
+  target: {fileID: 0}
+  originSpawn: {fileID: 0}
+  returnToObject: {fileID: 0}
+--- !u!114 &-2888935816401340919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3100712300063182446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12d11b986d72c9547871f95bc0bb24c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThrowObjectBehavior
+  overshoot: 3

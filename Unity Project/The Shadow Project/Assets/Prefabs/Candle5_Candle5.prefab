@@ -11,9 +11,12 @@ GameObject:
   - component: {fileID: 1369583888419240149}
   - component: {fileID: 4931220109339020760}
   - component: {fileID: 1197758157671157092}
+  - component: {fileID: -1156382125657531996}
+  - component: {fileID: -123970247109362358}
+  - component: {fileID: 6824969800229958282}
   m_Layer: 0
   m_Name: Candle5_Candle5
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,6 +93,59 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-1156382125657531996
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2302335114772538473}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.085352734, y: 0.062415477, z: 0.093218}
+  m_Center: {x: -0.0000000018626451, y: 0.0000000018626451, z: 0}
+--- !u!114 &-123970247109362358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2302335114772538473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33a30d312fdf41a5ae8024f799c0cf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectBehaviour
+  damage: {fileID: 11400000, guid: 1a9965abdd1094465be9c6aee9c149ef, type: 2}
+  throwSpeed: 10
+  returnable: 1
+  throwManager: {fileID: 6824969800229958282}
+  target: {fileID: 0}
+  originSpawn: {fileID: 0}
+  returnToObject: {fileID: 0}
+--- !u!114 &6824969800229958282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2302335114772538473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12d11b986d72c9547871f95bc0bb24c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThrowObjectBehavior
+  overshoot: 3
 --- !u!1 &8626285649742151355
 GameObject:
   m_ObjectHideFlags: 0
