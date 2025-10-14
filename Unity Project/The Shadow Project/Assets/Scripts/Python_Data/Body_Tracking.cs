@@ -9,18 +9,18 @@ public class Body_Tracking : MonoBehaviour
     public GameObject bodyPointPrefab; // Prefab to clone for each landmark
     [Tooltip("Assign point in order of Left arm 1-3 , right arm 1-3, left leg 1-3, right leg 1-3, then last is mid point")]
     public List<GameObject> bodyPoints = new List<GameObject>();
-    
+
     // Adjust these to match your scene scale
     public float scale = 0.01f;
     [Tooltip("deaflut is (X = -7, Y = 12, Z = 0)")]
     public Vector3 offset = new Vector3(0, 0, 0);
     [Tooltip("Lock of the scale of the points")]
     public Vector3 lockScale = new Vector3(1, 1, 1);
-    
+
 
     private void Lockpointscale()
     {
-        for(int i = 0; i < bodyPoints.Count; i++)
+        for (int i = 0; i < bodyPoints.Count; i++)
         {
 
             bodyPoints[i].transform.localScale = lockScale;
@@ -44,3 +44,6 @@ public class Body_Tracking : MonoBehaviour
         while (bodyPoints.Count < pointNumber)
         {
             Debug.LogError("Not enough points received.");
+        }
+    }
+}
