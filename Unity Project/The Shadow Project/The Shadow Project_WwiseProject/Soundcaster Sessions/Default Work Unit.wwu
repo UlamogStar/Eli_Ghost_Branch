@@ -73,7 +73,12 @@
 							<Position X="4" Y="0"/>
 						</Module>
 					</ModuleList>
-					<RTPCValueList ShowAll="true"/>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="player_health" ID="{DA3BE5BE-BE05-477E-8DAB-098B5E6F8019}"/>
+							<Value>100</Value>
+						</RTPCValue>
+					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

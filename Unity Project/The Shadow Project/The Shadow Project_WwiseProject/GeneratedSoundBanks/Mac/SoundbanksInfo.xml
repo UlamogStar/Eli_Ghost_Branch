@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{BBF37EF9-C192-8BBD-8BA3-B36D9F72314C}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F67E2887-30A9-A8E2-3347-B9EC073988D5}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -42,6 +42,10 @@
 					</PluginRefs>
 				</AuxBus>
 			</AuxBusses>
+			<GameParameters>
+				<GameParameter Id="180621091" Name="ghost_health"/>
+				<GameParameter Id="215992295" Name="player_health"/>
+			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="3157003241" Type="User" Language="SFX" Hash="{79834029-20A1-7EF6-AA29-F669E707C58F}">
 			<ShortName>test</ShortName>
@@ -245,5 +249,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8838E5C1-9CFD-8A0A-647E-DC27A59F7B02}</FileHash>
+	<FileHash>{B1D98EC7-BA58-D762-D7C2-FE1F7A235580}</FileHash>
 </SoundBanksInfo>

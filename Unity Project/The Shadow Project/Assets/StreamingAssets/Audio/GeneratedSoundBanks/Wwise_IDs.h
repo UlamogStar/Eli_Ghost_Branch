@@ -18,6 +18,12 @@ namespace AK
         static const AkUniqueID TEST_EVENT = 4258653052U;
     } // namespace EVENTS
 
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID GHOST_HEALTH = 180621091U;
+        static const AkUniqueID PLAYER_HEALTH = 215992295U;
+    } // namespace GAME_PARAMETERS
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
