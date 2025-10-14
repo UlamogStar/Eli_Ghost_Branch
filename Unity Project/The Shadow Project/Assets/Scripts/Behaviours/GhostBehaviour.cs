@@ -8,12 +8,24 @@ Last date worked on: 10/4/2025
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GhostBehaviour : MonoBehaviour
 {
-    public Animator animator;
+    [Header("Settings")]
     public float radius = .0005f;
     public float waitTime = 2f, delay = .5f;
+    [SerializeField] private float throwSpeed = 1f;
+    [SerializeField] private float levitationHeight = 2f;
+    [SerializeField] private float overshoot = 0.5f;
+
+    [Header("Components")]
+    public Animator animator;
+    [SerializeField] private Transform target;
+    [SerializeField] private ObjectManager objectManager;
+    [SerializeField] private ThrowObjectBehavior throwManager;
+
+    [Header("Info")]
     private NavMeshAgent agent;
     public bool isWandering = true, isDrifting = false;
 	public Transform cameraTransform;
@@ -22,16 +34,8 @@ public class GhostBehaviour : MonoBehaviour
     public Vector3 center, driftPointOne, driftPointTwo;
     public Quaternion rotation;
     public float rotationSpeed = 5f;
-    private int position = 0;
 
-	[SerializeField] private ThrowObjectBehavior throwManager;
-    [SerializeField] private ObjectListSO throwablePrefab;
-    [SerializeField] private GameObject startObject;
-    [SerializeField] private Transform target;
-    [SerializeField] private float throwSpeed = 1f;
-    [SerializeField] private float overshoot = 0.5f;
-
-    private GameObject currentThrowable;
+    private ObjectBehaviour currentThrowable;
     private void Awake()
     {
         center = transform.position;
@@ -78,24 +82,8 @@ public class GhostBehaviour : MonoBehaviour
             }
 			
             Idle();
-			Attack();
-			yield return new WaitForSeconds(delay);
-			Vector3 location = target.position;
+            StartCoroutine(Attack());
 
-            if (currentThrowable != null)
-            {
-                // Stop coroutine for this object
-                throwManager.EndThrow(currentThrowable);
-
-                // Destroy the object
-                Destroy(currentThrowable);
-                currentThrowable = null;
-            }
-			int randomInt = Random.Range(0, throwablePrefab.list.Count);
-            currentThrowable = Instantiate(throwablePrefab.list[randomInt], startObject.transform.position, Quaternion.identity);
-
-            throwManager.StartThrow(currentThrowable, location, throwSpeed);
-            
             yield return new WaitForSeconds(waitTime);
         }
     }
@@ -139,12 +127,44 @@ public class GhostBehaviour : MonoBehaviour
         isDrifting = true;
         StartCoroutine(DriftRoutine());
     }
-    public void Attack()
+    public IEnumerator Attack()
     {
+        ObjectBehaviour newSelectedObject = SelectObject();
+        GameObject throwable = newSelectedObject.gameObject;
+
+        Vector3 location = target.position;
+
+        if (currentThrowable != null)
+        {
+            throwManager.EndThrow(currentThrowable.gameObject);
+            // Destroy the object
+            Destroy(currentThrowable.gameObject);
+            currentThrowable = null;
+        }
+
+        LevitateObject(throwable);
+        // Add levitate animation
+
+        yield return new WaitForSeconds(1);
+
         animator.SetTrigger("attack");
+        ThrowObject(throwable, location);
+
+        currentThrowable = newSelectedObject;
 
         //Wwise Audio trigger
         //ghost_attack.Post(gameObject);
+    }
+
+    public void ThrowObject(GameObject throwable, Vector3 location)
+    {
+        throwManager.StartThrow(throwable, location, throwSpeed);
+    }
+    
+    public void LevitateObject(GameObject throwable)
+    {
+        Vector3 location = throwable.transform.position + new Vector3(0, levitationHeight, 0);
+        throwManager.StartThrow(throwable, location, throwSpeed);
     }
 
     public void Walk()
@@ -169,6 +189,16 @@ public class GhostBehaviour : MonoBehaviour
 
     public void TakeDamage()
     {
-        
+
+    }
+    
+    // Helper Functions
+
+    public ObjectBehaviour SelectObject()
+    {
+        List<ObjectBehaviour> allObjects = objectManager.spawnedObjects;
+        ObjectBehaviour selectedObject = allObjects[Random.Range(0, allObjects.Count)];
+
+        return selectedObject;
     }
 }
