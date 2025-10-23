@@ -75,6 +75,10 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
+							<GameParameterRef Name="ghost_health" ID="{9D0B9EE3-2A58-42CE-B590-21E7D7624BAE}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="player_health" ID="{DA3BE5BE-BE05-477E-8DAB-098B5E6F8019}"/>
 							<Value>100</Value>
 						</RTPCValue>

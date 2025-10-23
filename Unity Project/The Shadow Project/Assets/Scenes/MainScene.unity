@@ -3175,10 +3175,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Body_Tracking
   udpBody: {fileID: 807687957}
+  bodyPoint: {fileID: 0}
   bodyPointPrefab: {fileID: 1931734446}
   bodyPoints: []
   scale: 0.13
   offset: {x: 1291, y: 120, z: 0}
+  lockScale: {x: 1, y: 1, z: 1}
 --- !u!114 &807687957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3996,8 +3998,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  updateSpeed: 15
   maxHealth: 100
-  currentBarHealth: 100
+  currentBarValue: 0
 --- !u!114 &1021532476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4124,6 +4127,7 @@ GameObject:
   - component: {fileID: 1078200039}
   - component: {fileID: 1078200038}
   - component: {fileID: 1078200037}
+  - component: {fileID: 1078200043}
   m_Layer: 0
   m_Name: Player
   m_TagString: Object
@@ -4164,6 +4168,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1351877724}
         m_TargetAssemblyTypeName: HealthBarBehaviour, Assembly-CSharp
         m_MethodName: UpdateHealthBar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1078200043}
+        m_TargetAssemblyTypeName: WwiseEventTrigger, Assembly-CSharp
+        m_MethodName: EventTrigger1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4300,6 +4316,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1078200035}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1078200043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078200035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d2ed9e0f1bf9a846acbbad1cbf954b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WwiseEventTrigger
+  WwiseEvent1:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a8f8087ddfd651744b6dfd2f2f9f2ef3, type: 2}
+  WwiseEvent2:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  WwiseEvent3:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  SoundSource: {fileID: 1078200035}
 --- !u!1 &1086371477
 GameObject:
   m_ObjectHideFlags: 0
@@ -5291,8 +5332,9 @@ MonoBehaviour:
           m_StringArgument: DriftRoutin
           m_BoolArgument: 0
         m_CallState: 2
+  updateSpeed: 15
   maxHealth: 100
-  currentBarHealth: 100
+  currentBarValue: 0
 --- !u!114 &1351877725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7163,6 +7205,7 @@ GameObject:
   - component: {fileID: 1723113690}
   - component: {fileID: 1723113689}
   - component: {fileID: 1723113688}
+  - component: {fileID: 1723113691}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -7187,7 +7230,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: e475c0006076f9c4aa07d4e9a93d5b86, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 0f72305edf01ce34aa6eed193bde78cd, type: 2}
   decodeBank: 0
   overrideLoadSetting: 0
   loadAsynchronous: 0
@@ -7235,6 +7278,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1723113691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723113687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 611b327a34284f3419c8347f818ffa8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkBank
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 528a2ac0d12acb84ea1f25ffa9576f2b, type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &1728937808
 GameObject:
   m_ObjectHideFlags: 0
