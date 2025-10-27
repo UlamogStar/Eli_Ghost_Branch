@@ -12,6 +12,7 @@
 						<Switch Name="table" ID="{D4F2751B-3E15-4E28-91FA-E74317F8C343}"/>
 						<Switch Name="wardrobe" ID="{6CA9C8AB-7D1C-4A4E-A565-2D899E3BF76E}"/>
 						<Switch Name="candelabra" ID="{8273613D-2E37-4F65-B40C-DC5E38F6FE33}"/>
+						<Switch Name="default" ID="{D544DEBA-2CB0-4D1F-BDDF-8799057E8B7B}"/>
 					</ChildrenList>
 				</SwitchGroup>
 				<SwitchGroup Name="item_size" ID="{BC4C3712-5DB7-42C7-9116-4E83C28511BB}">

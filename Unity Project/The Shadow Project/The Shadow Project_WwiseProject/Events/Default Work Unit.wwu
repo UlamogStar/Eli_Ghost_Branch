@@ -76,6 +76,25 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Objects" ID="{76CAAF3D-47E7-42AF-96D8-9D6D287510C9}" ShortID="756885020">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="8"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="object_hit_player" ID="{EA723E27-8267-463E-B0B2-9397A02C2F8F}">
+							<ChildrenList>
+								<Action Name="" ID="{22194208-4EE1-472A-ABF3-6C0B957EC9F4}" ShortID="832078209">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Item_Type" ID="{1B230FDA-B2D3-4D68-8B0C-1F9AE7E0B3CD}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

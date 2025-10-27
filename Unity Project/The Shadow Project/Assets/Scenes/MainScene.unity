@@ -4127,7 +4127,7 @@ GameObject:
   - component: {fileID: 1078200039}
   - component: {fileID: 1078200038}
   - component: {fileID: 1078200037}
-  - component: {fileID: 1078200043}
+  - component: {fileID: 1078200044}
   m_Layer: 0
   m_Name: Player
   m_TagString: Object
@@ -4168,18 +4168,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1351877724}
         m_TargetAssemblyTypeName: HealthBarBehaviour, Assembly-CSharp
         m_MethodName: UpdateHealthBar
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1078200043}
-        m_TargetAssemblyTypeName: WwiseEventTrigger, Assembly-CSharp
-        m_MethodName: EventTrigger1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4316,7 +4304,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1078200035}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1078200043
+--- !u!114 &1078200044
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4325,22 +4313,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1078200035}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d2ed9e0f1bf9a846acbbad1cbf954b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 231c6dc77e9d9994387bf611fabbcd8a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WwiseEventTrigger
-  WwiseEvent1:
+  m_EditorClassIdentifier: Assembly-CSharp::WwiseSwitchOnHit
+  audioEmitter: {fileID: 1078200035}
+  defaultItemType:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a8f8087ddfd651744b6dfd2f2f9f2ef3, type: 2}
-  WwiseEvent2:
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 834fd66f260289c45877fe735a342dae, type: 2}
+  defaultItemSize:
     idInternal: 0
     valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  WwiseEvent3:
+  impactEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  SoundSource: {fileID: 1078200035}
+    WwiseObjectReference: {fileID: 11400000, guid: 1a5c560064d81c94095d5025557adf33, type: 2}
 --- !u!1 &1086371477
 GameObject:
   m_ObjectHideFlags: 0

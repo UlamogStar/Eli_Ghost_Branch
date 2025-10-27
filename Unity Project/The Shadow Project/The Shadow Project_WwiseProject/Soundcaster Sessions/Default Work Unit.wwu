@@ -84,7 +84,24 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
-					<CurrentSwitchList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="large" ID="{AB9A5816-B945-455C-A74B-F05A5B6BB95A}"/>
+						<CurrentSwitchRef Name="candelabra" ID="{8273613D-2E37-4F65-B40C-DC5E38F6FE33}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Hits" ID="{652A01C6-05FD-447C-A51A-68E0364610B5}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Item_Type" ID="{1B230FDA-B2D3-4D68-8B0C-1F9AE7E0B3CD}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="large" ID="{AB9A5816-B945-455C-A74B-F05A5B6BB95A}"/>
+						<CurrentSwitchRef Name="crate" ID="{70E499D2-EA66-4102-B667-D2C500621F21}"/>
+					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>
