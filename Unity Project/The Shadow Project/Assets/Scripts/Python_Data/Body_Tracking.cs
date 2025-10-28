@@ -44,31 +44,3 @@ public class Body_Tracking : MonoBehaviour
         while (bodyPoints.Count < pointNumber)
         {
             Debug.LogError("Not enough points received.");
-            GameObject newPoint = Instantiate(bodyPointPrefab);
-            // newPoint.transform.parent = transform; // Keep hierarchy clean
-            bodyPoints.Add(newPoint);
-            Lockpointscale();
-        }
-
-        // Update positions
-        for (int i = 0; i < pointNumber; i++)
-        {
-            float x = - float.Parse(points[i * 2]) * scale + offset.x;
-            float y = float.Parse(points[i * 2 + 1]) * scale + offset.y;
-            float z = offset.z;
-
-            Vector3 targetPos = new Vector3(x, y, z);
-            
-            bodyPoints[i].transform.localPosition = new Vector3(x, y, z);
-            
-            /*
-            // Smoothly interpolate from current to target
-            bodyPoints[i].transform.localPosition = Vector3.Lerp(
-                bodyPoints[i].transform.localPosition,
-                targetPos,
-                1f // <-- smoothing factor, tweak between 0.05f (very smooth) and 1.0f (instant snap)
-            );
-            */
-        }
-    }
-}
