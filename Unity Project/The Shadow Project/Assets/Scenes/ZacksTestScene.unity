@@ -4495,9 +4495,9 @@ GameObject:
   - component: {fileID: 2111317644}
   - component: {fileID: 2111317643}
   m_Layer: 0
-  m_Name: Player (1)
+  m_Name: TestObjectActivator
   m_TagString: Object
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4535,13 +4535,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33a30d312fdf41a5ae8024f799c0cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectBehaviour
+  size: 0
   damage: {fileID: 11400000, guid: 9661d000c6e044144a21d1f9cab4e05a, type: 2}
   throwSpeed: 3
-  size: 0
   returnable: 1
   thrown: 0
   originSpawn: {fileID: 0}
-  returnToObject: {fileID: 0}
 --- !u!54 &2111317645
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4712,7 +4711,6 @@ MonoBehaviour:
   - {fileID: 1306374295}
   - {fileID: 127168915}
   spawnedObjects: []
-  returnToObject: {fileID: 0}
 --- !u!4 &2125429160
 Transform:
   m_ObjectHideFlags: 0
