@@ -43,7 +43,7 @@ public class ThrowObjectBehavior : MonoBehaviour
         Vector3 dir = (location - throwable.transform.position).normalized;
         Vector3 overShootTarget = location + dir * overshoot;
 
-        while (Vector3.Distance(throwable.transform.position, location) > 0.01f)
+        while (throwable != null && Vector3.Distance(throwable.transform.position, location) > 0.01f)
         {
 
             throwable.transform.position = Vector3.MoveTowards(
@@ -56,7 +56,7 @@ public class ThrowObjectBehavior : MonoBehaviour
         }
 
         // snap to end
-        throwable.transform.position = overShootTarget;
+        if (throwable != null){ throwable.transform.position = overShootTarget; }
 
         currentThrows.Remove(throwable);
     }

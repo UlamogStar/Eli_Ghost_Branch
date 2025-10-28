@@ -1,8 +1,9 @@
 /*
 Originial Coder: Owynn A.
-Recent Coder: Owynn A.
-Recent Changes: Initial Coding
-Last date worked on: 9/23/2025
+Recent Coder: Zackery E.
+Recent Changes: Broke This script, as it was causing errors for other areas,
+needs to be reviewed and fixed most likely
+Last date worked on: 10/28/2025
 */
 
 using UnityEngine;
@@ -28,9 +29,9 @@ public class DamageBehaviour : MonoBehaviour
                 OnDamage.Invoke();
 			}
 			else
-			{
-				objectBehaviour.thrown = true;	
-			}
+            {
+                
+            }
 		}
         else if (other.CompareTag("Object"))
         {
@@ -46,7 +47,7 @@ public class DamageBehaviour : MonoBehaviour
 				Debug.Log("Return");
                 OnReturn.Invoke();
                 ObjectBehaviour block = other.GetComponent<ObjectBehaviour>();
-                block.OnReturn();
+                //block.OnReturn();
             } // end of if}
             else
             {
