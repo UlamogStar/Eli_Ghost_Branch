@@ -1,55 +1,70 @@
 /*
 Originial Coder: Owynn A.
-Recent Coder: Owynn A.
-Recent Changes: Added throwing behaviour
-Last date worked on: 10/4/2025
+Recent Coder: Zackery E.
+Recent Changes: Reorganized and fixed bugs. Added Attack Routine
+for randomizing attacks, Added Strength Checkpoints and strength,
+so when it hits an Strength Checkpoint, and on StrengthUpdate, the
+ghost's strength increases allowing it to throw the next sized object
+Last date worked on: 10/28/2025
 */
 
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework;
 
 public class GhostBehaviour : MonoBehaviour
 {
+    [Header("Stats")]
+    [SerializeField] private int strength; // 0 can throw small objects, 1 throws the next size up, and so on
+
     [Header("Settings")]
-    public float radius = .0005f;
-    public float waitTime = 2f, delay = .5f;
-    [SerializeField] private float throwSpeed = 1f;
+    [SerializeField] private float rotationSpeed = 5f;
+    [SerializeField] private float radius = .0005f;
+    [SerializeField] private float waitTime = 2f, delay = .5f;
+    [SerializeField] private float throwSpeed = 1f, levitateSpeed = 1f;
     [SerializeField] private float levitationHeight = 2f;
     [SerializeField] private float overshoot = 0.5f;
+    [SerializeField] private Vector3 center, driftPointOne, driftPointTwo;
+    [SerializeField] private List<int> strengthCheckpoints = new List<int>();
 
     [Header("Components")]
-    public Animator animator;
+    [SerializeField] private Animator animator;
+    [SerializeField] private IntData health;
     [SerializeField] private Transform target;
+    [SerializeField] private Transform cameraTransform;
     [SerializeField] private ObjectManager objectManager;
     [SerializeField] private ThrowObjectBehavior throwManager;
+    [SerializeField] private NavMeshAgent agent;
 
     [Header("Info")]
-    private NavMeshAgent agent;
-    public bool isWandering = true, isDrifting = false;
-	public Transform cameraTransform;
+    [SerializeField] private Quaternion rotation;
+    [SerializeField] private bool isWandering = false, isDrifting = false, isAttacking = false;
 
-    //public Vector3Data center;  replace later
-    public Vector3 center, driftPointOne, driftPointTwo;
-    public Quaternion rotation;
-    public float rotationSpeed = 5f;
+    #region Unity Functions
 
-    private ObjectBehaviour currentThrowable;
     private void Awake()
     {
+        // Set ghost to start, start wandering by deafault
         center = transform.position;
         rotation = transform.rotation;
         agent = GetComponent<NavMeshAgent>();
         StartCoroutine(WanderRoutine());
     }
-	public void StartWander()
-	{
-		StartCoroutine(WanderRoutine());
-	}	
+
+    #endregion
+
+    #region Routines
 
     private IEnumerator WanderRoutine()
     {
+        // Set wander to true, turn of attacking and drifitng
+        isWandering = true;
+        isAttacking = false;
+        isDrifting = false;
+
+        // Wandering Logic
         agent.updateRotation = true;
         while (isWandering)
         {
@@ -62,60 +77,83 @@ public class GhostBehaviour : MonoBehaviour
             }
 
             Idle();
-            
+
             yield return new WaitForSeconds(waitTime);
         }
     }
 
     private IEnumerator DriftRoutine()
     {
+        // Turn on drifting, Turn of wandering is wandering is true,
+        isDrifting = true;
+        isWandering = false;
+
+        // If not attacking, Start attacking
+        if (isAttacking == false)
+        {
+            StartCoroutine(AttackRoutine());
+        }
+    
+        // Drift Logic
         while (isDrifting)
         {
             Vector3 destination = Vector3.Lerp(driftPointOne, driftPointTwo, Random.value);
             agent.SetDestination(destination);
             Walk();
+
             while (agent.pathPending || agent.remainingDistance > agent.stoppingDistance)
             {
-				transform.LookAt(cameraTransform.position);
-            	transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+                transform.LookAt(cameraTransform.position);
+                transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
                 yield return null;
             }
-			
+
             Idle();
-            StartCoroutine(Attack());
 
             yield return new WaitForSeconds(waitTime);
         }
     }
-    private Vector3 GetRandomNavMeshPoint(Vector3 center, float radius)
+
+    private IEnumerator AttackRoutine()
     {
-        for (int i = 0; i < 30; i++)
+        // Start attacking
+        isAttacking = true;
+
+        // Attack Logic
+        while (isAttacking)
         {
-            Vector3 randomPos = center + Random.insideUnitSphere * radius;
-            if (NavMesh.SamplePosition(randomPos, out NavMeshHit hit, 2.0f, NavMesh.AllAreas))
-            {
-                return hit.position;
-            }
+            yield return new WaitForSeconds(Random.Range(2f, 5f));
+            StartCoroutine(Attack());
         }
-        return center;
+    }
+
+    #endregion
+
+    #region Actions
+
+    public void StartWander()
+    {
+        // Start Wander Routine
+        StartCoroutine(WanderRoutine());
     }
 
     public void StartEndIdle()
     {
-
-		animator.SetTrigger("suprise");
+        // Start the end of idle
+        animator.SetTrigger("suprise");
         StartCoroutine(EndIdle());
-		
+
     }
 
     public IEnumerator EndIdle()
     {
-        isWandering = false;
+        // Reset Position to center
         agent.updateRotation = false;
         agent.SetDestination(center);
-        
+
         Walk();
-		
+
+        // Wait for ghost to return to center
         while (agent.pathPending || agent.remainingDistance > agent.stoppingDistance)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
@@ -123,48 +161,51 @@ public class GhostBehaviour : MonoBehaviour
         }
 
         Idle();
-		
-        isDrifting = true;
-        StartCoroutine(DriftRoutine());
+
+        // Start Drift Routine if not already
+        if (isDrifting == false)
+        {
+            StartCoroutine(DriftRoutine());
+        }
     }
     public IEnumerator Attack()
     {
+        // Select available target throwable
         ObjectBehaviour newSelectedObject = SelectObject();
-        GameObject throwable = newSelectedObject.gameObject;
-
-        Vector3 location = target.position;
-
-        if (currentThrowable != null)
+        
+        // If object  is selected, throw at target
+        if (newSelectedObject != null)
         {
-            throwManager.EndThrow(currentThrowable.gameObject);
-            // Destroy the object
-            Destroy(currentThrowable.gameObject);
-            currentThrowable = null;
+            // Set as thrown and throw
+            newSelectedObject.thrown = true;
+            GameObject throwable = newSelectedObject.gameObject;
+
+            Vector3 location = target.position;
+
+            // Levitate Object (Add Animation for this in future)
+            LevitateObject(throwable);
+
+            // Wait for levitate to end
+            yield return new WaitForSeconds(1);
+
+            if (throwable != null) // Checks if object is destroyed in the 1 second it was levitated
+            {
+                animator.SetTrigger("attack");
+                ThrowObject(throwable, location);
+            }  
         }
-
-        LevitateObject(throwable);
-        // Add levitate animation
-
-        yield return new WaitForSeconds(1);
-
-        animator.SetTrigger("attack");
-        ThrowObject(throwable, location);
-
-        currentThrowable = newSelectedObject;
-
-        //Wwise Audio trigger
-        //ghost_attack.Post(gameObject);
     }
 
     public void ThrowObject(GameObject throwable, Vector3 location)
     {
+        // Being Linear Throw to location
         throwManager.StartThrow(throwable, location, throwSpeed);
     }
-    
     public void LevitateObject(GameObject throwable)
     {
+        // Hover Object for attack anticipation
         Vector3 location = throwable.transform.position + new Vector3(0, levitationHeight, 0);
-        throwManager.StartThrow(throwable, location, throwSpeed);
+        throwManager.StartThrow(throwable, location, levitateSpeed);
     }
 
     public void Walk()
@@ -184,21 +225,85 @@ public class GhostBehaviour : MonoBehaviour
 
     public void Appear()
     {
-        
+
     }
 
     public void TakeDamage()
     {
 
     }
-    
-    // Helper Functions
+
+    public void UpdateStrength()
+    {
+        if (strengthCheckpoints.Count <= 0) { return; }
+
+        for (int i = 0; i < strengthCheckpoints.Count; i++)
+        {
+            if (health.value < strengthCheckpoints[i])
+            {
+                strength = i;
+            }
+        }
+    }
+
+    #endregion
+
+    #region Helper Functions
+
+    private Vector3 GetRandomNavMeshPoint(Vector3 center, float radius)
+    {
+        for (int i = 0; i < 30; i++)
+        {
+            Vector3 randomPos = center + Random.insideUnitSphere * radius;
+            if (NavMesh.SamplePosition(randomPos, out NavMeshHit hit, 2.0f, NavMesh.AllAreas))
+            {
+                return hit.position;
+            }
+        }
+        return center;
+    }
 
     public ObjectBehaviour SelectObject()
     {
         List<ObjectBehaviour> allObjects = objectManager.spawnedObjects;
+        allObjects = filterByStrength(allObjects);
+        allObjects = filterByThrown(allObjects);
+        if (allObjects.Count <= 0) { return null; }
+
         ObjectBehaviour selectedObject = allObjects[Random.Range(0, allObjects.Count)];
 
         return selectedObject;
     }
+
+    public List<ObjectBehaviour> filterByThrown(List<ObjectBehaviour> objectList)
+    {
+        List<ObjectBehaviour> newList = new List<ObjectBehaviour>();
+
+        foreach (ObjectBehaviour obj in objectList)
+        {
+            if (!obj.thrown)
+            {
+                newList.Add(obj);
+            }
+        }
+
+        return newList;
+    }
+
+    public List<ObjectBehaviour> filterByStrength(List<ObjectBehaviour> objectList)
+    {
+        List<ObjectBehaviour> newList = new List<ObjectBehaviour>();
+
+        foreach (ObjectBehaviour obj in objectList)
+        {
+            if ((int)obj.size <= strength)
+            {
+                newList.Add(obj);
+            }
+        }
+
+        return newList;
+    }
+
+    #endregion
 }
