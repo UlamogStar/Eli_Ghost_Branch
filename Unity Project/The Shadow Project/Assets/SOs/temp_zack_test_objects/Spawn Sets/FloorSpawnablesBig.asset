@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24caa3e1776794d38a872d731e973934, type: 3}
-  m_Name: GhostHealthData
-  m_EditorClassIdentifier: Assembly-CSharp::IntData
-  value: -80
+  m_Script: {fileID: 11500000, guid: 69873d9c6ac4b3f4d89bfe3b4df20962, type: 3}
+  m_Name: FloorSpawnablesBig
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectListSO
+  list:
+  - {fileID: 7654721500479801829, guid: 2ef7fb0919810354d85d765bc9504155, type: 3}
