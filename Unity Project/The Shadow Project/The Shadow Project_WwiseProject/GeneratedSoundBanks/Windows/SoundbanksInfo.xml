@@ -85,14 +85,10 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{ADF12464-ECAB-7742-CC42-0E53B29F0849}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{71D2F89D-64ED-D879-0050-0412164B60B5}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
-				<File Id="50307025" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>crate_small.wav</ShortName>
-					<CachePath>SFX/crate_small_8E324C96.wem</CachePath>
-				</File>
 				<File Id="50860831" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_hauntcreak_05.wav</ShortName>
 					<CachePath>SFX/env_os_hauntcreak_05_8E324C96.wem</CachePath>
@@ -147,10 +143,6 @@
 					<ShortName>cardboard_large.wav</ShortName>
 					<CachePath>SFX/cardboard_large_8E324C96.wem</CachePath>
 				</File>
-				<File Id="366051015" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>crate_large.wav</ShortName>
-					<CachePath>SFX/crate_large_8E324C96.wem</CachePath>
-				</File>
 				<File Id="378498032" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_hauntcreak_03.wav</ShortName>
 					<CachePath>SFX/env_os_hauntcreak_03_8E324C96.wem</CachePath>
@@ -182,10 +174,6 @@
 				<File Id="606147416" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>default_type.wav</ShortName>
 					<CachePath>SFX/default_type_8E324C96.wem</CachePath>
-				</File>
-				<File Id="632119627" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>crate_medium.wav</ShortName>
-					<CachePath>SFX/crate_medium_8E324C96.wem</CachePath>
 				</File>
 				<File Id="659537667" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>woosh_01.wav</ShortName>
@@ -336,29 +324,6 @@
 								<MediaRef Id="606147416"/>
 							</MediaRefs>
 						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1281648863" Id="3098439042"/>
-							<Children>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="1566734580" Id="4284352190"/>
-									<MediaRefs>
-										<MediaRef Id="366051015"/>
-									</MediaRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="1566734580" Id="2849147824"/>
-									<MediaRefs>
-										<MediaRef Id="632119627"/>
-									</MediaRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="1566734580" Id="1846755610" Default="true"/>
-									<MediaRefs>
-										<MediaRef Id="50307025"/>
-									</MediaRefs>
-								</SwitchContainer>
-							</Children>
-						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
 			</Events>
@@ -385,5 +350,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9D5C3673-2C0D-8E6D-68AF-05EA934B8542}</FileHash>
+	<FileHash>{614879AD-FAC0-21B3-E51C-C700099A198A}</FileHash>
 </SoundBanksInfo>
