@@ -124,11 +124,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33a30d312fdf41a5ae8024f799c0cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectBehaviour
-  damage: {fileID: 0}
+  size: 0
+  damage: 10
   throwSpeed: 1
-  returnable: 0
+  returnable: 1
   thrown: 0
-  throwManager: {fileID: 0}
-  target: {fileID: 0}
+  returned: 0
   originSpawn: {fileID: 0}
-  returnToObject: {fileID: 0}
