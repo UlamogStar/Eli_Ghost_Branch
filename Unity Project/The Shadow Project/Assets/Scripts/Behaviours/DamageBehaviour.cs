@@ -1,9 +1,10 @@
 /*
 Originial Coder: Owynn A.
 Recent Coder: Zackery E.
-Recent Changes: Broke This script, as it was causing errors for other areas,
-needs to be reviewed and fixed most likely
-Last date worked on: 10/28/2025
+Recent Changes: Replaced this with a health value behavior, and to object
+behavior to detect it and damage it. This script is is kept in case you want
+to keep it.
+Last date worked on: 11/3/2025
 */
 
 using UnityEngine;
@@ -23,7 +24,7 @@ public class DamageBehaviour : MonoBehaviour
 		{
 			if(objectBehaviour.thrown)
 			{
-				damage = objectBehaviour.damage.value;
+				damage = objectBehaviour.damage;
                 damage *= multiplier;
                 health.value -= damage;
                 OnDamage.Invoke();
@@ -51,7 +52,7 @@ public class DamageBehaviour : MonoBehaviour
             } // end of if}
             else
             {
-                damage = objectBehaviour.damage.value;
+                damage = objectBehaviour.damage;
                 damage *= multiplier;
                 health.value -= damage;
                 OnDamage.Invoke();
