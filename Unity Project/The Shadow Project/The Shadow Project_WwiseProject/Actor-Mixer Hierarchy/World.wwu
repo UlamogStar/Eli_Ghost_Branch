@@ -632,7 +632,7 @@
 												<Path2D Name="env_squeak_Path_04" ID="{F99B905F-59E1-4DE6-A833-1D733F1C646F}">
 													<PointList>
 														<Point>
-															<XPos>-0</XPos>
+															<XPos>0</XPos>
 															<YPos>74.85876</YPos>
 															<Flags>12</Flags>
 															<Time>0</Time>
@@ -1623,6 +1623,714 @@
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="Item_Hits" ID="{E02E3056-C086-4199-BFD7-EB0E4172F44F}" ShortID="773773680">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SwitchContainer Name="Item_Type" ID="{1B230FDA-B2D3-4D68-8B0C-1F9AE7E0B3CD}" ShortID="623643472">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="default" ID="{D544DEBA-2CB0-4D1F-BDDF-8799057E8B7B}" WorkUnitID="{ABBE1C44-B5B2-4C0F-979F-1C8FC8B2FC52}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="item_type" ID="{56597220-3D5D-4894-9327-95850A3BEE1C}" WorkUnitID="{ABBE1C44-B5B2-4C0F-979F-1C8FC8B2FC52}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SwitchContainer Name="Cardboard_Hits" ID="{DC831C25-694F-43F7-A074-D81C279C8EEB}" ShortID="910440754">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+												</Reference>
+												<Reference Name="DefaultSwitchOrState">
+													<ObjectRef Name="small" ID="{0FE0A0C0-585F-4364-87D0-56662B453DC7}" WorkUnitID="{ABBE1C44-B5B2-4C0F-979F-1C8FC8B2FC52}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="item_size" ID="{BC4C3712-5DB7-42C7-9116-4E83C28511BB}" WorkUnitID="{ABBE1C44-B5B2-4C0F-979F-1C8FC8B2FC52}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="Cardboard_Hits_small" ID="{2E11EB67-F23F-4199-A7E8-EA8EC51A26BE}" ShortID="693869897">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="temp_cardboard_small" ID="{DA7145DE-B8D0-4F3C-860E-EC7EF8873756}" ShortID="511582835">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="cardboard_small" ID="{D841FFC1-139B-404F-B85A-9FCC71970721}">
+																	<Language>SFX</Language>
+																	<AudioFile>cardboard_small.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="700692415"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="cardboard_small" ID="{D841FFC1-139B-404F-B85A-9FCC71970721}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="Cardboard_Hits_med" ID="{68B059F2-4655-4DB0-AE7B-C9B5BE953EA8}" ShortID="817263960">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="temp_cardboard_medium" ID="{C85F08CB-6A66-4D20-BD5B-BF277490C79E}" ShortID="240760461">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="cardboard_medium" ID="{3891D487-81C1-4E60-9B71-CB4139993FA3}">
+																	<Language>SFX</Language>
+																	<AudioFile>cardboard_medium.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="443355421"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="cardboard_medium" ID="{3891D487-81C1-4E60-9B71-CB4139993FA3}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="Cardboard_Hits_large" ID="{2C0E958F-9080-455B-AA71-449BE068D320}" ShortID="507472172">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="temp_cardboard_large" ID="{09DCA761-79D1-4A05-A422-3472E4EE3B66}" ShortID="1029950389">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="cardboard_large" ID="{2A6698D7-389C-4142-B230-AF850D5F17FC}">
+																	<Language>SFX</Language>
+																	<AudioFile>cardboard_large.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="343973213"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="cardboard_large" ID="{2A6698D7-389C-4142-B230-AF850D5F17FC}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Cardboard_Hits_small" ID="{2E11EB67-F23F-4199-A7E8-EA8EC51A26BE}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Cardboard_Hits_large" ID="{2C0E958F-9080-455B-AA71-449BE068D320}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Cardboard_Hits_med" ID="{68B059F2-4655-4DB0-AE7B-C9B5BE953EA8}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="large" ID="{AB9A5816-B945-455C-A74B-F05A5B6BB95A}"/>
+														<ItemList>
+															<ItemRef Name="Cardboard_Hits_large" ID="{2C0E958F-9080-455B-AA71-449BE068D320}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="medium" ID="{6FB36936-78CB-4FC7-B56E-5E0BE4E6E85D}"/>
+														<ItemList>
+															<ItemRef Name="Cardboard_Hits_med" ID="{68B059F2-4655-4DB0-AE7B-C9B5BE953EA8}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="small" ID="{0FE0A0C0-585F-4364-87D0-56662B453DC7}"/>
+														<ItemList>
+															<ItemRef Name="Cardboard_Hits_small" ID="{2E11EB67-F23F-4199-A7E8-EA8EC51A26BE}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="Crate_Hits" ID="{69EAB73A-62E6-464B-BBE9-5C26CD8D58F2}" ShortID="697511406">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+												</Reference>
+												<Reference Name="DefaultSwitchOrState">
+													<ObjectRef Name="small" ID="{0FE0A0C0-585F-4364-87D0-56662B453DC7}" WorkUnitID="{ABBE1C44-B5B2-4C0F-979F-1C8FC8B2FC52}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="item_size" ID="{BC4C3712-5DB7-42C7-9116-4E83C28511BB}" WorkUnitID="{ABBE1C44-B5B2-4C0F-979F-1C8FC8B2FC52}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="Crate_Hits_small" ID="{F17014AD-3557-466B-8987-36D81C194742}" ShortID="562602868">
+													<PropertyList>
+														<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{A4C3200B-3D9F-4AD0-896D-77EF14B34985}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="100"/>
+																			<Property Name="Min" Type="Real64" Value="-250"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="temp_crate_small" ID="{21E889E5-7593-4601-BEA7-0DC8209CC3DA}" ShortID="287148800">
+															<PropertyList>
+																<Property Name="Inclusion" Type="bool">
+																	<ValueList>
+																		<Value>False</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="crate_small" ID="{98212047-3B17-4DD1-A4F9-1805E69C17D5}">
+																	<Language>SFX</Language>
+																	<AudioFile>crate_small.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="50307025"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="crate_small" ID="{98212047-3B17-4DD1-A4F9-1805E69C17D5}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="item_crateS_hit_02" ID="{C2B888BF-DB42-4AA7-AC8E-46E7AE68546A}" ShortID="838570889">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_crateS_hit_02" ID="{7B835E66-957F-4D74-AC58-347B30D4799F}">
+																	<Language>SFX</Language>
+																	<AudioFile>item_crateS_hit_02.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="411936919"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_crateS_hit_02" ID="{7B835E66-957F-4D74-AC58-347B30D4799F}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="item_crateS_hit_03" ID="{D33293AF-410C-430F-9549-44A80403619C}" ShortID="146086466">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_crateS_hit_03" ID="{C06AAEA6-A979-49A0-B9C9-90A2DAAD0661}">
+																	<Language>SFX</Language>
+																	<AudioFile>item_crateS_hit_03.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="925581424"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_crateS_hit_03" ID="{C06AAEA6-A979-49A0-B9C9-90A2DAAD0661}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="item_crateS_hit_01" ID="{B8EC7398-3FBE-483A-B51A-11346D00A51E}" ShortID="505996332">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_crateS_hit_01" ID="{1CFF5F89-D95D-4B86-8A2B-902545415425}">
+																	<Language>SFX</Language>
+																	<AudioFile>item_crateS_hit_01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="215610243"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_crateS_hit_01" ID="{1CFF5F89-D95D-4B86-8A2B-902545415425}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="Crate_Hits_med" ID="{9E4E15D8-9EF3-4F74-BBDE-033BA25DA095}" ShortID="185296914">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="temp_crate_medium" ID="{EFC2ED0E-E062-4B0A-8307-3A98C8B965EB}" ShortID="426881959">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="crate_medium" ID="{E0835B13-D50A-4532-9DFA-544923F3DCD3}">
+																	<Language>SFX</Language>
+																	<AudioFile>crate_medium.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="632119627"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="crate_medium" ID="{E0835B13-D50A-4532-9DFA-544923F3DCD3}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="Crate_Hits_large" ID="{D35BC1AC-B295-4A97-B7E0-56DCE3CB07E7}" ShortID="455326355">
+													<PropertyList>
+														<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{FCD9DF4F-DF49-458E-BCFE-CAD7066F40AA}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="200"/>
+																			<Property Name="Min" Type="Real64" Value="-250"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="temp_crate_large" ID="{93A22EDA-D8F5-4C71-9483-635680EA285F}" ShortID="1043506115">
+															<PropertyList>
+																<Property Name="Inclusion" Type="bool">
+																	<ValueList>
+																		<Value>False</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="crate_large" ID="{F4C915E3-F4C2-4189-BF70-EF4497F89BCF}">
+																	<Language>SFX</Language>
+																	<AudioFile>crate_large.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="366051015"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="crate_large" ID="{F4C915E3-F4C2-4189-BF70-EF4497F89BCF}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="item_crateL_hit_02" ID="{1F928473-65EC-4DDA-B50F-E1FA4E60EC95}" ShortID="421822881">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_crateL_hit_02" ID="{96D2337E-00BE-4AFD-81F9-5E72DD750B7C}">
+																	<Language>SFX</Language>
+																	<AudioFile>item_crateL_hit_02.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="628586250"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_crateL_hit_02" ID="{96D2337E-00BE-4AFD-81F9-5E72DD750B7C}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="item_crateL_hit_04" ID="{53F7EFE3-2A63-4BD1-8017-C98A3C66F67F}" ShortID="991723987">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_crateL_hit_04" ID="{612868FD-8E9A-4F76-9625-6DA8F9ADB146}">
+																	<Language>SFX</Language>
+																	<AudioFile>item_crateL_hit_04.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="1064107408"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_crateL_hit_04" ID="{612868FD-8E9A-4F76-9625-6DA8F9ADB146}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="item_crateL_hit_01" ID="{11BDF40B-A013-49A6-A300-9288F0528BB0}" ShortID="262279868">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_crateL_hit_01" ID="{716D98BE-4948-45BC-A4CC-D3CD12CBC6CB}">
+																	<Language>SFX</Language>
+																	<AudioFile>item_crateL_hit_01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="454060314"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_crateL_hit_01" ID="{716D98BE-4948-45BC-A4CC-D3CD12CBC6CB}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="item_crateL_hit_03" ID="{0E1F935E-C74A-4CB7-B82D-B429C1E67908}" ShortID="680931224">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="item_crateL_hit_03" ID="{06EFDA7D-90E2-43F9-ADF9-42691C9D7B37}">
+																	<Language>SFX</Language>
+																	<AudioFile>item_crateL_hit_03.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="708813500"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="item_crateL_hit_03" ID="{06EFDA7D-90E2-43F9-ADF9-42691C9D7B37}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="crate sequence" ID="{02CB6660-EBBC-4E7F-A8FD-A5D9F476E6C3}" ShortID="56530718">
+													<PropertyList>
+														<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="crate sequence" ID="{02CB6660-EBBC-4E7F-A8FD-A5D9F476E6C3}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Crate_Hits_large" ID="{D35BC1AC-B295-4A97-B7E0-56DCE3CB07E7}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Crate_Hits_small" ID="{F17014AD-3557-466B-8987-36D81C194742}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Crate_Hits_med" ID="{9E4E15D8-9EF3-4F74-BBDE-033BA25DA095}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<RandomSequenceContainer Name="Candle_Hits" ID="{914F520A-D2FA-4E6D-BD22-98A31B62B565}" ShortID="717982472">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="temp_candle" ID="{B7CC2F73-6AB9-4262-AE12-AB5F86B95D47}" ShortID="964501799">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="candle" ID="{2E4C9271-11FA-4C92-848E-B76A3905CFA7}">
+															<Language>SFX</Language>
+															<AudioFile>candle.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="795819036"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="candle" ID="{2E4C9271-11FA-4C92-848E-B76A3905CFA7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Stool_Hits" ID="{8F72D35D-3A2A-453E-B777-0ECD3EB59247}" ShortID="144724924">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Table_Hits" ID="{B4902222-D73D-416E-A489-9EF0C90EA51E}" ShortID="114952872">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Candelabra_Hits" ID="{8C3DD7B1-65ED-4ED7-BCCA-8DADF30BFF2D}" ShortID="739066136">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Wardrobe_Hits" ID="{69E91863-9298-4E3D-8243-8F1A6851AB67}" ShortID="545198648">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+										<Sound Name="default_type" ID="{CCAE66BC-3322-4101-9AC7-C6DC37D3BF49}" ShortID="273758618">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="default_type" ID="{FE9E0EDA-FB9E-40EE-AA41-FC6DDA0E4284}">
+													<Language>SFX</Language>
+													<AudioFile>default_type.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="606147416"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="default_type" ID="{FE9E0EDA-FB9E-40EE-AA41-FC6DDA0E4284}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="Candle_Hits" ID="{914F520A-D2FA-4E6D-BD22-98A31B62B565}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Table_Hits" ID="{B4902222-D73D-416E-A489-9EF0C90EA51E}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Cardboard_Hits" ID="{DC831C25-694F-43F7-A074-D81C279C8EEB}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Crate_Hits" ID="{69EAB73A-62E6-464B-BBE9-5C26CD8D58F2}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Stool_Hits" ID="{8F72D35D-3A2A-453E-B777-0ECD3EB59247}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Wardrobe_Hits" ID="{69E91863-9298-4E3D-8243-8F1A6851AB67}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Candelabra_Hits" ID="{8C3DD7B1-65ED-4ED7-BCCA-8DADF30BFF2D}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="default_type" ID="{CCAE66BC-3322-4101-9AC7-C6DC37D3BF49}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="table" ID="{D4F2751B-3E15-4E28-91FA-E74317F8C343}"/>
+												<ItemList>
+													<ItemRef Name="Table_Hits" ID="{B4902222-D73D-416E-A489-9EF0C90EA51E}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="candle" ID="{630E8A38-09A8-43FA-9DFF-6380B2D9076E}"/>
+												<ItemList>
+													<ItemRef Name="Candle_Hits" ID="{914F520A-D2FA-4E6D-BD22-98A31B62B565}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="candelabra" ID="{8273613D-2E37-4F65-B40C-DC5E38F6FE33}"/>
+												<ItemList>
+													<ItemRef Name="Candelabra_Hits" ID="{8C3DD7B1-65ED-4ED7-BCCA-8DADF30BFF2D}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="stool" ID="{FD465F60-DB57-41E9-89AF-9ADB1C2B47C1}"/>
+												<ItemList>
+													<ItemRef Name="Stool_Hits" ID="{8F72D35D-3A2A-453E-B777-0ECD3EB59247}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="cardboard" ID="{E467A397-0D38-4300-9872-E9CFC18362BF}"/>
+												<ItemList>
+													<ItemRef Name="Cardboard_Hits" ID="{DC831C25-694F-43F7-A074-D81C279C8EEB}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="wardrobe" ID="{6CA9C8AB-7D1C-4A4E-A565-2D899E3BF76E}"/>
+												<ItemList>
+													<ItemRef Name="Wardrobe_Hits" ID="{69E91863-9298-4E3D-8243-8F1A6851AB67}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="default" ID="{D544DEBA-2CB0-4D1F-BDDF-8799057E8B7B}"/>
+												<ItemList>
+													<ItemRef Name="default_type" ID="{CCAE66BC-3322-4101-9AC7-C6DC37D3BF49}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="crate" ID="{70E499D2-EA66-4102-B667-D2C500621F21}"/>
+												<ItemList>
+													<ItemRef Name="Crate_Hits" ID="{69EAB73A-62E6-464B-BBE9-5C26CD8D58F2}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="SFX" ID="{CD998F6E-6828-4102-A24E-CDDCF0C1D620}" ShortID="570631585">
 					<PropertyList>

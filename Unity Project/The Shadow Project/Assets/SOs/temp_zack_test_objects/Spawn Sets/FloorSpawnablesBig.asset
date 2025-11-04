@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69873d9c6ac4b3f4d89bfe3b4df20962, type: 3}
+  m_Name: FloorSpawnablesBig
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectListSO
+  list:
+  - {fileID: 7654721500479801829, guid: 2ef7fb0919810354d85d765bc9504155, type: 3}
