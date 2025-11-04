@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -2366744330017365912}
   - component: {fileID: 1357429977637709105}
   - component: {fileID: -7000712038648682349}
+  - component: {fileID: -1029949588709077937}
   m_Layer: 0
   m_Name: Box1
   m_TagString: Object
@@ -128,6 +129,7 @@ MonoBehaviour:
   damage: {fileID: 11400000, guid: 6a73afc856733436c8d9f47ed8142ddd, type: 2}
   throwSpeed: 10
   returnable: 0
+  thrown: 0
   throwManager: {fileID: -7000712038648682349}
   target: {fileID: 0}
   originSpawn: {fileID: 0}
@@ -145,3 +147,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThrowObjectBehavior
   overshoot: 3
+--- !u!114 &-1029949588709077937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067933573507620676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978af57a1bff7414a835bb6f600e22c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetItemType
+  itemType:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2584cbd2197009d4286305c5bc3085c5, type: 2}
+  itemSize:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 53f0c0a738754a9478af6fe920b24a4e, type: 2}
