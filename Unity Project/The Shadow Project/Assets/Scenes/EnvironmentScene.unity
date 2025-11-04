@@ -667,6 +667,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 263200099}
+  - component: {fileID: 228410321}
+  - component: {fileID: 228410320}
+  - component: {fileID: 228410319}
+  - component: {fileID: 364122016}
   m_Layer: 5
   m_Name: Handle Slide Area
   m_TagString: Untagged

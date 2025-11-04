@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: -5129212883646452085}
   - component: {fileID: -3132146229921986370}
   - component: {fileID: -388987593298249104}
+  - component: {fileID: -2633334652992622953}
   m_Layer: 0
   m_Name: Candle4_Candle4
   m_TagString: Object
@@ -218,6 +219,7 @@ MonoBehaviour:
   damage: {fileID: 11400000, guid: 1a9965abdd1094465be9c6aee9c149ef, type: 2}
   throwSpeed: 10
   returnable: 1
+  thrown: 0
   throwManager: {fileID: -388987593298249104}
   target: {fileID: 0}
   originSpawn: {fileID: 0}
@@ -235,3 +237,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThrowObjectBehavior
   overshoot: 3
+--- !u!114 &-2633334652992622953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3028584613036351919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978af57a1bff7414a835bb6f600e22c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetItemType
+  itemType:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5d81fdd033cb4474c95eec890edf89a5, type: 2}
+  itemSize:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
