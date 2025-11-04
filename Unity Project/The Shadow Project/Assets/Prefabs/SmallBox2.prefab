@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5885234998116208991}
   - component: {fileID: 5860753076455129989}
   - component: {fileID: -348766721377864616}
+  - component: {fileID: 6179906096114058085}
   m_Layer: 0
   m_Name: SmallBox2
   m_TagString: Object
@@ -128,6 +129,7 @@ MonoBehaviour:
   damage: {fileID: 11400000, guid: 6a73afc856733436c8d9f47ed8142ddd, type: 2}
   throwSpeed: 10
   returnable: 1
+  thrown: 0
   throwManager: {fileID: -348766721377864616}
   target: {fileID: 0}
   originSpawn: {fileID: 0}
@@ -145,3 +147,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThrowObjectBehavior
   overshoot: 3
+--- !u!114 &6179906096114058085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7629304052086675549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978af57a1bff7414a835bb6f600e22c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetItemType
+  itemType:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2584cbd2197009d4286305c5bc3085c5, type: 2}
+  itemSize:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 394426a2003508d439e168cbd6c87b06, type: 2}

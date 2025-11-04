@@ -281,6 +281,7 @@ GameObject:
   - component: {fileID: -4465105118648195466}
   - component: {fileID: -4478195314033729919}
   - component: {fileID: -6593204495939727098}
+  - component: {fileID: -1750984263379420247}
   m_Layer: 0
   m_Name: Chest_Base
   m_TagString: Object
@@ -398,6 +399,7 @@ MonoBehaviour:
   damage: {fileID: 11400000, guid: 39bc1588d8063413784d0485f520e1aa, type: 2}
   throwSpeed: 10
   returnable: 0
+  thrown: 0
   throwManager: {fileID: -6593204495939727098}
   target: {fileID: 0}
   originSpawn: {fileID: 0}
@@ -415,3 +417,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThrowObjectBehavior
   overshoot: 3
+--- !u!114 &-1750984263379420247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7192396256709127019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978af57a1bff7414a835bb6f600e22c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetItemType
+  itemType:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a3a9d2b1785c1ea4aaf7f521d6e5389d, type: 2}
+  itemSize:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
