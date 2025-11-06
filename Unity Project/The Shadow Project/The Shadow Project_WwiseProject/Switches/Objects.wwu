@@ -7,12 +7,11 @@
 					<ChildrenList>
 						<Switch Name="stool" ID="{FD465F60-DB57-41E9-89AF-9ADB1C2B47C1}"/>
 						<Switch Name="cardboard" ID="{E467A397-0D38-4300-9872-E9CFC18362BF}"/>
-						<Switch Name="crate" ID="{70E499D2-EA66-4102-B667-D2C500621F21}"/>
+						<Switch Name="wood" ID="{70E499D2-EA66-4102-B667-D2C500621F21}"/>
 						<Switch Name="candle" ID="{630E8A38-09A8-43FA-9DFF-6380B2D9076E}"/>
-						<Switch Name="table" ID="{D4F2751B-3E15-4E28-91FA-E74317F8C343}"/>
-						<Switch Name="wardrobe" ID="{6CA9C8AB-7D1C-4A4E-A565-2D899E3BF76E}"/>
 						<Switch Name="candelabra" ID="{8273613D-2E37-4F65-B40C-DC5E38F6FE33}"/>
 						<Switch Name="default" ID="{D544DEBA-2CB0-4D1F-BDDF-8799057E8B7B}"/>
+						<Switch Name="table" ID="{E0E6451F-50CD-480D-A764-1C4AA784B3C4}"/>
 					</ChildrenList>
 				</SwitchGroup>
 				<SwitchGroup Name="item_size" ID="{BC4C3712-5DB7-42C7-9116-4E83C28511BB}">

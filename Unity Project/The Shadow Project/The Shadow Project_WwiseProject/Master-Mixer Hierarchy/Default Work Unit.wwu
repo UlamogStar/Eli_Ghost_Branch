@@ -27,6 +27,7 @@
 										<Property Name="Color" Type="int16" Value="8"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
+									<ReferenceList/>
 								</Bus>
 								<Bus Name="Ambience" ID="{8F630A8D-B3D3-464D-890B-30E75D2EA3D5}">
 									<PropertyList>
@@ -45,7 +46,7 @@
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
 								</Bus>
-								<AuxBus Name="env_example" ID="{50F1DA45-5C78-4208-8952-3362A83738ED}">
+								<AuxBus Name="env_fx" ID="{50F1DA45-5C78-4208-8952-3362A83738ED}">
 									<ObjectLists>
 										<ObjectList Name="Effects">
 											<Reference>
@@ -68,6 +69,23 @@
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
 								</Bus>
+								<AuxBus Name="objects_fx" ID="{A42BE0B0-2050-4854-A598-3F7F4297EFEB}">
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{4F22A494-F11E-4996-9796-F635205E9D54}" ShortID="426425606">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+																<ObjectRef Name="Small_Tiled_Room1" ID="{41EEE722-3009-4B3F-8820-F414623783E3}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AuxBus>
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
