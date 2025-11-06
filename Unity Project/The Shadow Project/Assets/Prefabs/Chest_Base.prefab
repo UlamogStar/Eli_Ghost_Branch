@@ -434,10 +434,10 @@ MonoBehaviour:
     valueGuidInternal: 
     groupIdInternal: 0
     groupGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a3a9d2b1785c1ea4aaf7f521d6e5389d, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: c6743083e37571e468a9335247e30463, type: 2}
   itemSize:
     idInternal: 0
     valueGuidInternal: 
     groupIdInternal: 0
     groupGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 4dad10a4f0c7d0e45b8b3bbf65e78790, type: 2}

@@ -1001,7 +1001,7 @@
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
 										</Reference>
 										<Reference Name="UserAuxSend0">
-											<ObjectRef Name="env_example" ID="{50F1DA45-5C78-4208-8952-3362A83738ED}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+											<ObjectRef Name="env_fx" ID="{50F1DA45-5C78-4208-8952-3362A83738ED}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -1620,7 +1620,10 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+							<ObjectRef Name="Objects" ID="{12C55211-9DA4-44F2-AE51-F5B13A4A1793}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="objects_fx" ID="{A42BE0B0-2050-4854-A598-3F7F4297EFEB}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -1803,13 +1806,13 @@
 												</GroupingList>
 											</GroupingInfo>
 										</SwitchContainer>
-										<SwitchContainer Name="Crate_Hits" ID="{69EAB73A-62E6-464B-BBE9-5C26CD8D58F2}" ShortID="697511406">
+										<SwitchContainer Name="Wood_Hits" ID="{69EAB73A-62E6-464B-BBE9-5C26CD8D58F2}" ShortID="697511406">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
 												</Reference>
 												<Reference Name="DefaultSwitchOrState">
-													<ObjectRef Name="small" ID="{0FE0A0C0-585F-4364-87D0-56662B453DC7}" WorkUnitID="{ABBE1C44-B5B2-4C0F-979F-1C8FC8B2FC52}"/>
+													<ObjectRef Name="medium" ID="{6FB36936-78CB-4FC7-B56E-5E0BE4E6E85D}" WorkUnitID="{ABBE1C44-B5B2-4C0F-979F-1C8FC8B2FC52}"/>
 												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
@@ -1819,7 +1822,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<RandomSequenceContainer Name="Crate_Hits_small" ID="{F17014AD-3557-466B-8987-36D81C194742}" ShortID="562602868">
+												<RandomSequenceContainer Name="Wood_Hits_small" ID="{F17014AD-3557-466B-8987-36D81C194742}" ShortID="562602868">
 													<PropertyList>
 														<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 														<Property Name="Pitch" Type="int32">
@@ -1942,7 +1945,7 @@
 														</Sound>
 													</ChildrenList>
 												</RandomSequenceContainer>
-												<RandomSequenceContainer Name="Crate_Hits_med" ID="{9E4E15D8-9EF3-4F74-BBDE-033BA25DA095}" ShortID="185296914">
+												<RandomSequenceContainer Name="Wood_Hits_med" ID="{9E4E15D8-9EF3-4F74-BBDE-033BA25DA095}" ShortID="185296914">
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
@@ -1976,7 +1979,7 @@
 														</Sound>
 													</ChildrenList>
 												</RandomSequenceContainer>
-												<RandomSequenceContainer Name="Crate_Hits_large" ID="{D35BC1AC-B295-4A97-B7E0-56DCE3CB07E7}" ShortID="455326355">
+												<RandomSequenceContainer Name="Wood_Hits_large" ID="{D35BC1AC-B295-4A97-B7E0-56DCE3CB07E7}" ShortID="455326355">
 													<PropertyList>
 														<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 														<Property Name="Pitch" Type="int32">
@@ -2121,35 +2124,39 @@
 														</Sound>
 													</ChildrenList>
 												</RandomSequenceContainer>
-												<RandomSequenceContainer Name="crate sequence" ID="{02CB6660-EBBC-4E7F-A8FD-A5D9F476E6C3}" ShortID="56530718">
-													<PropertyList>
-														<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
-														</Reference>
-													</ReferenceList>
-												</RandomSequenceContainer>
 											</ChildrenList>
 											<GroupingInfo>
 												<GroupingBehaviorList>
 													<GroupingBehavior>
-														<ItemRef Name="crate sequence" ID="{02CB6660-EBBC-4E7F-A8FD-A5D9F476E6C3}"/>
+														<ItemRef Name="Wood_Hits_large" ID="{D35BC1AC-B295-4A97-B7E0-56DCE3CB07E7}"/>
 													</GroupingBehavior>
 													<GroupingBehavior>
-														<ItemRef Name="Crate_Hits_large" ID="{D35BC1AC-B295-4A97-B7E0-56DCE3CB07E7}"/>
+														<ItemRef Name="Wood_Hits_small" ID="{F17014AD-3557-466B-8987-36D81C194742}"/>
 													</GroupingBehavior>
 													<GroupingBehavior>
-														<ItemRef Name="Crate_Hits_small" ID="{F17014AD-3557-466B-8987-36D81C194742}"/>
-													</GroupingBehavior>
-													<GroupingBehavior>
-														<ItemRef Name="Crate_Hits_med" ID="{9E4E15D8-9EF3-4F74-BBDE-033BA25DA095}"/>
+														<ItemRef Name="Wood_Hits_med" ID="{9E4E15D8-9EF3-4F74-BBDE-033BA25DA095}"/>
 													</GroupingBehavior>
 												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="large" ID="{AB9A5816-B945-455C-A74B-F05A5B6BB95A}"/>
+														<ItemList>
+															<ItemRef Name="Wood_Hits_large" ID="{D35BC1AC-B295-4A97-B7E0-56DCE3CB07E7}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="medium" ID="{6FB36936-78CB-4FC7-B56E-5E0BE4E6E85D}"/>
+														<ItemList>
+															<ItemRef Name="Wood_Hits_med" ID="{9E4E15D8-9EF3-4F74-BBDE-033BA25DA095}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="small" ID="{0FE0A0C0-585F-4364-87D0-56662B453DC7}"/>
+														<ItemList>
+															<ItemRef Name="Wood_Hits_small" ID="{F17014AD-3557-466B-8987-36D81C194742}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
 											</GroupingInfo>
 										</SwitchContainer>
 										<RandomSequenceContainer Name="Candle_Hits" ID="{914F520A-D2FA-4E6D-BD22-98A31B62B565}" ShortID="717982472">
@@ -2195,6 +2202,30 @@
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="stool_temp" ID="{CD706013-1189-44F3-93E7-2B4EBEAD358A}" ShortID="1026147623">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="stool_temp" ID="{C58B4A22-D0BF-49D8-8C17-65BE270BB4FE}">
+															<Language>SFX</Language>
+															<AudioFile>stool_temp.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="149123019"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="stool_temp" ID="{C58B4A22-D0BF-49D8-8C17-65BE270BB4FE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="Table_Hits" ID="{B4902222-D73D-416E-A489-9EF0C90EA51E}" ShortID="114952872">
 											<ReferenceList>
@@ -2205,6 +2236,30 @@
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="table_temp" ID="{66AD3071-0FB4-4016-A479-D3BD2B3E755A}" ShortID="546084655">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="table_temp" ID="{AE9F313B-3126-4A90-A342-A2B21E069847}">
+															<Language>SFX</Language>
+															<AudioFile>table_temp.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="772496773"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="table_temp" ID="{AE9F313B-3126-4A90-A342-A2B21E069847}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="Candelabra_Hits" ID="{8C3DD7B1-65ED-4ED7-BCCA-8DADF30BFF2D}" ShortID="739066136">
 											<ReferenceList>
@@ -2215,16 +2270,30 @@
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
 												</Reference>
 											</ReferenceList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="Wardrobe_Hits" ID="{69E91863-9298-4E3D-8243-8F1A6851AB67}" ShortID="545198648">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
-												</Reference>
-											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="candelabra_temp" ID="{CE7072C7-7199-4DA8-AE04-F2A98CC69F28}" ShortID="243216655">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="candelabra_temp" ID="{0CE892DC-042F-4BD3-B422-9A5782397F43}">
+															<Language>SFX</Language>
+															<AudioFile>candelabra_temp.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="500151509"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="candelabra_temp" ID="{0CE892DC-042F-4BD3-B422-9A5782397F43}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
 										</RandomSequenceContainer>
 										<Sound Name="default_type" ID="{CCAE66BC-3322-4101-9AC7-C6DC37D3BF49}" ShortID="273758618">
 											<ReferenceList>
@@ -2261,13 +2330,10 @@
 												<ItemRef Name="Cardboard_Hits" ID="{DC831C25-694F-43F7-A074-D81C279C8EEB}"/>
 											</GroupingBehavior>
 											<GroupingBehavior>
-												<ItemRef Name="Crate_Hits" ID="{69EAB73A-62E6-464B-BBE9-5C26CD8D58F2}"/>
+												<ItemRef Name="Wood_Hits" ID="{69EAB73A-62E6-464B-BBE9-5C26CD8D58F2}"/>
 											</GroupingBehavior>
 											<GroupingBehavior>
 												<ItemRef Name="Stool_Hits" ID="{8F72D35D-3A2A-453E-B777-0ECD3EB59247}"/>
-											</GroupingBehavior>
-											<GroupingBehavior>
-												<ItemRef Name="Wardrobe_Hits" ID="{69E91863-9298-4E3D-8243-8F1A6851AB67}"/>
 											</GroupingBehavior>
 											<GroupingBehavior>
 												<ItemRef Name="Candelabra_Hits" ID="{8C3DD7B1-65ED-4ED7-BCCA-8DADF30BFF2D}"/>
@@ -2278,7 +2344,7 @@
 										</GroupingBehaviorList>
 										<GroupingList>
 											<Grouping>
-												<SwitchRef Name="table" ID="{D4F2751B-3E15-4E28-91FA-E74317F8C343}"/>
+												<SwitchRef Name="table" ID="{E0E6451F-50CD-480D-A764-1C4AA784B3C4}"/>
 												<ItemList>
 													<ItemRef Name="Table_Hits" ID="{B4902222-D73D-416E-A489-9EF0C90EA51E}"/>
 												</ItemList>
@@ -2308,21 +2374,15 @@
 												</ItemList>
 											</Grouping>
 											<Grouping>
-												<SwitchRef Name="wardrobe" ID="{6CA9C8AB-7D1C-4A4E-A565-2D899E3BF76E}"/>
-												<ItemList>
-													<ItemRef Name="Wardrobe_Hits" ID="{69E91863-9298-4E3D-8243-8F1A6851AB67}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
 												<SwitchRef Name="default" ID="{D544DEBA-2CB0-4D1F-BDDF-8799057E8B7B}"/>
 												<ItemList>
 													<ItemRef Name="default_type" ID="{CCAE66BC-3322-4101-9AC7-C6DC37D3BF49}"/>
 												</ItemList>
 											</Grouping>
 											<Grouping>
-												<SwitchRef Name="crate" ID="{70E499D2-EA66-4102-B667-D2C500621F21}"/>
+												<SwitchRef Name="wood" ID="{70E499D2-EA66-4102-B667-D2C500621F21}"/>
 												<ItemList>
-													<ItemRef Name="Crate_Hits" ID="{69EAB73A-62E6-464B-BBE9-5C26CD8D58F2}"/>
+													<ItemRef Name="Wood_Hits" ID="{69EAB73A-62E6-464B-BBE9-5C26CD8D58F2}"/>
 												</ItemList>
 											</Grouping>
 										</GroupingList>
