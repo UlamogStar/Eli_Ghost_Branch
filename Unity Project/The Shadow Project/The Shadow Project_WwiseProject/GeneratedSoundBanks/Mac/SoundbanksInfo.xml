@@ -92,7 +92,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{417C8998-01D1-66B2-45EB-D2496DC129C6}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5FBA233C-EEE5-E31C-DB2B-A585876FFB4A}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -103,6 +103,10 @@
 				<File Id="76659355" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_rats_03.wav</ShortName>
 					<CachePath>SFX/env_os_rats_03_8E324C96.wem</CachePath>
+				</File>
+				<File Id="93618431" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>card_L_02.wav</ShortName>
+					<CachePath>SFX/card_L_02_C5D48472.wem</CachePath>
 				</File>
 				<File Id="118384836" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_rats_02.wav</ShortName>
@@ -117,9 +121,9 @@
 					<Path>Media/147449458.wem</Path>
 					<CachePath>SFX/env_loop_morgue_56CEF360.wem</CachePath>
 				</File>
-				<File Id="149123019" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>stool_temp.wav</ShortName>
-					<CachePath>SFX/stool_temp_8E324C96.wem</CachePath>
+				<File Id="152270630" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>card_sm_02.wav</ShortName>
+					<CachePath>SFX/card_sm_02_0FC14F66.wem</CachePath>
 				</File>
 				<File Id="160165350" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_squeak_03.wav</ShortName>
@@ -154,10 +158,6 @@
 					<ShortName>woosh_03.wav</ShortName>
 					<CachePath>SFX/woosh_03_6567178B.wem</CachePath>
 				</File>
-				<File Id="343973213" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>cardboard_large.wav</ShortName>
-					<CachePath>SFX/cardboard_large_8E324C96.wem</CachePath>
-				</File>
 				<File Id="378498032" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_hauntcreak_03.wav</ShortName>
 					<CachePath>SFX/env_os_hauntcreak_03_8E324C96.wem</CachePath>
@@ -170,10 +170,6 @@
 					<ShortName>item_crateS_hit_02.wav</ShortName>
 					<CachePath>SFX/item_crateS_hit_02_8E324C96.wem</CachePath>
 				</File>
-				<File Id="443355421" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>cardboard_medium.wav</ShortName>
-					<CachePath>SFX/cardboard_medium_8E324C96.wem</CachePath>
-				</File>
 				<File Id="443385534" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_rats_08.wav</ShortName>
 					<CachePath>SFX/env_os_rats_08_8E324C96.wem</CachePath>
@@ -185,10 +181,6 @@
 				<File Id="460766516" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_hauntcreak_02.wav</ShortName>
 					<CachePath>SFX/env_os_hauntcreak_02_8E324C96.wem</CachePath>
-				</File>
-				<File Id="500151509" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>candelabra_temp.wav</ShortName>
-					<CachePath>SFX/candelabra_temp_8E324C96.wem</CachePath>
 				</File>
 				<File Id="529809776" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_rats_01.wav</ShortName>
@@ -206,10 +198,6 @@
 					<ShortName>item_crateL_hit_02.wav</ShortName>
 					<CachePath>SFX/item_crateL_hit_02_8E324C96.wem</CachePath>
 				</File>
-				<File Id="632119627" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>crate_medium.wav</ShortName>
-					<CachePath>SFX/crate_medium_8E324C96.wem</CachePath>
-				</File>
 				<File Id="659537667" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>woosh_01.wav</ShortName>
 					<CachePath>SFX/woosh_01_B34D47EA.wem</CachePath>
@@ -217,10 +205,6 @@
 				<File Id="688012886" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_rats_09.wav</ShortName>
 					<CachePath>SFX/env_os_rats_09_8E324C96.wem</CachePath>
-				</File>
-				<File Id="700692415" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>cardboard_small.wav</ShortName>
-					<CachePath>SFX/cardboard_small_8E324C96.wem</CachePath>
 				</File>
 				<File Id="708813500" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_crateL_hit_03.wav</ShortName>
@@ -243,10 +227,6 @@
 					<ShortName>table_temp.wav</ShortName>
 					<CachePath>SFX/table_temp_8E324C96.wem</CachePath>
 				</File>
-				<File Id="795819036" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>candle.wav</ShortName>
-					<CachePath>SFX/candle_8E324C96.wem</CachePath>
-				</File>
 				<File Id="801632121" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_squeak_05.wav</ShortName>
 					<CachePath>SFX/env_os_squeak_05_37F97180.wem</CachePath>
@@ -259,6 +239,14 @@
 					<ShortName>env_loop_wind_01.wav</ShortName>
 					<Path>Media/836443457.wem</Path>
 					<CachePath>SFX/env_loop_wind_01_56CEF360.wem</CachePath>
+				</File>
+				<File Id="838804070" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>card_L_03.wav</ShortName>
+					<CachePath>SFX/card_L_03_E4257A0A.wem</CachePath>
+				</File>
+				<File Id="843560819" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>card_sm_01.wav</ShortName>
+					<CachePath>SFX/card_sm_01_51A77DAD.wem</CachePath>
 				</File>
 				<File Id="886952836" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_rats_06.wav</ShortName>
@@ -285,9 +273,17 @@
 					<ShortName>env_os_squeak_06.wav</ShortName>
 					<CachePath>SFX/env_os_squeak_06_8E324C96.wem</CachePath>
 				</File>
+				<File Id="977793167" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>card_L_01.wav</ShortName>
+					<CachePath>SFX/card_L_01_4F70F3EA.wem</CachePath>
+				</File>
 				<File Id="1015114399" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>env_os_rats_04.wav</ShortName>
 					<CachePath>SFX/env_os_rats_04_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1054259990" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>card_sm_03.wav</ShortName>
+					<CachePath>SFX/card_sm_03_9CF9E2F0.wem</CachePath>
 				</File>
 				<File Id="1064107408" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>item_crateL_hit_04.wav</ShortName>
@@ -338,7 +334,7 @@
 						<MediaRef Id="959645677"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2405462070" Name="object_hit_player" DurationType="OneShot" DurationMin="0.69" DurationMax="1.8376367">
+				<Event Id="2405462070" Name="object_hit_player" DurationType="OneShot" DurationMin="0.77410644" DurationMax="1.8376367">
 					<AuxBusRefs>
 						<AuxBusRef Id="591668312" Name="objects_fx"/>
 					</AuxBusRefs>
@@ -350,21 +346,11 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1281648863" Id="2912468606"/>
-							<MediaRefs>
-								<MediaRef Id="795819036"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1281648863" Id="3353308030"/>
-							<MediaRefs>
-								<MediaRef Id="500151509"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="1281648863" Id="1200188298"/>
 							<MediaRefs>
-								<MediaRef Id="149123019"/>
+								<MediaRef Id="215610243"/>
+								<MediaRef Id="411936919"/>
+								<MediaRef Id="925581424"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -373,19 +359,17 @@
 								<SwitchContainer>
 									<SwitchValue GroupType="Switch" GroupId="1566734580" Id="4284352190"/>
 									<MediaRefs>
-										<MediaRef Id="343973213"/>
-									</MediaRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="1566734580" Id="2849147824"/>
-									<MediaRefs>
-										<MediaRef Id="443355421"/>
+										<MediaRef Id="93618431"/>
+										<MediaRef Id="838804070"/>
+										<MediaRef Id="977793167"/>
 									</MediaRefs>
 								</SwitchContainer>
 								<SwitchContainer>
 									<SwitchValue GroupType="Switch" GroupId="1566734580" Id="1846755610" Default="true"/>
 									<MediaRefs>
-										<MediaRef Id="700692415"/>
+										<MediaRef Id="152270630"/>
+										<MediaRef Id="843560819"/>
+										<MediaRef Id="1054259990"/>
 									</MediaRefs>
 								</SwitchContainer>
 							</Children>
@@ -406,12 +390,6 @@
 										<MediaRef Id="628586250"/>
 										<MediaRef Id="708813500"/>
 										<MediaRef Id="1064107408"/>
-									</MediaRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="1566734580" Id="2849147824" Default="true"/>
-									<MediaRefs>
-										<MediaRef Id="632119627"/>
 									</MediaRefs>
 								</SwitchContainer>
 								<SwitchContainer>
@@ -449,5 +427,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{983E8AA5-1C43-EF34-EED4-904D178470FE}</FileHash>
+	<FileHash>{B08D21C7-828C-E747-12B5-51A22CCCA681}</FileHash>
 </SoundBanksInfo>
