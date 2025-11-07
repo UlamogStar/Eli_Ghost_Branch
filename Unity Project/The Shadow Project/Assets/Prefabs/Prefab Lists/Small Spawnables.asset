@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69873d9c6ac4b3f4d89bfe3b4df20962, type: 3}
+  m_Name: Small Spawnables
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectListSO
+  list:
+  - {fileID: 2095235491797601841, guid: 32cedd4c362f1f241a099ace7949d29a, type: 3}
+  - {fileID: 2959072506460062796, guid: ed2cb9d538025b148bfecc8753da60f6, type: 3}
+  - {fileID: 4764661985652712716, guid: 98ccba5fba54df54eba54f583cd027fb, type: 3}
+  - {fileID: 3028584613036351919, guid: 44aa72f7cfd8c114080ab0ffe324dbac, type: 3}
+  - {fileID: 2302335114772538473, guid: 77c3604278fba734e804adf5e4b6f899, type: 3}
+  - {fileID: 8014366734083089309, guid: b2ecc13bf30290a44942e8395e17c1e5, type: 3}
+  - {fileID: 3445225290737156045, guid: 4edeb4ffa2656a84186a20ae9cad972e, type: 3}
