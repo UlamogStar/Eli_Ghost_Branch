@@ -672,6 +672,7 @@ MonoBehaviour:
   cameraTransform: {fileID: 137283994}
   objectManager: {fileID: 2125429159}
   throwManager: {fileID: 819758287}
+  indicatorManager: {fileID: 1491249817}
   agent: {fileID: 0}
   rotation: {x: 0, y: 0, z: 0, w: 0}
   isWandering: 1
@@ -939,6 +940,50 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 685438622}
     m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.339
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.212
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -16.623188
+      objectReference: {fileID: 0}
+    - target: {fileID: -450117702996330973, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -450117702996330973, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -450117702996330973, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -450117702996330973, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -450117702996330973, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -450117702996330973, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
+      propertyPath: m_Name
+      value: GhostRig
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
+      propertyPath: m_TagString
+      value: Ghost
+      objectReference: {fileID: 0}
     - target: {fileID: -8990551429946820328, guid: 30db92cce7a364bd0b4c187108231b11, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -8.944038
@@ -2023,50 +2068,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.7472467
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.339
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.212
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -16.623188
-      objectReference: {fileID: 0}
-    - target: {fileID: -450117702996330973, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: -450117702996330973, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: -450117702996330973, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: -450117702996330973, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -450117702996330973, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -450117702996330973, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
-      propertyPath: m_Name
-      value: GhostRig
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
-      propertyPath: m_TagString
-      value: Ghost
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -4196952040310456772, guid: d0f9d28fac92e4c3c97fd533e496dc86, type: 3}
@@ -2744,7 +2745,7 @@ GameObject:
   - component: {fileID: 849091568}
   - component: {fileID: 849091567}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Attack Indicator Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4004,7 +4005,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 550.26, y: 319.19, z: 1.0998186}
+  m_LocalScale: {x: 303.59, y: 319.19, z: 1.0998186}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 849091570}
@@ -4037,7 +4038,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491249812}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4099,7 +4100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIBehaviorScript
   follow: {fileID: 716218778}
-  Zoffset: 0
+  zoffset: 2.422
+  attackManager: {fileID: 269119247}
+  isAttacking: 0
 --- !u!4 &1491562535 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3337194131440720780, guid: 40d5596b1cbfc364fbaf1635c7fd6c86, type: 3}
