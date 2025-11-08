@@ -225,12 +225,12 @@ public class GhostBehaviour : MonoBehaviour
 
     public void Appear()
     {
-
+        animator.SetTrigger("appear");
     }
 
     public void TakeDamage()
     {
-
+        animator.SetTrigger("damage");
     }
 
     public void UpdateStrength()
