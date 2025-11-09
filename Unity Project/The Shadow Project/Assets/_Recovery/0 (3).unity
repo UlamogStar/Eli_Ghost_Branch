@@ -11033,7 +11033,7 @@ Transform:
   m_GameObject: {fileID: 1078200035}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.17, y: 0.25, z: -2.656}
+  m_LocalPosition: {x: -0.17, y: 0.25, z: -2.744}
   m_LocalScale: {x: 0.50503, y: 0.50503, z: 0.50503}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11211,13 +11211,13 @@ MonoBehaviour:
     valueGuidInternal: 
     groupIdInternal: 0
     groupGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 53f0c0a738754a9478af6fe920b24a4e, type: 2}
   defaultItemSize:
     idInternal: 0
     valueGuidInternal: 
     groupIdInternal: 0
     groupGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: fa1707f7f88098b45bd8353f0a48e5a2, type: 2}
   impactEvent:
     idInternal: 0
     valueGuidInternal: 

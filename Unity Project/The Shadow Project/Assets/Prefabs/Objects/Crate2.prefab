@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6420179138273616848}
   - component: {fileID: 1762988503460524296}
   - component: {fileID: 2154077371942638472}
+  - component: {fileID: -3811789735565727079}
   m_Layer: 0
   m_Name: Crate2
   m_TagString: Object
@@ -132,3 +133,27 @@ MonoBehaviour:
   returned: 0
   hit: 0
   originSpawn: {fileID: 0}
+--- !u!114 &-3811789735565727079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5423059843498078159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978af57a1bff7414a835bb6f600e22c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetItemType
+  itemType:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c6743083e37571e468a9335247e30463, type: 2}
+  itemSize:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4dad10a4f0c7d0e45b8b3bbf65e78790, type: 2}

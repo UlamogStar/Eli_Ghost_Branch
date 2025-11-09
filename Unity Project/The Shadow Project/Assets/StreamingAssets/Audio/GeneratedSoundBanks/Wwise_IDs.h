@@ -42,11 +42,10 @@ namespace AK
                 static const AkUniqueID CANDELABRA = 3353308030U;
                 static const AkUniqueID CANDLE = 2912468606U;
                 static const AkUniqueID CARDBOARD = 1229756253U;
-                static const AkUniqueID CRATE = 3098439042U;
                 static const AkUniqueID DEFAULT = 782826392U;
                 static const AkUniqueID STOOL = 1200188298U;
                 static const AkUniqueID TABLE = 2048817515U;
-                static const AkUniqueID WARDROBE = 119530393U;
+                static const AkUniqueID WOOD = 2058049674U;
             } // namespace SWITCH
         } // namespace ITEM_TYPE
 
@@ -81,7 +80,8 @@ namespace AK
 
     namespace AUX_BUSSES
     {
-        static const AkUniqueID ENV_EXAMPLE = 2334522901U;
+        static const AkUniqueID ENV_FX = 1802038219U;
+        static const AkUniqueID OBJECTS_FX = 591668312U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
