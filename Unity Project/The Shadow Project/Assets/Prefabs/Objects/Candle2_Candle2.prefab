@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8127832651308043}
   - component: {fileID: 2214343501582379499}
   - component: {fileID: -3290595812163497083}
+  - component: {fileID: -2232741299744481429}
   m_Layer: 0
   m_Name: Candle2_Candle2
   m_TagString: Object
@@ -133,6 +134,30 @@ MonoBehaviour:
   returned: 0
   hit: 0
   originSpawn: {fileID: 0}
+--- !u!114 &-2232741299744481429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2959072506460062796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978af57a1bff7414a835bb6f600e22c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetItemType
+  itemType:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5d81fdd033cb4474c95eec890edf89a5, type: 2}
+  itemSize:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &9178591281599988168
 GameObject:
   m_ObjectHideFlags: 0

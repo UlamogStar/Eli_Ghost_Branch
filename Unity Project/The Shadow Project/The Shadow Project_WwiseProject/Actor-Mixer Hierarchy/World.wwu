@@ -1418,6 +1418,11 @@
 							<ChildrenList>
 								<RandomSequenceContainer Name="ghost_woosh" ID="{181E8136-3ED7-4745-90EA-9E7B7C1B1130}" ShortID="329354041">
 									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
@@ -1606,16 +1611,70 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
+								<ActorMixer Name="ghost_appear" ID="{330A0077-FDC3-434A-A5C0-904DF7792E35}" ShortID="932006718">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+										</Reference>
+									</ReferenceList>
+								</ActorMixer>
+								<ActorMixer Name="ghost_notice" ID="{30FAA284-444B-436A-938B-DFBEE3ACE8F5}" ShortID="478271908">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+										</Reference>
+									</ReferenceList>
+								</ActorMixer>
+								<ActorMixer Name="ghost_throw" ID="{5A15247E-DA4A-425F-BC71-C16524012E3F}" ShortID="995996960">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+										</Reference>
+									</ReferenceList>
+								</ActorMixer>
+								<ActorMixer Name="ghost_blink" ID="{958023B7-22A5-4692-903D-7747585AAB3D}" ShortID="786173219">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+										</Reference>
+									</ReferenceList>
+								</ActorMixer>
+								<ActorMixer Name="ghost mumble" ID="{E6EF2EFF-6FF0-4E8F-B9F4-666D5E1D14F4}" ShortID="26283695">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+										</Reference>
+									</ReferenceList>
+								</ActorMixer>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Objects" ID="{E56D254D-5927-43D9-9A52-65DA53531BEC}" ShortID="62433528">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Color" Type="int16" Value="8"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Objects" ID="{7040F9CE-2011-4BD1-B0CD-7170B25461F3}" WorkUnitID="{81ED1C5A-38B2-4CFD-A1E7-61CEAAF02A28}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
 						</Reference>
@@ -2878,6 +2937,7 @@
 														<Position Name="" ID="{FD609D47-0467-45B9-876B-DCE686B221D6}">
 															<PropertyList>
 																<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+																<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
 															</PropertyList>
 															<ChildrenList>
 																<Path2D Name="Candle_Clatter_Path" ID="{DDC4A16B-E941-4A02-8B0F-59E4D63E39F6}">
@@ -3703,6 +3763,7 @@
 																<Position Name="" ID="{D9DFC000-6044-47A2-A63D-7F457A58DFC2}">
 																	<PropertyList>
 																		<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+																		<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
 																	</PropertyList>
 																	<ChildrenList>
 																		<Path2D Name="Candle_Clatter_Path" ID="{6AF88723-5D74-4128-BC3F-F5E357FC4C53}">
@@ -3816,6 +3877,18 @@
 												</ItemList>
 											</Grouping>
 											<Grouping>
+												<SwitchRef Name="candle" ID="{630E8A38-09A8-43FA-9DFF-6380B2D9076E}"/>
+												<ItemList>
+													<ItemRef Name="Candles" ID="{719D05ED-944C-42AA-A795-2309465F0202}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="candelabra" ID="{8273613D-2E37-4F65-B40C-DC5E38F6FE33}"/>
+												<ItemList>
+													<ItemRef Name="Candelabra" ID="{4CE1951D-B23A-426F-AB1A-1FD96DF43BF5}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
 												<SwitchRef Name="stool" ID="{FD465F60-DB57-41E9-89AF-9ADB1C2B47C1}"/>
 												<ItemList>
 													<ItemRef Name="Stool_Hits" ID="{8F72D35D-3A2A-453E-B777-0ECD3EB59247}"/>
@@ -3843,6 +3916,35 @@
 									</GroupingInfo>
 								</SwitchContainer>
 							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="object_lift" ID="{818E3279-A126-48EA-9329-79FF4DB6E9DA}" ShortID="48999905">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+								</Reference>
+							</ReferenceList>
+						</ActorMixer>
+						<ActorMixer Name="object throw" ID="{67AA1917-AED5-46F3-A450-48B27A4F1377}" ShortID="640199659">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Objects" ID="{7040F9CE-2011-4BD1-B0CD-7170B25461F3}" WorkUnitID="{81ED1C5A-38B2-4CFD-A1E7-61CEAAF02A28}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Objects" ID="{12C55211-9DA4-44F2-AE51-F5B13A4A1793}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="objects_fx" ID="{A42BE0B0-2050-4854-A598-3F7F4297EFEB}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+								</Reference>
+							</ReferenceList>
 						</ActorMixer>
 					</ChildrenList>
 				</ActorMixer>
