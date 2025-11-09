@@ -36,6 +36,8 @@ public class GhostBehaviour : MonoBehaviour
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private ObjectManager objectManager;
     [SerializeField] private ThrowObjectBehavior throwManager;
+    [SerializeField] private UIBehaviorScript indicatorManager;
+
     [SerializeField] private NavMeshAgent agent;
 
     [Header("Info")]
@@ -203,6 +205,8 @@ public class GhostBehaviour : MonoBehaviour
     }
     public void LevitateObject(GameObject throwable)
     {
+        //Start attack indicator
+        indicatorManager.StartIndicator();
         // Hover Object for attack anticipation
         Vector3 location = throwable.transform.position + new Vector3(0, levitationHeight, 0);
         throwManager.StartThrow(throwable, location, levitateSpeed);
@@ -225,12 +229,12 @@ public class GhostBehaviour : MonoBehaviour
 
     public void Appear()
     {
-
+        animator.SetTrigger("appear");
     }
 
     public void TakeDamage()
     {
-
+        animator.SetTrigger("damage");
     }
 
     public void UpdateStrength()

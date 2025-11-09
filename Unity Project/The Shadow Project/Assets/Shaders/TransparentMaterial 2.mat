@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TransparentMaterial 1
+  m_Name: TransparentMaterial 2
   m_Shader: {fileID: -6465566751694194690, guid: 71a21c080b6bcbe4eb0a79b3b7e5ec09, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -55,11 +55,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Fresnel_Power: 0.93
+    - _Fresnel_Power: 2.99
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Base_Color: {r: 0.08659667, g: 0.13000827, b: 0.13207549, a: 0.7607843}
-    - _Fresnel_Color: {r: 1.7207953, g: 0, b: 1.5566646, a: 0}
+    - _Base_Color: {r: 0.02006942, g: 0.08023179, b: 0.103773594, a: 0.20392157}
+    - _Fresnel_Color: {r: 0.054901965, g: 0.5019608, b: 0.13742994, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
