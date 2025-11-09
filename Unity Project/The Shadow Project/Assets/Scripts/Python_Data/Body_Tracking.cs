@@ -1,55 +1,93 @@
-using System;
 using UnityEngine;
 using System.Collections.Generic;
 
 public class Body_Tracking : MonoBehaviour
 {
     public UDP udpBody;
-    public GameObject bodyPoint; // Single GameObject to move
 
-    [Tooltip("in case not ports are assigned it will use these th make point and carte a skeleton for testing")]
-    public GameObject bodyPointPrefab; // Prefab to clone for each landmark
-
-    [Tooltip(
-        "Assign point in order of Left arm 1-3 , right arm 1-3, left leg 1-3, right leg 1-3, then last is mid point")]
-    public List<GameObject> bodyPoints = new List<GameObject>();
-
-    // Adjust these to match your scene scale
-    public float scale = 0.01f;
-
-    [Tooltip("deaflut is (X = -7, Y = 12, Z = 0)")]
-    public Vector3 offset = new Vector3(0, 0, 0);
-
-    [Tooltip("Lock of the scale of the points")]
-    public Vector3 lockScale = new Vector3(1, 1, 1);
-
-
-    private void Lockpointscale()
+    [System.Serializable]
+    public class BodySet
     {
-        for (int i = 0; i < bodyPoints.Count; i++)
+        public List<GameObject> points = new List<GameObject>(14);
+    }
+
+    public List<BodySet> sets = new List<BodySet>();  // Four sets expected
+    public float scale = 0.01f;
+    public Vector3 offset;
+    public float timeout = 0.5f;
+
+    private float[] lastUpdate;
+    private Vector3[][] restPositions;
+
+    void Start()
+    {
+        lastUpdate = new float[sets.Count];
+        restPositions = new Vector3[sets.Count][];
+
+        for (int s = 0; s < sets.Count; s++)
         {
+            restPositions[s] = new Vector3[sets[s].points.Count];
 
-            bodyPoints[i].transform.localScale = lockScale;
-
+            for (int i = 0; i < sets[s].points.Count; i++)
+                restPositions[s][i] = sets[s].points[i].transform.position;
         }
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        string data = udpBody.data;
-
-        if (string.IsNullOrEmpty(data))
+        string raw = udpBody.data.Trim('[', ']');
+        if (string.IsNullOrEmpty(raw))
             return;
 
-        data = data.Trim(new char[] { '[', ']' });
-        string[] points = data.Split(',');
+        string[] pts = raw.Split(',');
 
-        int pointNumber = points.Length / 2; // assuming data is x,y,z
+        int perSet = 14 * 2;  // 14 points * (x,y)
 
-        // Create missing points
-        while (bodyPoints.Count < pointNumber)
+        for (int s = 0; s < sets.Count; s++)
         {
-            Debug.LogError("Not enough points received.");
+            int setStart = s * perSet;
+
+            if (setStart + perSet > pts.Length)
+                break;
+
+            bool updated = false;
+
+            for (int i = 0; i < 14 && i < sets[s].points.Count; i++)
+            {
+                int baseIndex = setStart + i * 2;
+
+                if (float.TryParse(pts[baseIndex], out float x) &&
+                    float.TryParse(pts[baseIndex + 1], out float y))
+                {
+                    Vector3 pos = new Vector3(
+                        x * scale + offset.x,
+                        y * scale + offset.y,
+                        offset.z
+                    );
+
+                    sets[s].points[i].transform.position = pos;
+                    updated = true;
+                }
+            }
+
+            if (updated)
+                lastUpdate[s] = Time.time;
+        }
+
+        ApplyTimeouts();
+    }
+
+    void ApplyTimeouts()
+    {
+        for (int s = 0; s < sets.Count; s++)
+        {
+            if (Time.time - lastUpdate[s] > timeout)
+            {
+                for (int i = 0; i < sets[s].points.Count; i++)
+                {
+                    sets[s].points[i].transform.position = restPositions[s][i];
+                }
+            }
         }
     }
-}    
+}

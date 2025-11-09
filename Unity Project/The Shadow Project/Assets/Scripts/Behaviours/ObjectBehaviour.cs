@@ -39,5 +39,6 @@ public class ObjectBehaviour : MonoBehaviour
 public enum ObjectSize
 {
     Small, // 0
+    Medium,    
     Big // 1
 }
