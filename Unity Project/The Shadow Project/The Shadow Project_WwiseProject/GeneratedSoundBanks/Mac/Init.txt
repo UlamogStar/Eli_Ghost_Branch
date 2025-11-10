@@ -14,9 +14,11 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
-	2334522901	env_example			\Default Work Unit\Master Audio Bus\World\env_example	
+	591668312	objects_fx			\Default Work Unit\Master Audio Bus\World\objects_fx	
+	1802038219	env_fx			\Default Work Unit\Master Audio Bus\World\env_fx	
 
 Effect plug-ins	ID	Name	Type				Notes
+	992902880	Small_Tiled_Room1	Wwise Matrix Reverb			
 	3552193294	env_attic_verb	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes

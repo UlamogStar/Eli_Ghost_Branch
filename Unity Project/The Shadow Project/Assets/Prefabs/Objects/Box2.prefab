@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -6703164960749431394}
   - component: {fileID: 7664334638691095581}
   - component: {fileID: 5712413207960149122}
+  - component: {fileID: 8909500228333396275}
   m_Layer: 0
   m_Name: Box2
   m_TagString: Object
@@ -171,3 +172,27 @@ MonoBehaviour:
     groupIdInternal: 0
     groupGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 53f0c0a738754a9478af6fe920b24a4e, type: 2}
+--- !u!114 &8909500228333396275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2632795936351566697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978af57a1bff7414a835bb6f600e22c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetItemType
+  itemType:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2584cbd2197009d4286305c5bc3085c5, type: 2}
+  itemSize:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 394426a2003508d439e168cbd6c87b06, type: 2}
