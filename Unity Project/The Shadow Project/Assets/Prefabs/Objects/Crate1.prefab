@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -8408580037902180191}
   - component: {fileID: 8204856972571852310}
   - component: {fileID: 1137523403362414079}
+  - component: {fileID: -4417506223998458647}
   m_Layer: 0
   m_Name: Crate1
   m_TagString: Object
@@ -157,3 +158,16 @@ MonoBehaviour:
     groupIdInternal: 0
     groupGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 4dad10a4f0c7d0e45b8b3bbf65e78790, type: 2}
+--- !u!114 &-4417506223998458647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176156287935254898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65a3124056c447baa9f0a2f368ab3b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResetObjectBehaviour
+  objectManager: {fileID: 0}

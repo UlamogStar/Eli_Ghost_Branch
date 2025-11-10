@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2214343501582379499}
   - component: {fileID: -3290595812163497083}
   - component: {fileID: -2232741299744481429}
+  - component: {fileID: -3371909633818835450}
   m_Layer: 0
   m_Name: Candle2_Candle2
   m_TagString: Object
@@ -158,6 +159,19 @@ MonoBehaviour:
     groupIdInternal: 0
     groupGuidInternal: 
     WwiseObjectReference: {fileID: 0}
+--- !u!114 &-3371909633818835450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2959072506460062796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65a3124056c447baa9f0a2f368ab3b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResetObjectBehaviour
+  objectManager: {fileID: 0}
 --- !u!1 &9178591281599988168
 GameObject:
   m_ObjectHideFlags: 0
