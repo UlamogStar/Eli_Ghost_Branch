@@ -14,7 +14,6 @@ public class UIBehaviorScript : MonoBehaviour
     public Transform follow;
     [SerializeField] private float zoffset = 0;
     private GameObject indicator;
-    [SerializeField] private GhostBehaviour attackManager;
     private MeshRenderer meshRenderer;
     [SerializeField] private bool isAttacking = false;
 

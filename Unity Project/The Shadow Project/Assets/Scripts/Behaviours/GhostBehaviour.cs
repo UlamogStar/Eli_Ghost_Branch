@@ -207,6 +207,12 @@ public class GhostBehaviour : MonoBehaviour
     {
         //Start attack indicator
         indicatorManager.StartIndicator();
+        //Activate glow outline
+        MeshRenderer[] glow = throwable.GetComponentsInChildren<MeshRenderer>();
+        for (int i=0; i < glow.Length; i++)
+        {
+            glow[i].enabled = true;
+        }
         // Hover Object for attack anticipation
         Vector3 location = throwable.transform.position + new Vector3(0, levitationHeight, 0);
         throwManager.StartThrow(throwable, location, levitateSpeed);
