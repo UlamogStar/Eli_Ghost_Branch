@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8240163622932502103}
   - component: {fileID: -3735279037455071515}
   - component: {fileID: -5694645951673544305}
+  - component: {fileID: 8107581493893485487}
+  - component: {fileID: -5456521652970810013}
   m_Layer: 0
   m_Name: Stool2
   m_TagString: Object
@@ -134,6 +136,43 @@ MonoBehaviour:
   returned: 0
   hit: 0
   originSpawn: {fileID: 0}
+--- !u!114 &8107581493893485487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3100712300063182446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978af57a1bff7414a835bb6f600e22c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetItemType
+  itemType:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: fa1707f7f88098b45bd8353f0a48e5a2, type: 2}
+  itemSize:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+--- !u!114 &-5456521652970810013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3100712300063182446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65a3124056c447baa9f0a2f368ab3b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResetObjectBehaviour
+  objectManager: {fileID: 0}
 --- !u!1 &5214217744252300161
 GameObject:
   m_ObjectHideFlags: 0

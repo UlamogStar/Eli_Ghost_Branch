@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5074686938640083535}
   - component: {fileID: -3300265106138566423}
   - component: {fileID: 5415014342387126900}
+  - component: {fileID: -2051610820032624067}
   m_Layer: 0
   m_Name: Table
   m_TagString: Object
@@ -134,6 +135,19 @@ MonoBehaviour:
   returned: 0
   hit: 0
   originSpawn: {fileID: 0}
+--- !u!114 &-2051610820032624067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762262780465068190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65a3124056c447baa9f0a2f368ab3b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResetObjectBehaviour
+  objectManager: {fileID: 0}
 --- !u!1 &7261510035366988968
 GameObject:
   m_ObjectHideFlags: 0

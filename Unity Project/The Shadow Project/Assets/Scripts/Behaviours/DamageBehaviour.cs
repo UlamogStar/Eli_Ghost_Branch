@@ -20,6 +20,15 @@ public class DamageBehaviour : MonoBehaviour
     {
 		Debug.Log(other.name);
         ObjectBehaviour objectBehaviour = other.GetComponent<ObjectBehaviour>();
+		ResetObjectBehaviour resetBehaviour = other.GetComponent<ResetObjectBehaviour>();
+	if(resetBehaviour == null)
+	{
+		Debug.Log("no behaviour found");
+	}
+	else
+	{
+		Debug.Log("we cool");
+	}
 		if (this.gameObject.CompareTag("Ghost"))
 		{
 			if(objectBehaviour.thrown)
@@ -28,6 +37,7 @@ public class DamageBehaviour : MonoBehaviour
                 damage *= multiplier;
                 health.value -= damage;
                 OnDamage.Invoke();
+				resetBehaviour.Reset();
 			}
 			else
             {
@@ -56,6 +66,7 @@ public class DamageBehaviour : MonoBehaviour
                 damage *= multiplier;
                 health.value -= damage;
                 OnDamage.Invoke();
+				resetBehaviour.Reset();
             } // end of else
         } // end of CompareTag
     } // end of OnTriggerEnter

@@ -100,7 +100,7 @@
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="large" ID="{AB9A5816-B945-455C-A74B-F05A5B6BB95A}"/>
-						<CurrentSwitchRef Name="crate" ID="{70E499D2-EA66-4102-B667-D2C500621F21}"/>
+						<CurrentSwitchRef Name="wood" ID="{70E499D2-EA66-4102-B667-D2C500621F21}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

@@ -244,6 +244,8 @@ GameObject:
   - component: {fileID: 6650324524267820930}
   - component: {fileID: 3268408941024991822}
   - component: {fileID: -3415607471734633672}
+  - component: {fileID: -3814736777156580832}
+  - component: {fileID: -6597929265452698554}
   m_Layer: 0
   m_Name: LargeBox1
   m_TagString: Object
@@ -365,3 +367,40 @@ MonoBehaviour:
   returned: 0
   hit: 0
   originSpawn: {fileID: 0}
+--- !u!114 &-3814736777156580832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6488573034672774975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978af57a1bff7414a835bb6f600e22c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetItemType
+  itemType:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2584cbd2197009d4286305c5bc3085c5, type: 2}
+  itemSize:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4dad10a4f0c7d0e45b8b3bbf65e78790, type: 2}
+--- !u!114 &-6597929265452698554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6488573034672774975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65a3124056c447baa9f0a2f368ab3b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResetObjectBehaviour
+  objectManager: {fileID: 0}
