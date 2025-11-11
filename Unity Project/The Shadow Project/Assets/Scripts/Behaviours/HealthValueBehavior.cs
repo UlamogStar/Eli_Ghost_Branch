@@ -27,4 +27,6 @@ public class HealthValueBehavior : MonoBehaviour
         health.value -= heal;
         onHeal.Invoke();
     }
+    
+    
 }

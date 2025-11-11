@@ -7983,7 +7983,7 @@ Transform:
   m_GameObject: {fileID: 646314354}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.65, y: 0.25, z: -3.03}
+  m_LocalPosition: {x: 1.83, y: 0.25, z: -4.03}
   m_LocalScale: {x: 0.50503, y: 0.50503, z: 0.50503}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8233,7 +8233,7 @@ Transform:
   m_GameObject: {fileID: 740894812}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.34777, y: 0, z: -2.79}
+  m_LocalPosition: {x: 0.34777, y: 0, z: -3.995}
   m_LocalScale: {x: 1, y: 1, z: 0.43345}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11033,7 +11033,7 @@ Transform:
   m_GameObject: {fileID: 1078200035}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.17, y: 0.25, z: -2.47}
+  m_LocalPosition: {x: -0.17, y: 0.25, z: -2.454}
   m_LocalScale: {x: 0.50503, y: 0.50503, z: 0.50503}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12349,6 +12349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIBehaviorScript
   follow: {fileID: 1078200036}
   zoffset: 0.5
+  attackManager: {fileID: 0}
   isAttacking: 0
 --- !u!65 &1222645523
 BoxCollider:
@@ -16269,7 +16270,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1922520541
 Transform:
@@ -16306,7 +16307,7 @@ MonoBehaviour:
   m_SoftShadowQuality: 0
   m_RenderingLayersMask:
     serializedVersion: 0
-    m_Bits: 1
+    m_Bits: 2
   m_ShadowRenderingLayersMask:
     serializedVersion: 0
     m_Bits: 1
@@ -16332,7 +16333,7 @@ Light:
   m_InnerSpotAngle: 2.9190302
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -16364,8 +16365,8 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_RenderingLayerMask: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -18768,13 +18769,13 @@ MonoBehaviour:
   waitTime: 1
   delay: 0.5
   throwSpeed: 1
-  levitateSpeed: 0.5
+  levitateSpeed: 0.6
   levitationHeight: 0.2
-  overshoot: 0.5
+  overshoot: 2
   center: {x: 0, y: 0.3, z: -0.89}
   driftPointOne: {x: -0.75, y: 0.3, z: -0.89}
   driftPointTwo: {x: 1.05, y: 0.3, z: -0.89}
-  strengthCheckpoints: 
+  strengthCheckpoints: 640000003200000019000000
   animator: {fileID: 1993776378}
   health: {fileID: 11400000, guid: 25b5707082ec9401ca088f9184e43518, type: 2}
   target: {fileID: 1078200036}

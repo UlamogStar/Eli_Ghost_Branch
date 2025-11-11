@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf53d30925d89c343b9720bf1c084ced, type: 3}
   m_Name: 70E499D2-EA66-4102-B667-D2C500621F21
   m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseSwitchReference
-  objectName: crate
-  id: 3098439042
+  objectName: wood
+  id: 2058049674
   guid: 70E499D2-EA66-4102-B667-D2C500621F21
   WwiseSwitchGroupReference: {fileID: 11400000, guid: 7ec0f2d1c67a5ad45b477fa69d4bbce9, type: 2}
