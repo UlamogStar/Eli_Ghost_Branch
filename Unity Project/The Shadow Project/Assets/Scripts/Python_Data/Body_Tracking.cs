@@ -75,7 +75,7 @@ public class Body_Tracking : MonoBehaviour
                 }
 
                 Vector3 pos = new Vector3(
-                    x * scale + offset.x,
+                    -x * scale + offset.x,
                     y * scale + offset.y,
                     offset.z
                 );
