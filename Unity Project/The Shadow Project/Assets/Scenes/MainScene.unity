@@ -7983,7 +7983,7 @@ Transform:
   m_GameObject: {fileID: 646314354}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.83, y: 0.25, z: -4.03}
+  m_LocalPosition: {x: 2.284, y: 0.25, z: -2.924}
   m_LocalScale: {x: 0.50503, y: 0.50503, z: 0.50503}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8233,7 +8233,7 @@ Transform:
   m_GameObject: {fileID: 740894812}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.34777, y: 0, z: -3.995}
+  m_LocalPosition: {x: -0.114, y: 0, z: -3.245}
   m_LocalScale: {x: 1, y: 1, z: 0.43345}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12349,7 +12349,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIBehaviorScript
   follow: {fileID: 1078200036}
   zoffset: 0.5
-  attackManager: {fileID: 0}
   isAttacking: 0
 --- !u!65 &1222645523
 BoxCollider:
