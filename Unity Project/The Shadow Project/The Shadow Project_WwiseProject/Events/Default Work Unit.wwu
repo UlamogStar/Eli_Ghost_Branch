@@ -95,6 +95,25 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Player" ID="{F2B80528-DBFF-49B3-8DEE-49914160980E}" ShortID="1050318402">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="19"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="player_deflect" ID="{E56814F1-F54B-4191-A4A0-99D0EB9C273F}">
+							<ChildrenList>
+								<Action Name="" ID="{363286DD-91C9-47C8-9B52-1A830D23661B}" ShortID="850403448">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="player_deflect" ID="{FB194A30-3118-4B4A-AA30-34CBEE3AABB2}" WorkUnitID="{561680CE-9685-4CF3-A1A2-E3EC450EC2E2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

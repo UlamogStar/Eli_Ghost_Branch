@@ -3952,6 +3952,13 @@
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="1"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{B116567D-8DE1-4A13-8AD2-288CBEF60F79}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -3974,7 +3981,304 @@
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
 						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="objects_fx" ID="{A42BE0B0-2050-4854-A598-3F7F4297EFEB}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<BlendContainer Name="player_deflect" ID="{FB194A30-3118-4B4A-AA30-34CBEE3AABB2}" ShortID="841037081">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="player_deflect_thud" ID="{779F5A23-BB4D-4B28-9FE7-53E54274C251}" ShortID="121953578">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{FE76514D-CFC5-41B7-A5B9-9749B56B1927}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="455"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="player_deflect_01" ID="{44AC26A9-6C34-4892-B564-1A150A27BF03}" ShortID="210446082">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{B215AFEC-E331-48DA-AD8C-EEF5DF366E00}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="player_deflect_01" ID="{DEAFB23A-4B7C-4B29-B544-2414BF6B2B40}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.153160050177096"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.270393668831169"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>player_deflect_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="732019369"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="player_deflect_01" ID="{DEAFB23A-4B7C-4B29-B544-2414BF6B2B40}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="player_deflect_02" ID="{8BD32259-8361-4372-B85B-38F2A5836793}" ShortID="897666715">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{AE7027EC-CBA4-420B-8879-CD26079A980E}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="player_deflect_02" ID="{2BDB15AD-A0B1-4449-AD8E-3D24CECC8F75}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0547532467532467"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.282321428571429"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>player_deflect_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="572926054"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="player_deflect_02" ID="{2BDB15AD-A0B1-4449-AD8E-3D24CECC8F75}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="player_deflect_03" ID="{90FB72BA-1C42-4291-A4C4-1241ED9990EA}" ShortID="96097820">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{DC525FEF-B61B-4950-89FF-B945C37B707C}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="player_deflect_03" ID="{65B4166A-DE76-4BFF-8B74-E54C4939B863}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00172151711924439"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0822024424439197"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00215189639905549"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.296961703069658"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>player_deflect_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="445232177"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="player_deflect_03" ID="{65B4166A-DE76-4BFF-8B74-E54C4939B863}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="player_deflect_04" ID="{100532BD-18ED-4B89-94D4-A51F8DA8EA61}" ShortID="193233232">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{FA52872C-E016-4289-9F71-77510DF06022}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="player_deflect_04" ID="{E5B8AE86-2931-493A-B3B9-26BF96D0CF31}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.110335276465958"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.358705061983471"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>player_deflect_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="99372517"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="player_deflect_04" ID="{E5B8AE86-2931-493A-B3B9-26BF96D0CF31}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="player_deflect_05" ID="{3E3A9168-EB54-406A-A4D3-3FC91DB83F2E}" ShortID="489898085">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{89EC1208-940C-4B20-9A45-EF94F10C475E}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="player_deflect_05" ID="{E7D27170-FE46-475C-BD94-49E2515C9AD1}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.041022690377804"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.199003689492326"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>player_deflect_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1071191720"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="player_deflect_05" ID="{E7D27170-FE46-475C-BD94-49E2515C9AD1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="player_deflect_06" ID="{1B91C583-3FBF-48F6-A178-319B6A667F59}" ShortID="217127275">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{7F11BBE0-4EAD-4FD0-A16B-03FDFE03646F}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="player_deflect_06" ID="{BED8ED57-18A0-4A16-8060-EC27286EB5B3}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0893143816410862"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.333262618063754"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>player_deflect_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="420572592"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="player_deflect_06" ID="{BED8ED57-18A0-4A16-8060-EC27286EB5B3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="player_deflect_07" ID="{F71A4E53-4AD6-40D7-BC3D-88D3EF9E2C67}" ShortID="25157511">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{9579C0CD-64F2-4BEC-A113-D4D4FEF8CAFC}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="player_deflect_07" ID="{D1044AC8-4613-4AA2-8BCA-8682E1885176}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0783572289452971"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.289803620621802"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>player_deflect_07.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="992989276"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="player_deflect_07" ID="{D1044AC8-4613-4AA2-8BCA-8682E1885176}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</BlendContainer>
+					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
