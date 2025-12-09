@@ -32,7 +32,7 @@ public class GhostBehaviour : MonoBehaviour
     [Header("Components")]
     [SerializeField] private Animator animator;
     [SerializeField] private IntData health;
-    [SerializeField] private Transform target;
+    private Transform target;
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private ObjectManager objectManager;
     [SerializeField] private ThrowObjectBehavior throwManager;
@@ -43,6 +43,8 @@ public class GhostBehaviour : MonoBehaviour
     [Header("Info")]
     [SerializeField] private Quaternion rotation;
     [SerializeField] private bool isWandering = false, isDrifting = false, isAttacking = false;
+
+    private List<TransformDataList> players;
 
     #region Unity Functions
 
@@ -55,6 +57,19 @@ public class GhostBehaviour : MonoBehaviour
         StartCoroutine(WanderRoutine());
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            TransformDataList list = other.GetComponent<TransformDataList>();
+            players.Add(list);
+        }
+    }
+
+    public void RemovePlayer(TransformDataList player)
+    {
+        players.Remove(player);
+    }
     #endregion
 
     #region Routines
@@ -181,6 +196,8 @@ public class GhostBehaviour : MonoBehaviour
             // Set as thrown and throw
             newSelectedObject.thrown = true;
             GameObject throwable = newSelectedObject.gameObject;
+
+            target = SelectTarget();
 
             Vector3 location = target.position;
 
@@ -316,4 +333,12 @@ public class GhostBehaviour : MonoBehaviour
     }
 
     #endregion
+
+    public Transform SelectTarget()
+    {
+        int playerIndex = Random.Range(0, players.Count);
+        int posIndex = Random.Range(0, players[playerIndex].posList.Count);
+        
+        return players[playerIndex].posList[posIndex];
+    }
 }
