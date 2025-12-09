@@ -20459,6 +20459,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 634889973}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f008a3f28981fe84fa99ada944daa189, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 785849107}
     - targetCorrespondingSourceObject: {fileID: -5942485856976635662, guid: f008a3f28981fe84fa99ada944daa189, type: 3}
       insertIndex: -1
       addedObject: {fileID: 312118573}
@@ -21721,6 +21724,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 710591102}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f008a3f28981fe84fa99ada944daa189, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1400750866}
     - targetCorrespondingSourceObject: {fileID: -5942485856976635662, guid: f008a3f28981fe84fa99ada944daa189, type: 3}
       insertIndex: -1
       addedObject: {fileID: 593880180}
@@ -23488,6 +23494,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 130495487}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f008a3f28981fe84fa99ada944daa189, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1707404553}
     - targetCorrespondingSourceObject: {fileID: -5942485856976635662, guid: f008a3f28981fe84fa99ada944daa189, type: 3}
       insertIndex: -1
       addedObject: {fileID: 226772920}
@@ -31993,6 +32002,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -379158496716756083, guid: f008a3f28981fe84fa99ada944daa189, type: 3}
   m_PrefabInstance: {fileID: 980685011}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1400750866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980685012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2911854942d434bb3dc343ee782814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TransformDataList
+  posList:
+  - {fileID: 1720336165}
+  - {fileID: 1390156219}
+  - {fileID: 593880179}
+  - {fileID: 1841999259}
+  - {fileID: 790660270}
+  - {fileID: 604216375}
+  - {fileID: 980685019}
+  - {fileID: 980685018}
+  - {fileID: 980685017}
+  - {fileID: 980685016}
+  - {fileID: 980685015}
+  - {fileID: 980685014}
+  - {fileID: 268063202}
+  - {fileID: 980685013}
 --- !u!1 &1406035595 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 138872283005297489, guid: f008a3f28981fe84fa99ada944daa189, type: 3}
@@ -51962,6 +51998,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 640726126}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f008a3f28981fe84fa99ada944daa189, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1954106218}
     - targetCorrespondingSourceObject: {fileID: -5942485856976635662, guid: f008a3f28981fe84fa99ada944daa189, type: 3}
       insertIndex: -1
       addedObject: {fileID: 967280073}
