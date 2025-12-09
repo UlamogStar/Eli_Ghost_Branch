@@ -44,7 +44,7 @@ public class GhostBehaviour : MonoBehaviour
     [SerializeField] private Quaternion rotation;
     [SerializeField] private bool isWandering = false, isDrifting = false, isAttacking = false;
 
-    private List<TransformDataList> players;
+    [SerializeField] private List<TransformDataList> players;
 
     #region Unity Functions
 

@@ -7,15 +7,17 @@ to keep it.
 Last date worked on: 11/3/2025
 */
 
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 public class DamageBehaviour : MonoBehaviour
 { 
-    public UnityEvent OnDamage, OnReturn;
+    public UnityEvent OnDamage, OnDelay, OnReturn;
     public bool isBody = true;
     public int damage;
     public int multiplier = 1;
     public IntData health;
+    public float delayTime = 0.2f;
     public void OnTriggerEnter(Collider other)
     {
 		Debug.Log(other.name);
@@ -38,6 +40,7 @@ public class DamageBehaviour : MonoBehaviour
                 health.value -= damage;
                 OnDamage.Invoke();
 				resetBehaviour.Reset();
+				StartCoroutine(DelayEvent());
 			}
 			else
             {
@@ -67,7 +70,14 @@ public class DamageBehaviour : MonoBehaviour
                 health.value -= damage;
                 OnDamage.Invoke();
 				resetBehaviour.Reset();
+				StartCoroutine(DelayEvent());
             } // end of else
         } // end of CompareTag
     } // end of OnTriggerEnter
+
+    public IEnumerator DelayEvent()
+    {
+	    yield return new WaitForSeconds(delayTime);
+	    OnDelay.Invoke();
+    }
 } //end of
