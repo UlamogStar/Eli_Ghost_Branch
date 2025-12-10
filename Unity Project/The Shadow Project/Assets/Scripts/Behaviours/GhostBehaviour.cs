@@ -44,7 +44,7 @@ public class GhostBehaviour : MonoBehaviour
     [SerializeField] private Quaternion rotation;
     [SerializeField] private bool isWandering = false, isDrifting = false, isAttacking = false;
 
-    [SerializeField] private List<TransformDataList> players;
+    [SerializeField] public List<TransformDataList> players;
 
     #region Unity Functions
 
@@ -57,18 +57,9 @@ public class GhostBehaviour : MonoBehaviour
         StartCoroutine(WanderRoutine());
     }
 
-    public void OnTriggerEnter(Collider other)
+    public void AddPlayer(TransformDataList player)
     {
-        if (other.CompareTag("Player"))
-        {
-            TransformDataList list = other.GetComponent<TransformDataList>();
-            players.Add(list);
-        }
-    }
-
-    public void RemovePlayer(TransformDataList player)
-    {
-        players.Remove(player);
+        players[0] = player;
     }
     #endregion
 
