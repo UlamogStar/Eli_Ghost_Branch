@@ -29,15 +29,22 @@ public class UDP : MonoBehaviour
         [TextArea(3, 10)] public string note =
             "The default camera can only be changed in the python hand tracking script.";
         
-        public void Start()
+        void Start()
         {
-    
-            receiveThread = new Thread(
-                new ThreadStart(ReceiveData));
+            StartReceiver();
+        }
+        void StartReceiver()
+        {
+            if (receiveThread != null)
+            {
+                StopReceiver();
+            }
+
+            receiveThread = new Thread(ReceiveData);
             receiveThread.IsBackground = true;
             receiveThread.Start();
         }
-    
+        
         // receive thread
         private void ReceiveData()
         {
@@ -60,5 +67,34 @@ public class UDP : MonoBehaviour
                 }
             }
         }
+        
+        public void StopReceiver()
+        {
+            startRecieving = false;
+
+            if (client != null)
+            {
+                client.Close(); // <-- CRITICAL: closes socket so scene reload can reopen it
+                client = null;
+            }
+
+            if (receiveThread != null)
+            {
+                receiveThread.Abort();
+                receiveThread = null;
+            }
+        }
+
+        void OnDestroy()
+        {
+            StopReceiver();
+        }
+
+        void OnApplicationQuit()
+        {
+            StopReceiver();
+        }
     
+
+       
 }

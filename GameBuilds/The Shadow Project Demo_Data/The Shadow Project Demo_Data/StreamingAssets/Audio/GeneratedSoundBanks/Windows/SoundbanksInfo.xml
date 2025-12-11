@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{99EF6813-3944-46A4-EC65-EF86FC95C21D}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="992902880" Name="Small_Tiled_Room1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="3552193294" Name="env_attic_verb" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="85412153" Name="Ambience"/>
+				<Bus Id="393239870" Name="SFX"/>
+				<Bus Id="838047381" Name="Non-World"/>
+				<Bus Id="1069431850" Name="Player"/>
+				<Bus Id="1551306167" Name="UI"/>
+				<Bus Id="1695690031" Name="Objects"/>
+				<Bus Id="2242381963" Name="Enemies"/>
+				<Bus Id="2609808943" Name="World"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
+			</Busses>
+			<AuxBusses>
+				<AuxBus Id="591668312" Name="objects_fx">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="992902880"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="1802038219" Name="env_fx">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3552193294"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
+			<GameParameters>
+				<GameParameter Id="180621091" Name="ghost_health"/>
+				<GameParameter Id="215992295" Name="player_health"/>
+			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="1281648863" Name="item_type">
+					<Switches>
+						<Switch Id="782826392" Name="default"/>
+						<Switch Id="1200188298" Name="stool"/>
+						<Switch Id="1229756253" Name="cardboard"/>
+						<Switch Id="2048817515" Name="table"/>
+						<Switch Id="2058049674" Name="wood"/>
+						<Switch Id="2912468606" Name="candle"/>
+						<Switch Id="3353308030" Name="candelabra"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="1566734580" Name="item_size">
+					<Switches>
+						<Switch Id="1846755610" Name="small"/>
+						<Switch Id="2849147824" Name="medium"/>
+						<Switch Id="4284352190" Name="large"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="3157003241" Type="User" Language="SFX" Hash="{79834029-20A1-7EF6-AA29-F669E707C58F}">
+			<ShortName>test</ShortName>
+			<Path>test.bnk</Path>
+			<Media>
+				<File Id="762578400" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Pause.wav</ShortName>
+					<CachePath>SFX/Pause_7B654C33.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="4258653052" Name="test_event" DurationType="OneShot" DurationMin="0.629499" DurationMax="0.629499">
+					<MediaRefs>
+						<MediaRef Id="762578400"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{399960DA-9925-7F6D-BB3D-7DC434268237}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="5392749" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>520455-CANDLE_DROP_1.wav</ShortName>
+					<CachePath>SFX/520455-CANDLE_DROP_1_77A0CD8F.wem</CachePath>
+				</File>
+				<File Id="50860831" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_hauntcreak_05.wav</ShortName>
+					<CachePath>SFX/env_os_hauntcreak_05_8E324C96.wem</CachePath>
+				</File>
+				<File Id="76659355" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_rats_03.wav</ShortName>
+					<CachePath>SFX/env_os_rats_03_8E324C96.wem</CachePath>
+				</File>
+				<File Id="93618431" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>card_L_02.wav</ShortName>
+					<CachePath>SFX/card_L_02_C5D48472.wem</CachePath>
+				</File>
+				<File Id="118384836" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_rats_02.wav</ShortName>
+					<CachePath>SFX/env_os_rats_02_8E324C96.wem</CachePath>
+				</File>
+				<File Id="130462557" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_hauntcreak_04.wav</ShortName>
+					<CachePath>SFX/env_os_hauntcreak_04_899746C0.wem</CachePath>
+				</File>
+				<File Id="147449458" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>env_loop_morgue.wav</ShortName>
+					<Path>Media/147449458.wem</Path>
+					<CachePath>SFX/env_loop_morgue_56CEF360.wem</CachePath>
+				</File>
+				<File Id="152270630" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>card_sm_02.wav</ShortName>
+					<CachePath>SFX/card_sm_02_0FC14F66.wem</CachePath>
+				</File>
+				<File Id="158366706" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>205745-EFX_EXT_Metal_Bat_on_Heel_04.wav</ShortName>
+					<CachePath>SFX/205745-EFX_EXT_Metal_Bat_on_Heel_04_695B8221.wem</CachePath>
+				</File>
+				<File Id="160165350" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_squeak_03.wav</ShortName>
+					<CachePath>SFX/env_os_squeak_03_8E324C96.wem</CachePath>
+				</File>
+				<File Id="199535482" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_squeak_01.wav</ShortName>
+					<CachePath>SFX/env_os_squeak_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="215610243" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>item_crateS_hit_01.wav</ShortName>
+					<CachePath>SFX/item_crateS_hit_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="236890918" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>202398-EFX_INT_Face_Body_Punch_Clean_01.wav</ShortName>
+					<CachePath>SFX/202398-EFX_INT_Face_Body_Punch_Clean_01_BB5E3B6D.wem</CachePath>
+				</File>
+				<File Id="245547960" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_rats_07.wav</ShortName>
+					<CachePath>SFX/env_os_rats_07_8E324C96.wem</CachePath>
+				</File>
+				<File Id="254467704" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>env_loop_wind_02.wav</ShortName>
+					<Path>Media/254467704.wem</Path>
+					<CachePath>SFX/env_loop_wind_02_56CEF360.wem</CachePath>
+				</File>
+				<File Id="286244852" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_hauntcreak_01.wav</ShortName>
+					<CachePath>SFX/env_os_hauntcreak_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="366896990" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>520458-CANDLE_DROP_4.wav</ShortName>
+					<CachePath>SFX/520458-CANDLE_DROP_4_BBE66FB3.wem</CachePath>
+				</File>
+				<File Id="378498032" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_hauntcreak_03.wav</ShortName>
+					<CachePath>SFX/env_os_hauntcreak_03_8E324C96.wem</CachePath>
+				</File>
+				<File Id="387915797" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_rats_05.wav</ShortName>
+					<CachePath>SFX/env_os_rats_05_8E324C96.wem</CachePath>
+				</File>
+				<File Id="392460682" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>205744-EFX_EXT_Metal_Bat_on_Heel_03.wav</ShortName>
+					<CachePath>SFX/205744-EFX_EXT_Metal_Bat_on_Heel_03_B09B866C.wem</CachePath>
+				</File>
+				<File Id="411936919" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>item_crateS_hit_02.wav</ShortName>
+					<CachePath>SFX/item_crateS_hit_02_8E324C96.wem</CachePath>
+				</File>
+				<File Id="443385534" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_rats_08.wav</ShortName>
+					<CachePath>SFX/env_os_rats_08_8E324C96.wem</CachePath>
+				</File>
+				<File Id="454060314" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>item_crateL_hit_01.wav</ShortName>
+					<CachePath>SFX/item_crateL_hit_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="460766516" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_hauntcreak_02.wav</ShortName>
+					<CachePath>SFX/env_os_hauntcreak_02_8E324C96.wem</CachePath>
+				</File>
+				<File Id="485040114" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>202398-EFX_INT_Face_Body_Punch_Clean_01.wav</ShortName>
+					<CachePath>SFX/202398-EFX_INT_Face_Body_Punch_Clean_01_AFBC5D5F.wem</CachePath>
+				</File>
+				<File Id="496235049" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>202398-EFX_INT_Face_Body_Punch_Clean_01.wav</ShortName>
+					<CachePath>SFX/202398-EFX_INT_Face_Body_Punch_Clean_01_1C94BB92.wem</CachePath>
+				</File>
+				<File Id="510925398" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>46162-FOLEY_CANDLE_DROP_ON_CARPET_01.wav</ShortName>
+					<CachePath>SFX/46162-FOLEY_CANDLE_DROP_ON_CARPET_01_906D7E2E.wem</CachePath>
+				</File>
+				<File Id="529809776" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_rats_01.wav</ShortName>
+					<CachePath>SFX/env_os_rats_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="545847753" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>202398-EFX_INT_Face_Body_Punch_Clean_01.wav</ShortName>
+					<CachePath>SFX/202398-EFX_INT_Face_Body_Punch_Clean_01_539AA48A.wem</CachePath>
+				</File>
+				<File Id="581889273" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_squeak_04.wav</ShortName>
+					<CachePath>SFX/env_os_squeak_04_8E324C96.wem</CachePath>
+				</File>
+				<File Id="606147416" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>default_type.wav</ShortName>
+					<CachePath>SFX/default_type_8E324C96.wem</CachePath>
+				</File>
+				<File Id="628586250" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>item_crateL_hit_02.wav</ShortName>
+					<CachePath>SFX/item_crateL_hit_02_8E324C96.wem</CachePath>
+				</File>
+				<File Id="651684769" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>202398-EFX_INT_Face_Body_Punch_Clean_01.wav</ShortName>
+					<CachePath>SFX/202398-EFX_INT_Face_Body_Punch_Clean_01_F67C530C.wem</CachePath>
+				</File>
+				<File Id="688012886" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_rats_09.wav</ShortName>
+					<CachePath>SFX/env_os_rats_09_8E324C96.wem</CachePath>
+				</File>
+				<File Id="701384338" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>205745-EFX_EXT_Metal_Bat_on_Heel_04.wav</ShortName>
+					<CachePath>SFX/205745-EFX_EXT_Metal_Bat_on_Heel_04_E4AEF82D.wem</CachePath>
+				</File>
+				<File Id="708813500" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>item_crateL_hit_03.wav</ShortName>
+					<CachePath>SFX/item_crateL_hit_03_8E324C96.wem</CachePath>
+				</File>
+				<File Id="728308374" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>205744-EFX_EXT_Metal_Bat_on_Heel_03.wav</ShortName>
+					<CachePath>SFX/205744-EFX_EXT_Metal_Bat_on_Heel_03_F7442034.wem</CachePath>
+				</File>
+				<File Id="734080490" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>env_loop_centerfill.wav</ShortName>
+					<Path>Media/734080490.wem</Path>
+					<CachePath>SFX/env_loop_centerfill_2C9019F0.wem</CachePath>
+				</File>
+				<File Id="765011205" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_squeak_07.wav</ShortName>
+					<CachePath>SFX/env_os_squeak_07_8E324C96.wem</CachePath>
+				</File>
+				<File Id="801632121" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_squeak_05.wav</ShortName>
+					<CachePath>SFX/env_os_squeak_05_37F97180.wem</CachePath>
+				</File>
+				<File Id="836443457" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>env_loop_wind_01.wav</ShortName>
+					<Path>Media/836443457.wem</Path>
+					<CachePath>SFX/env_loop_wind_01_56CEF360.wem</CachePath>
+				</File>
+				<File Id="836858474" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>202398-EFX_INT_Face_Body_Punch_Clean_01.wav</ShortName>
+					<CachePath>SFX/202398-EFX_INT_Face_Body_Punch_Clean_01_C9F11791.wem</CachePath>
+				</File>
+				<File Id="838804070" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>card_L_03.wav</ShortName>
+					<CachePath>SFX/card_L_03_E4257A0A.wem</CachePath>
+				</File>
+				<File Id="843560819" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>card_sm_01.wav</ShortName>
+					<CachePath>SFX/card_sm_01_51A77DAD.wem</CachePath>
+				</File>
+				<File Id="886952836" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_rats_06.wav</ShortName>
+					<CachePath>SFX/env_os_rats_06_8E324C96.wem</CachePath>
+				</File>
+				<File Id="925581424" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>item_crateS_hit_03.wav</ShortName>
+					<CachePath>SFX/item_crateS_hit_03_8E324C96.wem</CachePath>
+				</File>
+				<File Id="927452689" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_squeak_02.wav</ShortName>
+					<CachePath>SFX/env_os_squeak_02_8E324C96.wem</CachePath>
+				</File>
+				<File Id="937005659" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>202398-EFX_INT_Face_Body_Punch_Clean_01.wav</ShortName>
+					<CachePath>SFX/202398-EFX_INT_Face_Body_Punch_Clean_01_ED07E394.wem</CachePath>
+				</File>
+				<File Id="937608976" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>202398-EFX_INT_Face_Body_Punch_Clean_01.wav</ShortName>
+					<CachePath>SFX/202398-EFX_INT_Face_Body_Punch_Clean_01_395FAEE1.wem</CachePath>
+				</File>
+				<File Id="938374940" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>202398-EFX_INT_Face_Body_Punch_Clean_01.wav</ShortName>
+					<CachePath>SFX/202398-EFX_INT_Face_Body_Punch_Clean_01_0BBB6051.wem</CachePath>
+				</File>
+				<File Id="951544368" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>env_loop_gaspipes.wav</ShortName>
+					<Path>Media/951544368.wem</Path>
+					<CachePath>SFX/env_loop_gaspipes_56CEF360.wem</CachePath>
+				</File>
+				<File Id="962882079" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_squeak_06.wav</ShortName>
+					<CachePath>SFX/env_os_squeak_06_8E324C96.wem</CachePath>
+				</File>
+				<File Id="973742346" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>202398-EFX_INT_Face_Body_Punch_Clean_01.wav</ShortName>
+					<CachePath>SFX/202398-EFX_INT_Face_Body_Punch_Clean_01_C6DB88D2.wem</CachePath>
+				</File>
+				<File Id="977793167" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>card_L_01.wav</ShortName>
+					<CachePath>SFX/card_L_01_4F70F3EA.wem</CachePath>
+				</File>
+				<File Id="980592382" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>520456-CANDLE_DROP_2.wav</ShortName>
+					<CachePath>SFX/520456-CANDLE_DROP_2_EA70B836.wem</CachePath>
+				</File>
+				<File Id="990560223" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>205744-EFX_EXT_Metal_Bat_on_Heel_03.wav</ShortName>
+					<CachePath>SFX/205744-EFX_EXT_Metal_Bat_on_Heel_03_4C373A28.wem</CachePath>
+				</File>
+				<File Id="1015114399" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>env_os_rats_04.wav</ShortName>
+					<CachePath>SFX/env_os_rats_04_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1032002284" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>205744-EFX_EXT_Metal_Bat_on_Heel_03.wav</ShortName>
+					<CachePath>SFX/205744-EFX_EXT_Metal_Bat_on_Heel_03_A0BBD23A.wem</CachePath>
+				</File>
+				<File Id="1054259990" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>card_sm_03.wav</ShortName>
+					<CachePath>SFX/card_sm_03_9CF9E2F0.wem</CachePath>
+				</File>
+				<File Id="1064107408" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>item_crateL_hit_04.wav</ShortName>
+					<CachePath>SFX/item_crateL_hit_04_8E324C96.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1697873554" Name="amb_attic_start" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="50860831"/>
+						<MediaRef Id="76659355"/>
+						<MediaRef Id="118384836"/>
+						<MediaRef Id="130462557"/>
+						<MediaRef Id="147449458"/>
+						<MediaRef Id="160165350"/>
+						<MediaRef Id="199535482"/>
+						<MediaRef Id="245547960"/>
+						<MediaRef Id="254467704"/>
+						<MediaRef Id="286244852"/>
+						<MediaRef Id="378498032"/>
+						<MediaRef Id="387915797"/>
+						<MediaRef Id="443385534"/>
+						<MediaRef Id="460766516"/>
+						<MediaRef Id="529809776"/>
+						<MediaRef Id="581889273"/>
+						<MediaRef Id="688012886"/>
+						<MediaRef Id="734080490"/>
+						<MediaRef Id="765011205"/>
+						<MediaRef Id="801632121"/>
+						<MediaRef Id="836443457"/>
+						<MediaRef Id="886952836"/>
+						<MediaRef Id="927452689"/>
+						<MediaRef Id="951544368"/>
+						<MediaRef Id="962882079"/>
+						<MediaRef Id="1015114399"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="1802038219" Name="env_fx"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="979070061" Name="ghost_attack" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2405462070" Name="object_hit_player" MaxAttenuation="40" DurationType="OneShot" DurationMin="0" DurationMax="1.8376367">
+					<AuxBusRefs>
+						<AuxBusRef Id="591668312" Name="objects_fx"/>
+					</AuxBusRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1281648863" Id="2912468606"/>
+							<MediaRefs>
+								<MediaRef Id="5392749"/>
+								<MediaRef Id="366896990"/>
+								<MediaRef Id="496235049"/>
+								<MediaRef Id="510925398"/>
+								<MediaRef Id="545847753"/>
+								<MediaRef Id="651684769"/>
+								<MediaRef Id="836858474"/>
+								<MediaRef Id="973742346"/>
+								<MediaRef Id="980592382"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1281648863" Id="3353308030"/>
+							<MediaRefs>
+								<MediaRef Id="5392749"/>
+								<MediaRef Id="158366706"/>
+								<MediaRef Id="236890918"/>
+								<MediaRef Id="366896990"/>
+								<MediaRef Id="392460682"/>
+								<MediaRef Id="485040114"/>
+								<MediaRef Id="510925398"/>
+								<MediaRef Id="701384338"/>
+								<MediaRef Id="728308374"/>
+								<MediaRef Id="937005659"/>
+								<MediaRef Id="937608976"/>
+								<MediaRef Id="938374940"/>
+								<MediaRef Id="980592382"/>
+								<MediaRef Id="990560223"/>
+								<MediaRef Id="1032002284"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1281648863" Id="1200188298"/>
+							<MediaRefs>
+								<MediaRef Id="215610243"/>
+								<MediaRef Id="411936919"/>
+								<MediaRef Id="925581424"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1281648863" Id="1229756253"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="1566734580" Id="4284352190"/>
+									<MediaRefs>
+										<MediaRef Id="93618431"/>
+										<MediaRef Id="838804070"/>
+										<MediaRef Id="977793167"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="1566734580" Id="1846755610" Default="true"/>
+									<MediaRefs>
+										<MediaRef Id="152270630"/>
+										<MediaRef Id="843560819"/>
+										<MediaRef Id="1054259990"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1281648863" Id="782826392" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="606147416"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1281648863" Id="2058049674"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="1566734580" Id="4284352190"/>
+									<MediaRefs>
+										<MediaRef Id="454060314"/>
+										<MediaRef Id="628586250"/>
+										<MediaRef Id="708813500"/>
+										<MediaRef Id="1064107408"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="1566734580" Id="1846755610"/>
+									<MediaRefs>
+										<MediaRef Id="215610243"/>
+										<MediaRef Id="411936919"/>
+										<MediaRef Id="925581424"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</Events>
+			<SwitchGroups>
+				<SwitchGroup Id="1281648863" Name="item_type">
+					<Switches>
+						<Switch Id="782826392" Name="default"/>
+						<Switch Id="1200188298" Name="stool"/>
+						<Switch Id="1229756253" Name="cardboard"/>
+						<Switch Id="2048817515" Name="table"/>
+						<Switch Id="2058049674" Name="wood"/>
+						<Switch Id="2912468606" Name="candle"/>
+						<Switch Id="3353308030" Name="candelabra"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="1566734580" Name="item_size">
+					<Switches>
+						<Switch Id="1846755610" Name="small"/>
+						<Switch Id="2849147824" Name="medium"/>
+						<Switch Id="4284352190" Name="large"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{F3BA50A8-6C5D-7FF7-364F-86CC6F381C0C}</FileHash>
+</SoundBanksInfo>
