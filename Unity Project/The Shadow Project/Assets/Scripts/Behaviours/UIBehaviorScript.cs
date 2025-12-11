@@ -21,7 +21,7 @@ public class UIBehaviorScript : MonoBehaviour
     private TMP_Text textSmall, textMedium, textLarge;
     [SerializeField] private bool isAttacking = false;
     [HideInInspector] public GameObject throwable;
-    [SerializeField] private float blinkTime = 0.25f;
+    [SerializeField] private float blinkTime = 0.2f;
 
 
 
