@@ -39,5 +39,9 @@ public class ResetBehaviorScript : MonoBehaviour
             gHealth.value = 100;
             updateHealth.Invoke();
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 }
