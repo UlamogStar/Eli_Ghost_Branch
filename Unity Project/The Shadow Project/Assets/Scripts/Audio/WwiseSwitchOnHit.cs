@@ -11,7 +11,7 @@ public class WwiseSwitchOnHit : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //only care about your throwable objects
-        if (!other.CompareTag("Object"))
+        if (!other.CompareTag("Object") || other.GetComponent<DamageBehaviour>() != null)
             return;
 
         SetItemType itemData = other.GetComponentInParent<SetItemType>();
@@ -39,6 +39,6 @@ public class WwiseSwitchOnHit : MonoBehaviour
 
         Debug.Log(itemData != null
         ? $"[WwiseSwitchOnHit] Found SetItemType on {itemData.gameObject.name}, applied {itemData.itemType?.Name} / {itemData.itemSize?.Name}"
-        : $"[WwiseSwitchOnHit] No SetItemType found on {other.name} or its parents — using defaults.");
+        : $"[WwiseSwitchOnHit] No SetItemType found on {other.name} or its parents ï¿½ using defaults.");
     }
 }
