@@ -4,7 +4,7 @@ public class LightAdjustment : MonoBehaviour
 {
     private float light;
     private Light adjustLight;
-    void Start()
+    void Awake()
     {
         light = this.GetComponent<Light>().intensity;
         adjustLight = this.GetComponent<Light>();

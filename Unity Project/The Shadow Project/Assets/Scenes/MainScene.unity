@@ -24498,6 +24498,7 @@ GameObject:
   - component: {fileID: 1208093074}
   - component: {fileID: 1208093076}
   - component: {fileID: 1208093075}
+  - component: {fileID: 1208093077}
   m_Layer: 0
   m_Name: AdjustmentLight
   m_TagString: Untagged
@@ -24614,6 +24615,18 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &1208093077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208093073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e1c06eab322af344b87b2c76ad7e971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LightAdjustment
 --- !u!1 &1208576730
 GameObject:
   m_ObjectHideFlags: 0
