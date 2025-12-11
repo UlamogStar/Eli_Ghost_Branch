@@ -172,7 +172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65a3124056c447baa9f0a2f368ab3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetObjectBehaviour
-  objectManager: {fileID: 0}
 --- !u!1 &5462935802817072277
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +183,6 @@ GameObject:
   - component: {fileID: 8827958392866187551}
   - component: {fileID: 636413847985406702}
   - component: {fileID: 4036444352988638606}
-  - component: {fileID: 8071823070293381658}
   m_Layer: 0
   m_Name: Outline
   m_TagString: Object
@@ -263,18 +261,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8071823070293381658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5462935802817072277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0830ce3e5bc3e7e48b1c19786b1b2130, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VFXBehavior
 --- !u!1 &8869833073925988043
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +342,7 @@ TrailRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Time: 0.5
-  m_PreviewTimeScale: 0.35
+  m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1

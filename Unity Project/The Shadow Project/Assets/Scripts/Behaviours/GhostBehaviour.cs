@@ -1,11 +1,11 @@
 /*
 Originial Coder: Owynn A.
-Recent Coder: Zackery E.
+Recent Coder: Zackery E. Natalie R.
 Recent Changes: Reorganized and fixed bugs. Added Attack Routine
 for randomizing attacks, Added Strength Checkpoints and strength,
 so when it hits an Strength Checkpoint, and on StrengthUpdate, the
 ghost's strength increases allowing it to throw the next sized object
-Last date worked on: 10/28/2025
+Last date worked on: 12/10/2025
 */
 
 using UnityEngine;
@@ -32,7 +32,7 @@ public class GhostBehaviour : MonoBehaviour
     [Header("Components")]
     [SerializeField] private Animator animator;
     [SerializeField] private IntData health;
-    private Transform target;
+    public Transform target;
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private ObjectManager objectManager;
     [SerializeField] private ThrowObjectBehavior throwManager;
@@ -214,6 +214,8 @@ public class GhostBehaviour : MonoBehaviour
     public void LevitateObject(GameObject throwable)
     {
         //Start attack indicator
+        indicatorManager.follow = target;
+        indicatorManager.throwable = throwable;
         indicatorManager.StartIndicator();
         //Activate glow outline
         MeshRenderer[] glow = throwable.GetComponentsInChildren<MeshRenderer>();
