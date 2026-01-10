@@ -9388,13 +9388,11 @@ MonoBehaviour:
   cameraTransform: {fileID: 0}
   objectManager: {fileID: 0}
   throwManager: {fileID: 0}
-  indicatorManager: {fileID: 0}
   agent: {fileID: 0}
   rotation: {x: 0, y: 0, z: 0, w: 0}
   isWandering: 1
   isDrifting: 0
   isAttacking: 0
-  players: []
 --- !u!195 &1266123384
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -12376,9 +12374,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnDelay:
-    m_PersistentCalls:
-      m_Calls: []
   OnReturn:
     m_PersistentCalls:
       m_Calls: []
@@ -12386,7 +12381,6 @@ MonoBehaviour:
   damage: 0
   multiplier: 1
   health: {fileID: 11400000, guid: 9661d000c6e044144a21d1f9cab4e05a, type: 2}
-  delayTime: 0.2
 --- !u!65 &2017929267
 BoxCollider:
   m_ObjectHideFlags: 0
