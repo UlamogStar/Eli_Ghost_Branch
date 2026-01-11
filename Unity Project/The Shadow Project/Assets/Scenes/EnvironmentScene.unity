@@ -329,6 +329,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnDelay:
+    m_PersistentCalls:
+      m_Calls: []
   OnReturn:
     m_PersistentCalls:
       m_Calls: []
@@ -336,6 +339,7 @@ MonoBehaviour:
   damage: 0
   multiplier: 1
   health: {fileID: 11400000, guid: 3943486331d354528809d0f18a4d2413, type: 2}
+  delayTime: 0.2
 --- !u!65 &73903516
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -667,10 +671,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 263200099}
-  - component: {fileID: 228410321}
-  - component: {fileID: 228410320}
-  - component: {fileID: 228410319}
-  - component: {fileID: 364122016}
   m_Layer: 5
   m_Name: Handle Slide Area
   m_TagString: Untagged
@@ -940,14 +940,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33a30d312fdf41a5ae8024f799c0cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectBehaviour
-  damage: {fileID: 11400000, guid: 9661d000c6e044144a21d1f9cab4e05a, type: 2}
+  size: 0
+  damage: 10
   throwSpeed: 3
   returnable: 1
   thrown: 0
-  throwManager: {fileID: 0}
-  target: {fileID: 0}
+  returned: 0
+  hit: 0
   originSpawn: {fileID: 0}
-  returnToObject: {fileID: 0}
 --- !u!54 &530762673
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1098,6 +1098,9 @@ MonoBehaviour:
   OnDamage:
     m_PersistentCalls:
       m_Calls: []
+  OnDelay:
+    m_PersistentCalls:
+      m_Calls: []
   OnReturn:
     m_PersistentCalls:
       m_Calls: []
@@ -1105,6 +1108,7 @@ MonoBehaviour:
   damage: 0
   multiplier: 1
   health: {fileID: 11400000, guid: 25b5707082ec9401ca088f9184e43518, type: 2}
+  delayTime: 0.2
 --- !u!1001 &550472731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2230,6 +2234,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnDelay:
+    m_PersistentCalls:
+      m_Calls: []
   OnReturn:
     m_PersistentCalls:
       m_Calls: []
@@ -2237,6 +2244,7 @@ MonoBehaviour:
   damage: 0
   multiplier: 1
   health: {fileID: 11400000, guid: 3943486331d354528809d0f18a4d2413, type: 2}
+  delayTime: 0.2
 --- !u!1001 &1187441163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2436,24 +2444,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3206523b5b3614b75ab1a2607393b8a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhostBehaviour
+  strength: 0
+  rotationSpeed: 5
   radius: 10
   waitTime: 1
   delay: 0.5
   throwSpeed: 1
+  levitateSpeed: 1
   levitationHeight: 0.5
   overshoot: 0.5
-  animator: {fileID: 1266123380}
-  target: {fileID: 1186896730}
-  objectManager: {fileID: 1660602994}
-  throwManager: {fileID: 1266123388}
-  isWandering: 1
-  isDrifting: 0
-  cameraTransform: {fileID: 70572859}
   center: {x: 0, y: 0, z: 0}
   driftPointOne: {x: -1.12, y: 0.3, z: -1.02}
   driftPointTwo: {x: 1.12, y: 0.3, z: -1.02}
+  strengthCheckpoints: 
+  animator: {fileID: 1266123380}
+  health: {fileID: 11400000, guid: 25b5707082ec9401ca088f9184e43518, type: 2}
+  target: {fileID: 1186896730}
+  cameraTransform: {fileID: 70572859}
+  objectManager: {fileID: 1660602994}
+  throwManager: {fileID: 1266123388}
+  indicatorManager: {fileID: 0}
+  agent: {fileID: 0}
   rotation: {x: 0, y: 0, z: 0, w: 0}
-  rotationSpeed: 5
+  isWandering: 1
+  isDrifting: 0
+  isAttacking: 0
+  players: []
 --- !u!195 &1266123384
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2586,6 +2602,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnDelay:
+    m_PersistentCalls:
+      m_Calls: []
   OnReturn:
     m_PersistentCalls:
       m_Calls: []
@@ -2593,6 +2612,7 @@ MonoBehaviour:
   damage: 0
   multiplier: 1
   health: {fileID: 11400000, guid: 25b5707082ec9401ca088f9184e43518, type: 2}
+  delayTime: 0.2
 --- !u!65 &1266123391
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3499,7 +3519,6 @@ MonoBehaviour:
   - {fileID: 1250204083}
   - {fileID: 776707793}
   spawnedObjects: []
-  returnToObject: {fileID: 0}
 --- !u!4 &1660602995
 Transform:
   m_ObjectHideFlags: 0
@@ -5213,6 +5232,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnDelay:
+    m_PersistentCalls:
+      m_Calls: []
   OnReturn:
     m_PersistentCalls:
       m_Calls: []
@@ -5220,6 +5242,7 @@ MonoBehaviour:
   damage: 0
   multiplier: 1
   health: {fileID: 11400000, guid: 3943486331d354528809d0f18a4d2413, type: 2}
+  delayTime: 0.2
 --- !u!114 &1854655916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5631,6 +5654,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnDelay:
+    m_PersistentCalls:
+      m_Calls: []
   OnReturn:
     m_PersistentCalls:
       m_Calls: []
@@ -5638,6 +5664,7 @@ MonoBehaviour:
   damage: 0
   multiplier: 1
   health: {fileID: 11400000, guid: 9661d000c6e044144a21d1f9cab4e05a, type: 2}
+  delayTime: 0.2
 --- !u!65 &2017929267
 BoxCollider:
   m_ObjectHideFlags: 0
