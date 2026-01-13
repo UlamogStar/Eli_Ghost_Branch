@@ -53,8 +53,8 @@
 						<Effect Name="Attack_Remover" ID="{174E7B9A-A16F-4CA7-86D0-530212B5A6AA}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
 							<PropertyList>
 								<Property Name="AttackTime" Type="Real32" Value="0.001"/>
-								<Property Name="Ratio" Type="Real32" Value="20"/>
-								<Property Name="ReleaseTime" Type="Real32" Value="0.5"/>
+								<Property Name="Ratio" Type="Real32" Value="40.4"/>
+								<Property Name="ReleaseTime" Type="Real32" Value="1.26"/>
 								<Property Name="Threshold" Type="Real32" Value="-25"/>
 							</PropertyList>
 						</Effect>
@@ -1917,12 +1917,12 @@
 						</Effect>
 						<Effect Name="Aliasing" ID="{4CCC0D23-78CD-4B09-A62B-D3CB5E071A2F}" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
 							<PropertyList>
-								<Property Name="ModFrequency" Type="Real32" Value="20000"/>
-								<Property Name="ModPWM" Type="Real32" Value="0"/>
+								<Property Name="ModDepth" Type="Real32" Value="12.1"/>
+								<Property Name="ModFrequency" Type="Real32" Value="14.8"/>
+								<Property Name="ModPWM" Type="Real32" Value="61"/>
 								<Property Name="ModPhaseOffset" Type="Real32" Value="-180"/>
 								<Property Name="ModPhaseSpread" Type="Real32" Value="19"/>
 								<Property Name="ModSmoothing" Type="Real32" Value="100"/>
-								<Property Name="ModWaveform" Type="int32" Value="4"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Fast_LF_Tremolo" ID="{3B09A271-D9D4-4A4E-B545-F681E8313E5F}" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">

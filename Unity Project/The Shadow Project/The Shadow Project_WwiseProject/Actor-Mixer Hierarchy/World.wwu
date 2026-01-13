@@ -3971,10 +3971,14 @@
 				</ActorMixer>
 				<ActorMixer Name="Player" ID="{AD263865-7E3E-4C22-8D21-871F9E710A95}" ShortID="280859964">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Color" Type="int16" Value="19"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Objects" ID="{7040F9CE-2011-4BD1-B0CD-7170B25461F3}" WorkUnitID="{81ED1C5A-38B2-4CFD-A1E7-61CEAAF02A28}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
 						</Reference>
@@ -3998,6 +4002,12 @@
 							<ChildrenList>
 								<RandomSequenceContainer Name="player_deflect_thud" ID="{779F5A23-BB4D-4B28-9FE7-53E54274C251}" ShortID="121953578">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>31</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -4275,7 +4285,77 @@
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{ECC39052-7009-4053-844D-034B7EB07865}" ShortID="196518467">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+																<ObjectRef Name="Attack_Remover" ID="{174E7B9A-A16F-4CA7-86D0-530212B5A6AA}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 								</RandomSequenceContainer>
+								<Sound Name="player-deflect-sweetener" ID="{ADAA735A-D057-4B16-8E41-5667ABD72EF7}" ShortID="1021627691">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>32</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{993CE805-1B5A-4753-8576-47A86AD31168}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="556"/>
+															<Property Name="Min" Type="Real64" Value="-227"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6B53EE07-8236-4251-BD33-D58B85192A52}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9DC67EF1-665E-45FE-A81C-95E03C4F4DCC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="422603-Mobile-Game-Melodic-Stinger-Glitch-Drum-2" ID="{385953BD-A2B8-4DBA-A612-62978775F888}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0178997613365155"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0924821002386635"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0134248210023866"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.238663484486874"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>422603-Mobile-Game-Melodic-Stinger-Glitch-Drum-2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="853574687"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="422603-Mobile-Game-Melodic-Stinger-Glitch-Drum-2" ID="{385953BD-A2B8-4DBA-A612-62978775F888}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</BlendContainer>
 					</ChildrenList>
