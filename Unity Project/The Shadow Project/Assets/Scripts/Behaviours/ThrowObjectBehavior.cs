@@ -24,6 +24,8 @@ public class ThrowObjectBehavior : MonoBehaviour
             StopCoroutine(existing);
             currentThrows.Remove(throwable);
         }
+		ResetObjectBehaviour resetBehaviour = throwable.GetComponent<ResetObjectBehaviour>();
+		resetBehaviour.StartTimeDestroy();
 
         Coroutine newThrow = StartCoroutine(MoveOverTime(throwable, location, speed));
         currentThrows[throwable] = newThrow;

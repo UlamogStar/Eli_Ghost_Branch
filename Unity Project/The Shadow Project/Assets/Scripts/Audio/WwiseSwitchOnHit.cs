@@ -11,18 +11,23 @@ public class WwiseSwitchOnHit : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //only care about your throwable objects
-        if (!other.CompareTag("Object"))
+        if (!other.CompareTag("Object") || other.GetComponent<DamageBehaviour>() != null)
             return;
 
-        GameObject hitObject = other.transform.root.gameObject; //in case collider is child
-        SetItemType itemData = hitObject.GetComponent<SetItemType>();
+        SetItemType itemData = other.GetComponentInParent<SetItemType>();
+        GameObject hitObject = itemData != null ? itemData.gameObject : other.gameObject;
+
+
+        
 
         //apply switches
         AK.Wwise.Switch typeSwitch = itemData != null && itemData.itemType != null ? itemData.itemType : defaultItemType;
         AK.Wwise.Switch sizeSwitch = itemData != null && itemData.itemSize != null ? itemData.itemSize : defaultItemSize;
 
-        if (audioEmitter == null)
-            audioEmitter = gameObject;
+
+
+        // If we found SetItemType, use that object's GameObject as the emitter
+        GameObject emitter = itemData != null ? itemData.gameObject : audioEmitter ?? gameObject;
 
         typeSwitch?.SetValue(audioEmitter);
         sizeSwitch?.SetValue(audioEmitter);
@@ -32,6 +37,8 @@ public class WwiseSwitchOnHit : MonoBehaviour
         //play the event
         impactEvent?.Post(audioEmitter);
 
-        Debug.Log($"Applied switches from {hitObject.name} and played event {impactEvent}");
+        Debug.Log(itemData != null
+        ? $"[WwiseSwitchOnHit] Found SetItemType on {itemData.gameObject.name}, applied {itemData.itemType?.Name} / {itemData.itemSize?.Name}"
+        : $"[WwiseSwitchOnHit] No SetItemType found on {other.name} or its parents � using defaults.");
     }
 }

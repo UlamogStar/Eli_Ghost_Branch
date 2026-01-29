@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24caa3e1776794d38a872d731e973934, type: 3}
   m_Name: GhostHealthData
   m_EditorClassIdentifier: Assembly-CSharp::IntData
-  value: 30
+  value: 60

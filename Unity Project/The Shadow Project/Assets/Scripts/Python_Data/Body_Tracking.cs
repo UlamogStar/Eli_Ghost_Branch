@@ -8,15 +8,16 @@ public class Body_Tracking : MonoBehaviour
     [System.Serializable]
     public class BodySet
     {
-        public List<GameObject> points = new List<GameObject>(14);
+        public List<GameObject> points = new List<GameObject>(14); 
+        // IMPORTANT: exactly 14 per set (13 joints + midpoint)
     }
 
-    public List<BodySet> sets = new List<BodySet>();  // Four sets expected
+    public List<BodySet> sets = new List<BodySet>();   // Expect 4 sets
     public float scale = 0.01f;
     public Vector3 offset;
     public float timeout = 0.5f;
 
-    private float[] lastUpdate;
+    private float[] lastUpdate; 
     private Vector3[][] restPositions;
 
     void Start()
@@ -29,45 +30,58 @@ public class Body_Tracking : MonoBehaviour
             restPositions[s] = new Vector3[sets[s].points.Count];
 
             for (int i = 0; i < sets[s].points.Count; i++)
+            {
                 restPositions[s][i] = sets[s].points[i].transform.position;
+            }
         }
     }
 
     void FixedUpdate()
     {
-        string raw = udpBody.data.Trim('[', ']');
-        if (string.IsNullOrEmpty(raw))
+        string raw = udpBody.data;
+        if (string.IsNullOrWhiteSpace(raw))
             return;
 
         string[] pts = raw.Split(',');
-
         int perSet = 14 * 2;  // 14 points * (x,y)
+
+        if (pts.Length < perSet)
+            return;
 
         for (int s = 0; s < sets.Count; s++)
         {
-            int setStart = s * perSet;
+            int start = s * perSet;
 
-            if (setStart + perSet > pts.Length)
+            if (start + perSet > pts.Length)
                 break;
 
             bool updated = false;
 
-            for (int i = 0; i < 14 && i < sets[s].points.Count; i++)
+            for (int i = 0; i < sets[s].points.Count; i++)
             {
-                int baseIndex = setStart + i * 2;
+                int baseIndex = start + i * 2;
 
-                if (float.TryParse(pts[baseIndex], out float x) &&
-                    float.TryParse(pts[baseIndex + 1], out float y))
+                bool okX = float.TryParse(pts[baseIndex], out float x);
+                bool okY = float.TryParse(pts[baseIndex + 1], out float y);
+
+                if (!okX || !okY)
+                    continue;
+
+                // If Python sent zeros → no person found → use rest pose
+                if (Mathf.Abs(x) < 0.001f && Mathf.Abs(y) < 0.001f)
                 {
-                    Vector3 pos = new Vector3(
-                        x * scale + offset.x,
-                        y * scale + offset.y,
-                        offset.z
-                    );
-
-                    sets[s].points[i].transform.position = pos;
-                    updated = true;
+                    sets[s].points[i].transform.position = restPositions[s][i];
+                    continue;
                 }
+
+                Vector3 pos = new Vector3(
+                    -x * scale + offset.x,
+                    y * scale + offset.y,
+                    offset.z
+                );
+
+                sets[s].points[i].transform.position = pos;
+                updated = true;
             }
 
             if (updated)

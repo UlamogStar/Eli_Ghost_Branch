@@ -1,11 +1,11 @@
 /*
 Originial Coder: Owynn A.
-Recent Coder: Zackery E.
+Recent Coder: Zackery E. Natalie R.
 Recent Changes: Reorganized and fixed bugs. Added Attack Routine
 for randomizing attacks, Added Strength Checkpoints and strength,
 so when it hits an Strength Checkpoint, and on StrengthUpdate, the
 ghost's strength increases allowing it to throw the next sized object
-Last date worked on: 10/28/2025
+Last date worked on: 12/10/2025
 */
 
 using UnityEngine;
@@ -32,7 +32,7 @@ public class GhostBehaviour : MonoBehaviour
     [Header("Components")]
     [SerializeField] private Animator animator;
     [SerializeField] private IntData health;
-    [SerializeField] private Transform target;
+    public Transform target;
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private ObjectManager objectManager;
     [SerializeField] private ThrowObjectBehavior throwManager;
@@ -43,6 +43,8 @@ public class GhostBehaviour : MonoBehaviour
     [Header("Info")]
     [SerializeField] private Quaternion rotation;
     [SerializeField] private bool isWandering = false, isDrifting = false, isAttacking = false;
+
+    [SerializeField] public List<TransformDataList> players;
 
     #region Unity Functions
 
@@ -55,6 +57,10 @@ public class GhostBehaviour : MonoBehaviour
         StartCoroutine(WanderRoutine());
     }
 
+    public void AddPlayer(TransformDataList player)
+    {
+        players[0] = player;
+    }
     #endregion
 
     #region Routines
@@ -182,6 +188,8 @@ public class GhostBehaviour : MonoBehaviour
             newSelectedObject.thrown = true;
             GameObject throwable = newSelectedObject.gameObject;
 
+            target = SelectTarget();
+
             Vector3 location = target.position;
 
             // Levitate Object (Add Animation for this in future)
@@ -206,7 +214,15 @@ public class GhostBehaviour : MonoBehaviour
     public void LevitateObject(GameObject throwable)
     {
         //Start attack indicator
+        indicatorManager.follow = target;
+        indicatorManager.throwable = throwable;
         indicatorManager.StartIndicator();
+        //Activate glow outline
+        MeshRenderer[] glow = throwable.GetComponentsInChildren<MeshRenderer>();
+        for (int i=0; i < glow.Length; i++)
+        {
+            glow[i].enabled = true;
+        }
         // Hover Object for attack anticipation
         Vector3 location = throwable.transform.position + new Vector3(0, levitationHeight, 0);
         throwManager.StartThrow(throwable, location, levitateSpeed);
@@ -310,4 +326,12 @@ public class GhostBehaviour : MonoBehaviour
     }
 
     #endregion
+
+    public Transform SelectTarget()
+    {
+        int playerIndex = Random.Range(0, players.Count);
+        int posIndex = Random.Range(0, players[playerIndex].posList.Count);
+        
+        return players[playerIndex].posList[posIndex];
+    }
 }
