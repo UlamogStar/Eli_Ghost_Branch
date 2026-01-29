@@ -6057,6 +6057,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ThrowableReturnBehavior
   target: {fileID: 1993776379}
   throwObjectManager: {fileID: 2075343737}
+  playerDeflect:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f3b93d1d31aa5c2458127fcc035d666d, type: 2}
 --- !u!54 &130495489
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9246,6 +9250,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ThrowableReturnBehavior
   target: {fileID: 1993776379}
   throwObjectManager: {fileID: 2075343737}
+  playerDeflect:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f3b93d1d31aa5c2458127fcc035d666d, type: 2}
 --- !u!54 &464599414
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9428,6 +9436,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ThrowableReturnBehavior
   target: {fileID: 1993776379}
   throwObjectManager: {fileID: 2075343737}
+  playerDeflect:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f3b93d1d31aa5c2458127fcc035d666d, type: 2}
 --- !u!54 &499880387
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15841,6 +15853,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ThrowableReturnBehavior
   target: {fileID: 1993776379}
   throwObjectManager: {fileID: 2075343737}
+  playerDeflect:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f3b93d1d31aa5c2458127fcc035d666d, type: 2}
 --- !u!54 &623001737
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15995,6 +16011,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ThrowableReturnBehavior
   target: {fileID: 1993776379}
   throwObjectManager: {fileID: 2075343737}
+  playerDeflect:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f3b93d1d31aa5c2458127fcc035d666d, type: 2}
 --- !u!54 &634889975
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16134,6 +16154,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ThrowableReturnBehavior
   target: {fileID: 1993776379}
   throwObjectManager: {fileID: 2075343737}
+  playerDeflect:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f3b93d1d31aa5c2458127fcc035d666d, type: 2}
 --- !u!54 &640726122
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16927,6 +16951,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ThrowableReturnBehavior
   target: {fileID: 1993776379}
   throwObjectManager: {fileID: 2075343737}
+  playerDeflect:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f3b93d1d31aa5c2458127fcc035d666d, type: 2}
 --- !u!54 &710591104
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -52509,6 +52537,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ThrowableReturnBehavior
   target: {fileID: 1993776379}
   throwObjectManager: {fileID: 2075343737}
+  playerDeflect:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f3b93d1d31aa5c2458127fcc035d666d, type: 2}
 --- !u!54 &1984492125
 Rigidbody:
   m_ObjectHideFlags: 0
