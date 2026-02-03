@@ -9,6 +9,9 @@ public class ThrowableReturnBehavior : MonoBehaviour
     [Header("Components")]
     [SerializeField] private ThrowObjectBehavior throwObjectManager;
 
+    [Header("Wwise Event")]
+    [SerializeField] public AK.Wwise.Event playerDeflect;
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out ObjectBehaviour objectBehaviour))
@@ -21,6 +24,9 @@ public class ThrowableReturnBehavior : MonoBehaviour
                 // Start Return Throw
                 objectBehaviour.returned = true;
                 throwObjectManager.StartThrow(objectBehaviour.gameObject, target.position, objectBehaviour.throwSpeed);
+
+                //Wwise Audio Trigger
+                playerDeflect.Post(gameObject);
             }
         }
     }
