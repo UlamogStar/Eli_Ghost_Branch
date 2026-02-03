@@ -26,14 +26,14 @@ public class GhostBehaviour : MonoBehaviour
     [SerializeField] private float throwSpeed = 1f, levitateSpeed = 1f;
     [SerializeField] private float levitationHeight = 2f;
     [SerializeField] private float overshoot = 0.5f;
-    [SerializeField] private Vector3 center, driftPointOne, driftPointTwo;
+    [SerializeField] private Vector3 center, driftPointOne, driftPointTwo, location;
     [SerializeField] private List<int> strengthCheckpoints = new List<int>();
 
     [Header("Components")]
     [SerializeField] private Animator animator;
     [SerializeField] private IntData health;
     public Transform target;
-    [SerializeField] private Transform cameraTransform;
+    [SerializeField] private Transform cameraTransform, hoverTransform;
     [SerializeField] private ObjectManager objectManager;
     [SerializeField] private ThrowObjectBehavior throwManager;
     [SerializeField] private UIBehaviorScript indicatorManager;
@@ -42,9 +42,12 @@ public class GhostBehaviour : MonoBehaviour
 
     [Header("Info")]
     [SerializeField] private Quaternion rotation;
-    [SerializeField] private bool isWandering = false, isDrifting = false, isAttacking = false;
+    [SerializeField] public bool isWandering = false, isDrifting = false, isAttacking = false, waiting = false;
 
     [SerializeField] public List<TransformDataList> players;
+
+    public GameObject throwable;
+    private ObjectBehaviour newSelectedObject;
 
     #region Unity Functions
 
@@ -95,44 +98,21 @@ public class GhostBehaviour : MonoBehaviour
         // Turn on drifting, Turn of wandering is wandering is true,
         isDrifting = true;
         isWandering = false;
-
-        // If not attacking, Start attacking
-        if (isAttacking == false)
-        {
-            StartCoroutine(AttackRoutine());
-        }
     
         // Drift Logic
-        while (isDrifting)
-        {
-            Vector3 destination = Vector3.Lerp(driftPointOne, driftPointTwo, Random.value);
-            agent.SetDestination(destination);
-            Walk();
+        Vector3 destination = Vector3.Lerp(driftPointOne, driftPointTwo, Random.value); 
+        agent.SetDestination(destination);
+        Walk();
 
-            while (agent.pathPending || agent.remainingDistance > agent.stoppingDistance)
-            {
-                transform.LookAt(cameraTransform.position);
-                transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
-                yield return null;
-            }
-
-            Idle();
-
-            yield return new WaitForSeconds(waitTime);
+        while (agent.pathPending || agent.remainingDistance > agent.stoppingDistance)
+        { 
+            transform.LookAt(cameraTransform.position);
+            transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+            yield return null;
         }
-    }
 
-    private IEnumerator AttackRoutine()
-    {
-        // Start attacking
-        isAttacking = true;
-
-        // Attack Logic
-        while (isAttacking)
-        {
-            yield return new WaitForSeconds(Random.Range(2f, 5f));
-            StartCoroutine(Attack());
-        }
+        Idle();
+        StartCoroutine(Attack());
     }
 
     #endregion
@@ -178,38 +158,56 @@ public class GhostBehaviour : MonoBehaviour
     }
     public IEnumerator Attack()
     {
+        isAttacking = true;
         // Select available target throwable
-        ObjectBehaviour newSelectedObject = SelectObject();
+        newSelectedObject = SelectObject();
         
         // If object  is selected, throw at target
         if (newSelectedObject != null)
         {
             // Set as thrown and throw
-            newSelectedObject.thrown = true;
-            GameObject throwable = newSelectedObject.gameObject;
+            animator.SetTrigger("summon");
+            //yield return new WaitForSeconds(0.75f);
+            
+            throwable = newSelectedObject.gameObject;
 
             target = SelectTarget();
 
-            Vector3 location = target.position;
+            location = target.position;
 
             // Levitate Object (Add Animation for this in future)
             LevitateObject(throwable);
-
+            waiting = true;
+            
             // Wait for levitate to end
-            yield return new WaitForSeconds(1);
+            yield return null;
 
-            if (throwable != null) // Checks if object is destroyed in the 1 second it was levitated
-            {
-                animator.SetTrigger("attack");
-                ThrowObject(throwable, location);
-            }  
+            
         }
+
+        isAttacking = false;
+        
+  
     }
 
-    public void ThrowObject(GameObject throwable, Vector3 location)
+    public IEnumerator Throw()
+    {
+        if (throwable != null && waiting == false) // Checks if object is destroyed in the 1 second it was levitated
+        {
+            animator.SetTrigger("attack");
+            ThrowObject(throwable, location);
+            waiting = false;
+            //newSelectedObject.thrown = true;
+            yield return new WaitForSeconds(2);
+            StartCoroutine(DriftRoutine());
+            
+        }  
+    }
+
+    public void ThrowObject(GameObject throwable, Vector3 newLocation)
     {
         // Being Linear Throw to location
-        throwManager.StartThrow(throwable, location, throwSpeed);
+        throwManager.StartCoroutine(throwManager.MoveOverTime(throwable, newLocation, throwSpeed));
     }
     public void LevitateObject(GameObject throwable)
     {
@@ -224,8 +222,8 @@ public class GhostBehaviour : MonoBehaviour
             glow[i].enabled = true;
         }
         // Hover Object for attack anticipation
-        Vector3 location = throwable.transform.position + new Vector3(0, levitationHeight, 0);
-        throwManager.StartThrow(throwable, location, levitateSpeed);
+        //Vector3 location = throwable.transform.position + new Vector3(0, levitationHeight, 0);
+        throwManager.Levitate(throwable, levitateSpeed);
     }
 
     public void Walk()
@@ -241,6 +239,7 @@ public class GhostBehaviour : MonoBehaviour
     public void Disappear()
     {
         animator.SetTrigger("disappear");
+        animator.SetBool("alive", false);
     }
 
     public void Appear()

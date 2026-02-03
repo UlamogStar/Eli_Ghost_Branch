@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: -123970247109362358}
   - component: {fileID: 1657856401139709041}
   - component: {fileID: 2288513927823050609}
-  m_Layer: 0
+  - component: {fileID: 6531303473061991481}
+  m_Layer: 1
   m_Name: Candle5_Candle5
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -174,6 +175,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65a3124056c447baa9f0a2f368ab3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetObjectBehaviour
+--- !u!114 &6531303473061991481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2302335114772538473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba131a64f6fc4f969617b340b6c3a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionBehaviour
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3916077788375514598
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,7 +201,7 @@ GameObject:
   - component: {fileID: 5568300005082258886}
   - component: {fileID: 5634168906785478312}
   - component: {fileID: 8996583601498554030}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8104419393831634374}
   - component: {fileID: 7673181875392615843}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +432,7 @@ GameObject:
   - component: {fileID: 4435519078183236263}
   - component: {fileID: 8791076590876989713}
   - component: {fileID: 6643923180865496197}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -505,7 +521,7 @@ GameObject:
   - component: {fileID: 4741775486361363742}
   - component: {fileID: 5730113472814155637}
   - component: {fileID: 2731236605757021455}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Candle5_Wickgroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

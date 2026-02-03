@@ -20,6 +20,7 @@ public class ResetObjectBehaviour : MonoBehaviour
         ObjectBehaviour objectBehaviour = this.gameObject.GetComponent<ObjectBehaviour>();
         objectManager.enableSpawnByObject(objectBehaviour);
         objectManager.spawnRandom(1);
+        objectManager.spawnedObjects.Remove(objectBehaviour);
         Destroy(this.gameObject);
 
     }

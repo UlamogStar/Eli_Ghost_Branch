@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 80272804989199155}
   - component: {fileID: 4118603500840188047}
   - component: {fileID: 7406933027168962889}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8677987706876610488}
   - component: {fileID: 8884777628261019278}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 927134946300362207}
   - component: {fileID: 4879764539253094052}
   - component: {fileID: 8054459273953563563}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 8912409287349459762}
   - component: {fileID: 59758083005251601}
   - component: {fileID: 8050702916127851435}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Latch_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 1712632939299879168}
   - component: {fileID: 3083416198306233921}
   - component: {fileID: 3332271567536448939}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 954595155399312017}
   - component: {fileID: 6669027879795890256}
   - component: {fileID: 4186518507876150206}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Chest_Lid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -602,7 +602,8 @@ GameObject:
   - component: {fileID: 5233058328711009830}
   - component: {fileID: -7346733703562034044}
   - component: {fileID: 2703036135288300424}
-  m_Layer: 0
+  - component: {fileID: 1302572282975333614}
+  m_Layer: 1
   m_Name: Chest_Base1
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -765,7 +766,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65a3124056c447baa9f0a2f368ab3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetObjectBehaviour
-  objectManager: {fileID: 0}
+--- !u!114 &1302572282975333614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7078872615798433053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba131a64f6fc4f969617b340b6c3a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionBehaviour
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7431980146737179079
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +792,7 @@ GameObject:
   - component: {fileID: 8439808608211710888}
   - component: {fileID: 7706692591034087644}
   - component: {fileID: 2136348159254173243}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -866,7 +881,7 @@ GameObject:
   - component: {fileID: 2042758312392531570}
   - component: {fileID: 928326829729656855}
   - component: {fileID: 2279238462367610694}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Latch_Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
