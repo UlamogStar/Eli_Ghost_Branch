@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 786747640245732172}
   - component: {fileID: 1640693953894233883}
   - component: {fileID: 67570374121983636}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -104,7 +104,8 @@ GameObject:
   - component: {fileID: -680069868035172672}
   - component: {fileID: 8559750660388003578}
   - component: {fileID: -2767565994351600824}
-  m_Layer: 0
+  - component: {fileID: -2281579983590930438}
+  m_Layer: 1
   m_Name: SmallBox1
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -261,7 +262,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65a3124056c447baa9f0a2f368ab3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetObjectBehaviour
-  objectManager: {fileID: 0}
+--- !u!114 &-2281579983590930438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792794902333812670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba131a64f6fc4f969617b340b6c3a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionBehaviour
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4832816587835029786
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6560103729361194026}
   - component: {fileID: 8213685879400752518}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}

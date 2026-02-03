@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8447228084836813443}
   - component: {fileID: 1627427092135388657}
   - component: {fileID: 9016532211665520563}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Candle4_group1Wick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,8 @@ GameObject:
   - component: {fileID: -3132146229921986370}
   - component: {fileID: -453770700647363109}
   - component: {fileID: 110327748614528030}
-  m_Layer: 0
+  - component: {fileID: 6847753084440290934}
+  m_Layer: 1
   m_Name: Candle4_Candle4
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -263,6 +264,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65a3124056c447baa9f0a2f368ab3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetObjectBehaviour
+--- !u!114 &6847753084440290934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3028584613036351919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba131a64f6fc4f969617b340b6c3a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionBehaviour
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4152134149730414744
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +290,7 @@ GameObject:
   - component: {fileID: 1134055560418952833}
   - component: {fileID: 5892981560780000976}
   - component: {fileID: 4476768623292240915}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5233183440098081052}
   - component: {fileID: 3287868500265251029}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +521,7 @@ GameObject:
   - component: {fileID: 1479133275783747141}
   - component: {fileID: 6608473554166658603}
   - component: {fileID: 932427441208456436}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Object
   m_Icon: {fileID: 0}
