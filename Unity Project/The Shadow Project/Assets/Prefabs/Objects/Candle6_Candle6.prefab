@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1956710214271312495}
   - component: {fileID: 9123513627763370209}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 4475427568137354428}
   - component: {fileID: 6314424764079276346}
   - component: {fileID: 9140044236689379956}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Candle6_Candle_2Candle_2_DropletsWax_Drop27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 6270607529343851652}
   - component: {fileID: 7564812605970981168}
   - component: {fileID: 5859595698517035948}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 2360615941945065894}
   - component: {fileID: 5675043411382422715}
   - component: {fileID: 582560422761125003}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Candle6_Candle_2Wax_Drop26Candle_2_Droplets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 5388940789980678663}
   - component: {fileID: 6348463644885461904}
   - component: {fileID: 2792376669658012772}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 1420275654605969104}
   - component: {fileID: 3360591827567507879}
   - component: {fileID: 8654872349225585486}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -602,7 +602,8 @@ GameObject:
   - component: {fileID: 1426261195640443209}
   - component: {fileID: 8999111496065574111}
   - component: {fileID: 5593209494900958338}
-  m_Layer: 0
+  - component: {fileID: -5712910728431465244}
+  m_Layer: 1
   m_Name: Candle6_Candle6
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -765,6 +766,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65a3124056c447baa9f0a2f368ab3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetObjectBehaviour
+--- !u!114 &-5712910728431465244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8014366734083089309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba131a64f6fc4f969617b340b6c3a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionBehaviour
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8693911344992015420
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,7 +792,7 @@ GameObject:
   - component: {fileID: 5205764213595856842}
   - component: {fileID: 4641435457102598641}
   - component: {fileID: 5203083429314570764}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -865,7 +881,7 @@ GameObject:
   - component: {fileID: 2609406849516594932}
   - component: {fileID: 7807004857542225313}
   - component: {fileID: 7701595706375439379}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Candle6_Candle_2Candle_2_DropletsWax_Drop28
   m_TagString: Untagged
   m_Icon: {fileID: 0}

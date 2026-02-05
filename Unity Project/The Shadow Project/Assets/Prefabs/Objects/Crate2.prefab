@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1335361130492695139}
   - component: {fileID: 5201400681983686586}
   - component: {fileID: 7204009777628851247}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -104,7 +104,8 @@ GameObject:
   - component: {fileID: 2154077371942638472}
   - component: {fileID: -3811789735565727079}
   - component: {fileID: -5885624025600126088}
-  m_Layer: 0
+  - component: {fileID: 1535335987936603927}
+  m_Layer: 1
   m_Name: Crate2
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -261,7 +262,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65a3124056c447baa9f0a2f368ab3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetObjectBehaviour
-  objectManager: {fileID: 0}
+--- !u!114 &1535335987936603927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5423059843498078159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba131a64f6fc4f969617b340b6c3a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionBehaviour
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8605597361514404796
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6271239297012146065}
   - component: {fileID: 1827092283921522028}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}

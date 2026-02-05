@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6809553403143146796}
   - component: {fileID: 2000572536705467360}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 2273687716120825416}
   - component: {fileID: 5962205918995644385}
   - component: {fileID: 5051984707947002006}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 8732005526417056245}
   - component: {fileID: 464622051130112237}
   - component: {fileID: 3697349101411490174}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 723764954791452637}
   - component: {fileID: 7725776275858717912}
   - component: {fileID: 6397963459535801197}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 7161482293501096758}
   - component: {fileID: 5831086571940999298}
   - component: {fileID: 5265339606698331182}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Candle1_Candle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 5082864070121454834}
   - component: {fileID: 1118642823388867137}
   - component: {fileID: 2237553550671693030}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Candle1_Wickgroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -599,7 +599,7 @@ GameObject:
   - component: {fileID: 997230900585507914}
   - component: {fileID: 6642057861213035136}
   - component: {fileID: 4169328296018970099}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Candle3_Wickgroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -692,7 +692,8 @@ GameObject:
   - component: {fileID: 7600222543995785162}
   - component: {fileID: 4412159373198730538}
   - component: {fileID: 4810815431001604938}
-  m_Layer: 0
+  - component: {fileID: 491707378147974279}
+  m_Layer: 1
   m_Name: Candlelabra
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -858,6 +859,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65a3124056c447baa9f0a2f368ab3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetObjectBehaviour
+--- !u!114 &491707378147974279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3445225290737156045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba131a64f6fc4f969617b340b6c3a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionBehaviour
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3655234228312015186
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,7 +885,7 @@ GameObject:
   - component: {fileID: 3619350504909329980}
   - component: {fileID: 5231397290144258510}
   - component: {fileID: 2522322787198616796}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -958,7 +974,7 @@ GameObject:
   - component: {fileID: 7491854208933963397}
   - component: {fileID: 850849103477085990}
   - component: {fileID: 5667619691997485899}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Candle3_Candle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1048,7 +1064,7 @@ GameObject:
   - component: {fileID: 2639383848701857190}
   - component: {fileID: 3800722235456344620}
   - component: {fileID: 5585391236418028951}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Candle2_Candle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1138,7 +1154,7 @@ GameObject:
   - component: {fileID: 3921353183184904406}
   - component: {fileID: 3488859887629177114}
   - component: {fileID: 3221767209733604005}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Candle2_WickCandle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1227,7 +1243,7 @@ GameObject:
   - component: {fileID: 5610887951063680952}
   - component: {fileID: 2770201976378340947}
   - component: {fileID: 1469408530018836534}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1316,7 +1332,7 @@ GameObject:
   - component: {fileID: 1900704532945101081}
   - component: {fileID: 3188407907091600120}
   - component: {fileID: 2452140576351440812}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -1405,7 +1421,7 @@ GameObject:
   - component: {fileID: 1347719835878858876}
   - component: {fileID: 7569562597040605654}
   - component: {fileID: 1708580717628491478}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}

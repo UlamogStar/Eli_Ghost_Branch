@@ -132,4 +132,5 @@ MonoBehaviour:
   returnable: 1
   thrown: 0
   returned: 0
+  hit: 0
   originSpawn: {fileID: 0}

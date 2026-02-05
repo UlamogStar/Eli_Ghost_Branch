@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3366960965105609629}
   - component: {fileID: 5268012892730565962}
   - component: {fileID: 8607186030672553575}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Latch_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 5638373741629989792}
   - component: {fileID: 3055590443607215438}
   - component: {fileID: 611507492488532895}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 4605071330473100919}
   - component: {fileID: 64723841123949005}
   - component: {fileID: 7699654896153154695}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Chest_Lid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 4520861004077958800}
   - component: {fileID: 5089492612864253050}
   - component: {fileID: 4057741716297232392}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +367,7 @@ GameObject:
   - component: {fileID: 7806327004314156653}
   - component: {fileID: 7559723712881134231}
   - component: {fileID: 3124423996624678978}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Latch_Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,7 +456,7 @@ GameObject:
   - component: {fileID: 2543232351835049066}
   - component: {fileID: 2111130507864654255}
   - component: {fileID: 248471100282841278}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -544,7 +544,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2851351137707073251}
   - component: {fileID: 5517634766486981350}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -687,7 +687,7 @@ GameObject:
   - component: {fileID: 170950743424551713}
   - component: {fileID: 7285866891636720167}
   - component: {fileID: 889667064790308882}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -780,7 +780,8 @@ GameObject:
   - component: {fileID: -4478195314033729919}
   - component: {fileID: 3905444085915601158}
   - component: {fileID: 8952007565841083139}
-  m_Layer: 0
+  - component: {fileID: -5376132781375319758}
+  m_Layer: 1
   m_Name: Chest_Base
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -943,4 +944,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65a3124056c447baa9f0a2f368ab3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetObjectBehaviour
-  objectManager: {fileID: 0}
+--- !u!114 &-5376132781375319758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7192396256709127019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba131a64f6fc4f969617b340b6c3a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionBehaviour
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls: []

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4320759025881463828}
   - component: {fileID: 9084261704814197520}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 7089392001764833861}
   - component: {fileID: 1034471667502634362}
   - component: {fileID: 6414451735343255209}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,8 @@ GameObject:
   - component: {fileID: -3290595812163497083}
   - component: {fileID: -2232741299744481429}
   - component: {fileID: -3371909633818835450}
-  m_Layer: 0
+  - component: {fileID: -8358649316561970899}
+  m_Layer: 1
   m_Name: Candle2_Candle2
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -405,6 +406,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65a3124056c447baa9f0a2f368ab3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetObjectBehaviour
+--- !u!114 &-8358649316561970899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2959072506460062796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba131a64f6fc4f969617b340b6c3a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionBehaviour
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7644040164286761540
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,7 +432,7 @@ GameObject:
   - component: {fileID: 2388642050867985750}
   - component: {fileID: 7740688642523441101}
   - component: {fileID: 7385529752778018042}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -505,7 +521,7 @@ GameObject:
   - component: {fileID: 664809916504813040}
   - component: {fileID: 4374372577482190705}
   - component: {fileID: 756084432843151579}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Candle2_WickCandle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

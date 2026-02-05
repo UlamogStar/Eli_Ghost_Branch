@@ -17,7 +17,8 @@ GameObject:
   - component: {fileID: 5712413207960149122}
   - component: {fileID: 8909500228333396275}
   - component: {fileID: 4923078030604132275}
-  m_Layer: 0
+  - component: {fileID: 467000494737338728}
+  m_Layer: 1
   m_Name: Box2
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -151,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThrowObjectBehavior
   overshoot: 3
+  handLocation: {fileID: 0}
 --- !u!114 &5712413207960149122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,7 +213,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65a3124056c447baa9f0a2f368ab3b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetObjectBehaviour
-  objectManager: {fileID: 0}
+--- !u!114 &467000494737338728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2632795936351566697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba131a64f6fc4f969617b340b6c3a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionBehaviour
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8167809788525424057
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +239,7 @@ GameObject:
   - component: {fileID: 5728113893746171880}
   - component: {fileID: 8341284257666474994}
   - component: {fileID: 2436094382941069857}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Outline
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -311,7 +327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8874034702498685162}
   - component: {fileID: 1392421154489162304}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}

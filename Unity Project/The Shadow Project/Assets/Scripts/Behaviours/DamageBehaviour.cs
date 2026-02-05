@@ -27,10 +27,6 @@ public class DamageBehaviour : MonoBehaviour
 	{
 		Debug.Log("no behaviour found");
 	}
-	else
-	{
-		Debug.Log("we cool");
-	}
 		if (this.gameObject.CompareTag("Ghost"))
 		{
 			if(objectBehaviour.thrown)
@@ -42,10 +38,6 @@ public class DamageBehaviour : MonoBehaviour
 				resetBehaviour.Reset();
 				StartCoroutine(DelayEvent());
 			}
-			else
-            {
-                
-            }
 		}
         else if (other.CompareTag("Object"))
         {
