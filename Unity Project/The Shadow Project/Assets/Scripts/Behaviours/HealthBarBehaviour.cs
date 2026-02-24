@@ -13,9 +13,9 @@ using System.Collections;
 public class HealthBarBehaviour : MonoBehaviour
 {
     public IntData health;
-    public Slider slider;
+    public Slider slider, easeSlider;
     public UnityEvent onDamage, onHeal, onDepleted;
-    public float updateSpeed = 15f;
+    public float updateSpeed = 15f, updateEaseSpeed = 5f;
     public int maxHealth;
     public int currentBarValue;
     public void Awake()
@@ -58,18 +58,29 @@ public class HealthBarBehaviour : MonoBehaviour
             onDamage.Invoke();
         } 
     }//End RunHelathEvents
-
+	
     public void RunUpdateSlider()
     {
         StartCoroutine(UpdateSlider());
+		StartCoroutine(UpdateEaseSlider());
     }//End RunUpdateSlider
 
 	private IEnumerator UpdateSlider()
 	{
-
         while (Mathf.Abs(slider.value - health.value) > 0.01f)
         {
             slider.value = Mathf.MoveTowards(slider.value, health.value, Time.deltaTime * updateSpeed);
+            yield return null;
+        }//end while
+
+        Debug.Log("it worked");
+    }//end UpdateSlider
+
+	private IEnumerator UpdateEaseSlider()
+	{
+        while (Mathf.Abs(easeSlider.value - health.value) > 0.01f)
+        {
+            easeSlider.value = Mathf.MoveTowards(easeSlider.value, health.value, Time.deltaTime * updateEaseSpeed);
             yield return null;
         }//end while
 
