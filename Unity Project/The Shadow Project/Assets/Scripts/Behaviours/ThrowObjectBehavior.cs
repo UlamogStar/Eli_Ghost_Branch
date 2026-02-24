@@ -30,7 +30,6 @@ public class ThrowObjectBehavior : MonoBehaviour
 
         Coroutine newThrow = StartCoroutine(MoveOverTime(throwable, location, speed));
         currentThrows[throwable] = newThrow;
-        Debug.Log("Throw started");
     }
 
     public void Levitate(GameObject throwable, float speed)
@@ -52,7 +51,6 @@ public class ThrowObjectBehavior : MonoBehaviour
     public IEnumerator MoveOverTime(GameObject throwable, Vector3 location, float speed)
     {
         yield return new WaitForSeconds(0.75f);
-        Debug.Log("Moving");
         Vector3 dir = (location - throwable.transform.position).normalized;
         Vector3 overShootTarget = location + dir * overshoot;
 
@@ -78,7 +76,7 @@ public class ThrowObjectBehavior : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         Vector3 dir = (location - throwable.transform.position).normalized;
-        while (throwable != null && Vector3.Distance(throwable.transform.position, location) > 0.2f)
+        while (throwable != null && Vector3.Distance(throwable.transform.position, location) > 0.3f)
         {
 
             throwable.transform.position = Vector3.MoveTowards(
