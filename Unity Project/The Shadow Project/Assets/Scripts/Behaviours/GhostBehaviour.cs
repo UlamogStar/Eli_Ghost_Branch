@@ -10,6 +10,7 @@ Last date worked on: 12/10/2025
 
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
@@ -62,7 +63,24 @@ public class GhostBehaviour : MonoBehaviour
 
     public void AddPlayer(TransformDataList player)
     {
-        players[0] = player;
+        if (players.Contains(player))
+        {
+            return;
+        }
+        players.Add(player);
+        if (players.Count == 1)
+        {
+            StartEndIdle();
+        }
+    }
+    
+    public void RemovePlayer(TransformDataList player)
+    {
+        players.Remove(player);
+        if (players.Count == 0)
+        {
+            StartCoroutine(WanderRoutine());
+        }
     }
     #endregion
 
@@ -70,10 +88,12 @@ public class GhostBehaviour : MonoBehaviour
 
     private IEnumerator WanderRoutine()
     {
+        yield return new WaitForSeconds(3);
         // Set wander to true, turn of attacking and drifitng
         isWandering = true;
         isAttacking = false;
         isDrifting = false;
+        waiting = false;
 
         // Wandering Logic
         agent.updateRotation = true;
@@ -111,8 +131,15 @@ public class GhostBehaviour : MonoBehaviour
             yield return null;
         }
 
-        Idle();
-        StartCoroutine(Attack());
+        if (isDrifting == false)
+        {
+            yield return null;
+        }
+        else
+        {
+            Idle();
+            StartCoroutine(Attack());
+        }
     }
 
     #endregion
@@ -197,7 +224,6 @@ public class GhostBehaviour : MonoBehaviour
             animator.SetTrigger("attack");
             ThrowObject(throwable, location);
             waiting = false;
-            //newSelectedObject.thrown = true;
             yield return new WaitForSeconds(2);
             StartCoroutine(DriftRoutine());
             
