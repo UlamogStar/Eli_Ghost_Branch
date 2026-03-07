@@ -17,8 +17,133 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BasicCandleRef_M_CandleBasicPBR
-    second: {fileID: 5047651204043652464, guid: eea733f0f6b0e1241b8efddace748a23, type: 3}
+      name: Cellar_Props_Environment_Attc_Prop_Environment_CandleMat
+    second: {fileID: 2100000, guid: 3468034b7750c7c42b7911f038cd3bbd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_Attc_Prop_Environment_Crate1_Mat
+    second: {fileID: 2100000, guid: 813f5b2cf0da24546aa042bf3312210d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_Attc_Prop_Environment_Crate2_Mat
+    second: {fileID: 2100000, guid: b331792be38324d4b9b898f394cb1aa6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_BarrelRef_M_BarrelPBR
+    second: {fileID: 2100000, guid: 6d637c58e5c509d4b929cb9f361e1b3d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_BasicCandleRef_M_CandleBasicPBR
+    second: {fileID: 2100000, guid: 8d43510578082f643a99229ada41b87e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_CrackedBarrelRef_M_CrackedBarrelPBR
+    second: {fileID: 2100000, guid: 708df9eed0632664c983590340cea20b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_FancyCandalabraMat
+    second: {fileID: 2100000, guid: 17a711c69d04fbc4b9815b8250b9a536, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_HalfBarrelRef_HalfBarrelMat
+    second: {fileID: 2100000, guid: ee794c5ffc3190246baba87038be42e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_LadderRopeMat
+    second: {fileID: 2100000, guid: f6a677d5bcc7f5941a40b06745085d59, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_LadderStepsMat
+    second: {fileID: 2100000, guid: 5dc84053730f9984c811597291bbda9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_LadderWoodMat
+    second: {fileID: 2100000, guid: c420cf811c37df84c8212672d4d4cbc1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_LightBulbRef_Bulb
+    second: {fileID: 2100000, guid: 4dfb5dc19ce12db4ab9d75ff69ee1f2d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_LightBulbRef_Light
+    second: {fileID: 2100000, guid: 8d443bdc72be3ee46a6b1cb0ed648c4d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_OpenBarrelRef_OpenBarrelMat
+    second: {fileID: 2100000, guid: 5d5a0b83f9e16d844b99a42a2f670b55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_StandingCandelabraMat
+    second: {fileID: 2100000, guid: fe1a69220e3e00e449a698d600c21f31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_WarpedBarrelRef_WarpedBarrelMat
+    second: {fileID: 2100000, guid: 6be370a2378763648a43300e84018a01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_WineBottlesRef_Material
+    second: {fileID: 2100000, guid: b785650f71f143d4b901888742bd3d79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_WineBottlesRef_Material.001
+    second: {fileID: 2100000, guid: 1c2e02f646c65df44823950de7d49f9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_WineBottlesRef_Material.002
+    second: {fileID: 2100000, guid: b7f6360dde8e1b443a4625d86a5ca99b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_WineBottlesRef_Material.003
+    second: {fileID: 2100000, guid: 19ea295d1f184f846abeb53610892823, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_WineBottlesRef_Material.004
+    second: {fileID: 2100000, guid: 5faea9ebc6c7da647a08d3b26a70d8b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_WineBottlesRef_Material.006
+    second: {fileID: 2100000, guid: ebcb1ea7c5f1de74ea4672a3822982ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_WineBottlesRef_Material.007
+    second: {fileID: 2100000, guid: a103218dede2b0540a3a9109b5b5033d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_WineBottlesRef_Material.012
+    second: {fileID: 2100000, guid: bc2cee5205ec54d4887d61b4e70e17ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_WineBottlesRef_Material.013
+    second: {fileID: 2100000, guid: e9a9b1115694deb49a0421995890b862, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cellar_Props_Environment_WineRackMat
+    second: {fileID: 2100000, guid: 8ea9f6e49ec14a044979459ae03aaebb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -54,11 +179,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: LadderRef_M_Ladder_WoodPBR
     second: {fileID: 2100000, guid: c420cf811c37df84c8212672d4d4cbc1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: LightBulbRef_standardSurface2
-    second: {fileID: 2100000, guid: cc694fa80d9c6a84ba1f75c6506a9112, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
